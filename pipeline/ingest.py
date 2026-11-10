@@ -113,6 +113,9 @@ def run(refresh: bool = False) -> dict:
         dest = RAW / src["file"]
         prev = manifest.get(src["source_id"])
         if dest.exists() and prev and prev.get("status") == 200 and not refresh:
+            # raw files must stay byte-identical to what was fetched
+            if hashlib.sha256(dest.read_bytes()).hexdigest() != prev.get("sha256"):
+                raise RuntimeError(f"[ingest] {dest} no longer matches its manifest sha256 - raw data was modified")
             cached += 1
             continue
         entry = {k: src[k] for k in ("url", "file", "title", "source_type", "licence")}
