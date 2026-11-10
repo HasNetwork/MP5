@@ -36,7 +36,7 @@ Blocking errors: duplicate course code · non-numeric credits · record without 
 
 - **No "Minor" exists** in IIT Bhilai documents. The closest is BTech (Honours) by specialisation, and **no numeric CGPA cut-off is published** for it.
 - **Conflicts between sources** are kept, not merged: total credits 144 (2023+ batch) vs 240 (legacy batch); V#/NPTEL course size "1-2 credits" (CoS-2026) vs "1-3 credits" (UG Manual). Each rule's `applies_to` and `notes` say which batch and which side of the conflict it belongs to.
-- **Elective semesters** are the PE-slot semesters (6–8). Actual offerings vary each term and are not published.
+- **Elective semesters** are the PE-slot semesters (6–8). Actual per-term offerings are not on the public website. The institute circulates a term-wise course list (slots, instructors) by internal DoAA email, but I **excluded it on purpose** because it is not publicly available. With permission it is the natural source for a `course_offerings` table.
 - **Overlap percentages** often reference legacy codes (e.g. "CS608 (100%)"). They are kept as raw text and not yet resolved.
 - **Skill links are keyword-based.** 15 courses have none (mostly non-CS institute core such as chemistry and physics, plus CSL511 and CSL609). Depth is inferred from course level, not from learning outcomes. There are known false positives: NPTEL 106102220 (an AI course) is linked to systems security through generic words. Each link stores its matched keywords in `evidence`, so these can be reviewed.
 - **Licences** for NPTEL and OCW come from the providers' site-wide terms, not checked page by page. The institute PDFs carry no open licence.

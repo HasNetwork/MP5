@@ -5,3 +5,5 @@ __pycache__/
 data/interim/
 .claude/
 .mcp.json
+# internal (DoAA mail) - not a public source, excluded per data-ethics rule
+List of courses V4.pdf
