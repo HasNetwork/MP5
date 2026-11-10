@@ -1,0 +1,11 @@
+programme_id,semester,semester_label,slot_type,credits,source_id,source_url,retrieved_on,source_type
+IITBH-BTECH-CSE,3,Sem 3,LA,2.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,4,Sem 4,LA,4.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,5,Sem 5,LA,2.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,6,Sem 6,PE,3.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,6,Sem 6,OE,3.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,6,Sem 6,LA,2.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,7,Sem 7,PE,8.5,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,7,Sem 7,OE,6.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,8,Sem 8,PE,11.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official
+IITBH-BTECH-CSE,8,Sem 8,OE,6.0,iitbh_cos_2026,https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22,2026-11-10,official

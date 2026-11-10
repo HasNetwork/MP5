@@ -1,0 +1,272 @@
+[
+  {
+    "course_code": "CSL202",
+    "requires_code": "CSL100",
+    "requires_code_raw": "CSL100",
+    "kind": "hard",
+    "group_id": "CSL202-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSP203",
+    "requires_code": "CSL100",
+    "requires_code_raw": "CSL100",
+    "kind": "hard",
+    "group_id": "CSP203-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL251",
+    "requires_code": "CSL100",
+    "requires_code_raw": "CSL100",
+    "kind": "hard",
+    "group_id": "CSL251-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL251",
+    "requires_code": "ECL101",
+    "requires_code_raw": "ECL101",
+    "kind": "hard",
+    "group_id": "CSL251-G2",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL252",
+    "requires_code": "CSL100",
+    "requires_code_raw": "CSL100",
+    "kind": "hard",
+    "group_id": "CSL252-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL252",
+    "requires_code": "CSL201",
+    "requires_code_raw": "CSL201",
+    "kind": "hard",
+    "group_id": "CSL252-G2",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL252",
+    "requires_code": "CSL202",
+    "requires_code_raw": "CSL202",
+    "kind": "hard",
+    "group_id": "CSL252-G3",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL253",
+    "requires_code": "CSL201",
+    "requires_code_raw": "CSL201",
+    "kind": "hard",
+    "group_id": "CSL253-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL253",
+    "requires_code": "CSL202",
+    "requires_code_raw": "CSL202",
+    "kind": "hard",
+    "group_id": "CSL253-G2",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL301",
+    "requires_code": "CSL202",
+    "requires_code_raw": "CSL202",
+    "kind": "hard",
+    "group_id": "CSL301-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL301",
+    "requires_code": "CSL251",
+    "requires_code_raw": "CSL251",
+    "kind": "hard",
+    "group_id": "CSL301-G2",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL302",
+    "requires_code": "CSL251",
+    "requires_code_raw": "CSL251",
+    "kind": "hard",
+    "group_id": "CSL302-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL302",
+    "requires_code": "CSL253",
+    "requires_code_raw": "CSL253",
+    "kind": "hard",
+    "group_id": "CSL302-G2",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSP352",
+    "requires_code": "CSL100",
+    "requires_code_raw": "IC100",
+    "kind": "hard",
+    "group_id": "CSP352-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSP402",
+    "requires_code": "CSL100",
+    "requires_code_raw": "IC100",
+    "kind": "hard",
+    "group_id": "CSP402-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSP402",
+    "requires_code": "IC150",
+    "requires_code_raw": "IC150",
+    "kind": "hard",
+    "group_id": "CSP402-G2",
+    "group_logic": "all_of",
+    "requires_in_catalogue": false
+  },
+  {
+    "course_code": "CSP402",
+    "requires_code": "CSL251",
+    "requires_code_raw": "CS204",
+    "kind": "hard",
+    "group_id": "CSP402-G3",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSP402",
+    "requires_code": "CSL301",
+    "requires_code_raw": "CS250",
+    "kind": "hard",
+    "group_id": "CSP402-G4",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSP402",
+    "requires_code": "CSL302",
+    "requires_code_raw": "CS251",
+    "kind": "hard",
+    "group_id": "CSP402-G5",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL510",
+    "requires_code": "CSL252",
+    "requires_code_raw": "CSL252",
+    "kind": "hard",
+    "group_id": "CSL510-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL512",
+    "requires_code": "CSL252",
+    "requires_code_raw": "CSL252",
+    "kind": "hard",
+    "group_id": "CSL512-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL515",
+    "requires_code": "CSL252",
+    "requires_code_raw": "CSL252",
+    "kind": "hard",
+    "group_id": "CSL515-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL518",
+    "requires_code": "CSL252",
+    "requires_code_raw": "CSL252",
+    "kind": "hard",
+    "group_id": "CSL518-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL602",
+    "requires_code": "CSL503",
+    "requires_code_raw": "CSL503",
+    "kind": "hard",
+    "group_id": "CSL602-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL608",
+    "requires_code": "CSL252",
+    "requires_code_raw": "CSL252",
+    "kind": "hard",
+    "group_id": "CSL608-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL610",
+    "requires_code": "CSL252",
+    "requires_code_raw": "CSL252",
+    "kind": "hard",
+    "group_id": "CSL610-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL612",
+    "requires_code": "CSL253",
+    "requires_code_raw": "CSL253",
+    "kind": "hard",
+    "group_id": "CSL612-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL614",
+    "requires_code": "CSL503",
+    "requires_code_raw": "CSL503",
+    "kind": "hard",
+    "group_id": "CSL614-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "CSL616",
+    "requires_code": "CSL252",
+    "requires_code_raw": "CS202",
+    "kind": "hard",
+    "group_id": "CSL616-G1",
+    "group_logic": "any_of",
+    "requires_in_catalogue": true
+  },
+  {
+    "course_code": "MAL403",
+    "requires_code": "MAL100",
+    "requires_code_raw": "MAL100",
+    "kind": "hard",
+    "group_id": "MAL403-G1",
+    "group_logic": "all_of",
+    "requires_in_catalogue": true
+  }
+]

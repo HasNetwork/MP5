@@ -1,0 +1,72 @@
+[
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "category": "IC",
+    "min_credits": 40.5,
+    "unit": "credits",
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=21",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "category": "PL",
+    "min_credits": 4.0,
+    "unit": "credits",
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=21",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "category": "PC",
+    "min_credits": 52.0,
+    "unit": "credits",
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=21",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "category": "PE",
+    "min_credits": 22.5,
+    "unit": "credits",
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=21",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "category": "OE",
+    "min_credits": 15.0,
+    "unit": "credits",
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=21",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "category": "LA",
+    "min_credits": 10.0,
+    "unit": "credits",
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=21",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "category": "NC",
+    "min_credits": 12.0,
+    "unit": "units",
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=21",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  }
+]

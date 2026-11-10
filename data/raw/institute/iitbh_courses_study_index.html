@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+	<title>Courses of study</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="Courses of study"/>
+	<meta name="KeyWords" content="Courses of study"/>
+	<link rel="icon" href="index.php?pid=favicon" sizes="16x16">
+	<link rel="stylesheet" href="index.php?pid=css_bootstrapmin">
+	<link rel="stylesheet" href="index.php?pid=css_style">
+	<link rel="stylesheet" href="index.php?pid=css_bootstrap_select" />
+	<link rel="stylesheet" href="index.php?pid=css_fontawesomemin">
+	<script type="text/javascript" src="index.php?pid=js_search"></script>
+    <script type="text/javascript" src="index.php?pid=js_jquerymin"></script>
+    <script type="text/javascript" src="index.php?pid=js_bootstrap_select"></script>
+</head>
+<body id="body">
+	<!--header and top bar starts here-->
+
+		<!-- <nav class="navbar navbar-default affix-top" id="navigation" data-spy="affix" data-offset-top="20"> -->
+			<!-- <div class=" topBar affix-top" id="topbar" data-spy="affix" data-offset-top="0" > -->
+		<div class="topBar affix-top" id="topbar" >			
+			<div class="container">
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=reach_us"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="hidden-xs">&nbsp;&nbsp;IIT Bhilai</span></a></li>
+				<!--	<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=reach_us"><i class="fa fa-phone" aria-hidden="true"></i><span class="hidden-xs">&nbsp;&nbsp; +91-788-2991603 </span></a></li> -->
+					<li><a href="mailto:administration@iitbhilai.ac.in"><i class="fa fa-envelope" aria-hidden="true"></i><span class="hidden-xs">&nbsp;&nbsp; administration@iitbhilai.ac.in </span></a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right hidden-xs">
+					<li><a onclick="btnHindiCulture();" style="cursor: pointer;">हिन्दी</a></li>
+					<li><a onclick="btnEnglishCulture();" style="cursor: pointer;">English</a></li>
+					<li><a href="index.php" onclick="customizeFont('down');return false;">A<sup>-</sup></a></li>
+					<li><a href="index.php" onclick="customizeFont('default');return false;">A</a></li>
+					<li><a href="index.php" onclick="customizeFont('up');return false;">A<sup>+</sup></a></li>
+					<li><a href="https://www.facebook.com/iit.bh/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.instagram.com/iitbhilai/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href= https://twitter.com/IIT_Bhilai?lang=en-US target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+					<li>
+						<form class="navbar-form navbar-right" id="search_form" action="index.php" method="post">
+							<div class="form-group">
+								<input type="text" class="form-control" name="q" id="q" autocomplete="off" onkeydown="if(event.keyCode == 13) { SearchSite(); }" placeholder="Search">
+							</div>
+							<button type="button" class="btn btn-default" onclick="SearchSite();"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<nav class="navbar navbar-default" id="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.php">
+						<img class="img-responsive" src="index.php?pid=img_logo" alt="">
+					</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="index.php?pid=administration" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="main-nav-link">Institute									<b class="caret"></b>
+								</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=admin_aboutiitbh">About IIT Bhilai</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_academic">Academics</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_administration">Administration</a>
+								</li>
+                                <li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_department">Departments</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=distinguished_professor">Distinguished Professor</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=adjunct_professors">Adjunct Professors</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=institute_facility">Institute Facilities</a>
+								</li>								
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_research">Research and Development</a>
+								</li>								
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								<span class="main-nav-link">Recruitment									<b class="caret"></b>
+								</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=rec_faculty">Faculty</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=rec_staff">Staff</a>
+								</li>
+							</ul>
+						</li>
+<!--
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								<span class="main-nav-link">Admissions									<b class="caret"></b>
+								</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_undergraduate">BTech</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_mtech_new">MTech</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_ecell">e-Masters</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_msc">MSc</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_phd_new">PhD</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_foreign">Foreign Students</a>
+								</li>
+							</ul>
+						</li>
+-->
+<!--
+		<li class="dropdown admissions-dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     <span class="main-nav-link">Admissions                        <b class="caret"></b>
+                     </span>
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_undergraduate">BTech</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_mtech_new">MTech</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_msc">MSc</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_phd_new">PhD</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_foreign">Foreign Students</a></li>
+
+                     <li class="dropdown-submenu eprograms-submenu">
+                        <a href="#eprograms-collapse" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false" style="pointer-events: none; cursor: default;">
+   <span class="main-nav-link">e-Programs</span>
+</a>
+                        <ul class="dropdown-menu collapse" id="eprograms-collapse">
+                           <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_eMasters">e-Masters</a></li>
+                           <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_emtech">Executive M.Tech</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+-->
+              <li class="dropdown admissions-dropdown">
+                  <!-- Added admissions-dropdown class -->
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     <span class="main-nav-link">Admissions                        <b class="caret"></b>
+                     </span>
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_undergraduate">BTech</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_mtech_new">MTech</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_msc">MSc</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_phd_new">PhD</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=PDF_visvesvaraya_scheme">Post Doctoral Fellow</a></li>
+                     <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_foreign">Foreign Students</a></li>
+
+                     <li class="dropdown-submenu eprograms-submenu">
+                        <!-- Added eprograms-submenu class -->
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false" style="cursor: default;">
+                           <span class="main-nav-link">e-Programs</span>
+                        </a>
+                        <ul class="dropdown-menu collapse" id="eprograms-collapse">
+                           <!-- CORRECT: class="collapse", id="eprograms-collapse" -->
+                           <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_eMasters"><strong>e-Masters</strong></a></li>
+                           <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=adm_emtech"><strong>Executive M.Tech</strong></a></li>
+                           <li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=exe_mtech_acal">Academic Calendar</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+		
+				<li class="dropdown">
+                     <a class="dropdown-toggle">
+                     <span class="main-nav-link">Alumni                     <b class="caret"></b>
+                     </span>
+                     </a>
+                     <ul class="dropdown-menu" style="display: none">
+                        <li>
+                            <a href="https://www.iitbhilai.ac.in:443/index.php?pid=alumni_office">Alumni Office</a>
+                        </li>
+                     	<li>
+                            <a href="https://iitbhilaiaa.org/" target="_blank">Alumni Association</a>
+                        </li>
+                    </ul>
+                  </li>
+						<li class="dropdown">
+							<a class="dropdown-toggle">
+								<span class="main-nav-link">Placement									<b class="caret"></b>
+								</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=placement">Centre for Career Planning and Services</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=company_portal">Company Registration</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown" style="display: none">
+							<a class="dropdown-toggle">
+								<span class="main-nav-link">People									<b class="caret"></b>
+								</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=fac_faculty">Faculty</a>
+								</li>
+								<li style="display: none">
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=pla_student">Students</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=fac_staff">Staff</a>
+								</li>
+								<li style="display: none">
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=pla_student">Admin</a>
+								</li>
+							</ul>
+						</li>
+						<li style="display: none">
+							<a href="https://www.iitbhilai.ac.in:443/index.php?pid=aca_admission">
+								<span class="main-nav-link">Admissions</span>
+							</a>
+						</li>
+						<li style="display: none">
+							<a href="https://www.iitbhilai.ac.in:443/index.php?pid=recruit_recruitments">
+								<span class="main-nav-link">Recruitment</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle">
+								<span class="main-nav-link">Announcements									<b class="caret"></b>
+								</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=ann_tenders">Tenders</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=holiday_2026">Holiday List Year 2026</a>
+								</li>
+								<li>
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=holiday_2027">Holiday List Year 2027</a>
+								</li>
+								<li style="display: none">
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=news_seminar">Seminar</a>
+								</li>
+								<li style="display: none">
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=news_conference">Conferences</a>
+								</li>
+								<li style="display: none">
+									<a href="https://www.iitbhilai.ac.in:443/index.php?pid=news_achievements">Achievements</a>
+								</li>
+							</ul>
+						</li>
+					</ul>	
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container -->
+			</nav>
+		<!--header and top bar ends here-->
+						<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="breadcrumb">
+							<li><a href="index.php">Home</a></li>
+														<li>Courses of study</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9" id="content">
+						<body>
+	<ul style="line-height:22pt">
+		<li>Courses of study (<a href="./index.php?pid=schedule_programs" target="_blank" style="font-weight: bold;">Applicable for students admitted till 2022-23-W Semester</a>)</li>
+		<li>Courses of study (<a href="./index.php?pid=new_schedule_programs" target="_blank" style="font-weight: bold;"> Applicable for students to be admitted from 2023-24-M Semester onwards</a>)</li>
+	</ul>
+</body>			        </div>
+			        <div class="col-md-3">
+			        	<!-- generated from related link file -->
+			        	<h3 class='mytitle'>Related Links</h3>
+<ul class='mysidebar'><li class='active' ><a  href='index.php?pid=admin_aboutiitbh' target='_self'> About Us</a></li>
+<li class='active' ><a  href='index.php?pid=aca_ourcampus' target='_self'>  Our Campus</a></li>
+<li class='active' ><a  href='index.php?pid=reach_us' target='_self'> Contact Us</a></li>
+</ul>			        	<h3 class="mytitle">Navigation</h3>
+			        	<!--Tes-->
+			        	<ul class="mysidebar">
+			        		<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_academic">Academics</a></li>
+			        		<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_administration">Administration</a></li>
+			        		<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=aca_admission">Admissions</a></li>
+			        		<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_department">Departments</a></li>
+			        		<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=institute_facility">Institute Facilities</a></li>
+			        		<li><a href="https://www.iitbhilai.ac.in:443/index.php?pid=nav_research">Research and Development</a></li>			        		
+			        	</ul>
+			        </div>
+    			</div>
+			</div>
+						<!--footer section starts here-->
+			<div class="footersection">
+				<div class="topBar">
+					<div class="container">
+						<div class="row">
+							<div>
+								<table style="table-layout: auto; width: 100%;">
+									<tr style="white-space: nowrap; height: 40px;">
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="index.php?pid=FacultyAndStaff" style="color: white">Faculty and Staff</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="index.php?pid=pro_faculty" style="color: white">Prospective Faculty</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="index.php?pid=pro_staff" style="color: white">Prospective Staff</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="index.php?pid=students" style="color: white" >Student</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="index.php?pid=pro_student" style="color: white">Prospective Students</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="index.php?pid=aca_ourcampus" style="color: white">Campus</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>										
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="/index.php?pid=media" style="color: white">Media</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a href="/index.php?pid=admin_aboutiitbh" style="color: white">NIRF Report</a></h4>
+										</td>
+										<td style="width: auto">
+											&nbsp;
+										</td>
+										<td style="vertical-align: middle; width: 1%">
+											<h4><a style="color: white" href="index.php?pid=reach_us">Contact Us</a></h4>
+										</td>
+									</tr>
+								</table>          
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 ">
+							<div class="footerright">
+								<h4>Message From Director</h4>
+								<p>
+									I am pleased to extend my greetings to students and their parents as well as colleagues near and far. IIT Bhilai was established on 7 August 2016. We are located in Chhattisgarh, the rice bowl of India, in a state rich in natural resources as well as cultural memory and heritage.									 <a href="index.php?pid=admin_messagefromdirector">Read More</a>
+								</p>
+							</div>
+						</div>
+						<div class="col-md-3 ">
+							<h4>Institute</h4>
+							<ul class="footerlinks">
+							<li><a href="/index.php?pid=happening_iit">All Stories</a></li>
+							<li><a href="/index.php?pid=IITBhilai_Profile">Profile of IIT Bhilai</a></li>
+								<!-- <li><a href="/index.php?pid=institutional_responsibilities">Institutional Responsibilites</a></li> -->
+								<li><a href="/index.php?pid=iitbh_intranet">Intranet</a></li>
+								<li><a href="/index.php?pid=obc_Cell">OBC Cell</a></li>
+								<li><a href="/index.php?pid=anti_ragging">Anti-Ragging</a></li>
+								<li><a href="/index.php?pid=student_grievance">Student Grievance Redressal</a></li>
+								<li><a href="https://aimsportal.iitbhilai.ac.in/iitbhAims/" target="_blank">AIMS Portal</a></li>
+								<li><a href="/index.php?pid=rti">RTI</a></li>
+							</ul>				
+						</div>
+						<div class="col-md-2 ">
+							<h4>Information</h4>
+							<ul class="footerlinks">
+								<li><a href="/index.php?pid=info_gallery">Gallery</a></li>
+								<li><a href="/index.php?pid=info_sitemap">Sitemap</a></li>
+								<li><a href="https://polaris.iitbhilai.ac.in/" target="_blank"><b class="blinking1" style="color: red !important;"> Polaris</b></a></li>
+								<li><a href="/index.php?pid=info_directory" target="_blank">Directory</a></li>
+								<li><a href="/index.php?pid=award_committee" target="_blank">Scholarships and Awards</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h4><a href="/index.php?pid=newsletter">Newsletter</a></h4>
+							<p>Subscribe to our Newsletter and stay tuned.</p>
+							<form id="subscription_form" action="index.php" method="post">
+								<input type="text" class="form-control" placeholder="your@email.com" name="email_id"><br>
+								<button Text="Subscribe Now!" class="btn btn-large" onclick="">Subscribe Now!</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="topBar">
+				<div class="container">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="index.php">Copyright © 2017 - All Rights Reserved - IIT Bhilai</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right ">
+						<!-- <li><a href="index.php?pid=faq">FAQ</a></li> -->
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+						<!-- <li><a href="index.php?pid=reach_us">Contact Us</a></li> -->
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript" src="index.php?pid=js_bootstrapmin"></script>			
+			<script type="text/javascript" src="index.php?pid=js_effi_cryptojs"></script>
+			<script type="text/javascript" src="index.php?pid=js_effi_cryptojs_hmacsha256"></script>
+			<script type="text/javascript" src="index.php?pid=js_effi_cryptojs_encbase64"></script>
+			<script type="text/javascript" src="index.php?pid=js_effi_serviceutility"></script>
+			<script> //google custom search engine
+			    (function() {
+			    	var cx = '002503337570983062401:y-x0lh4xq70';
+			    	var gcse = document.createElement('script');
+			    	gcse.type = 'text/javascript';
+			    	gcse.async = true;
+			    	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			    	var s = document.getElementsByTagName('script')[0];
+			    	s.parentNode.insertBefore(gcse, s);
+			    })();
+			</script>
+			<script type="text/javascript">
+			$(document).ready(function () {
+					$('ul.nav li.dropdown').hover(function () {
+						$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+					}, function () {
+						$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+					});
+				});
+				
+				function btnHindiCulture()
+				{
+					var location = window.location.href;
+					var new_location = location.split('&')[0];
+					if (location.includes("culture"))
+						location = removeParam("culture", location);
+					var url = new URL(location);
+					if (url.searchParams.get("pid") != null)
+						window.location = location+"&culture=hi-IN"
+					else
+					{
+						if (window.location.href.includes("index.php"))
+							window.location = location +"?pid=home&culture=hi-IN";
+						else
+							window.location = location+"index.php?pid=home&culture=hi-IN"
+					}
+				}
+				function btnEnglishCulture()
+				{
+					var location = window.location.href;
+					var new_location = location.split('&')[0];
+					if (location.includes("culture"))
+						location = removeParam("culture", location);
+					var url = new URL(location);
+					if (url.searchParams.get("pid") != null)
+						window.location = location+"&culture=en-US"
+					else
+					{
+						if (window.location.href.includes("index.php"))
+							window.location = location+"?pid=home&culture=en-US";
+						else
+							window.location = location+"index.php?pid=home&culture=en-US"
+					}
+				}
+
+				function removeParam(key, URL)
+				{
+					var rtn = URL.split("?")[0],
+					param,
+					params_arr = [],
+					queryString = (URL.indexOf("?") !== -1) ? URL.split("?")[1] : "";
+					if (queryString !== "")
+					{
+						params_arr = queryString.split("&");
+						for (var i = params_arr.length - 1; i >= 0; i -= 1) {
+							param = params_arr[i].split("=")[0];
+							if (param === key) {
+								params_arr.splice(i, 1);
+							}
+						}
+						rtn = rtn + "?" + params_arr.join("&");
+					}
+					return rtn;
+				}
+				function customizeFont(action)
+				{
+					current_size= parseInt($('#body').css('font-size'));
+					current_box_height = parseInt($('.well').css('height'));
+					new_size = 14;
+					new_box_height = 200;				
+					if(action == 'up')
+					{
+						new_size = Math.min(current_size+2,18);
+						new_box_height = Math.min(current_box_height+50,275)
+					}
+					else if (action == 'down')
+					{
+						new_size = Math.max(current_size-2,10);
+						new_box_height = Math.max(current_box_height-50,200);
+					}
+					$('#body').css('font-size', new_size);
+					new_box_height = new_box_height+'px'
+					$('.well').css('height',new_box_height);  
+			        document.getElementById("card1").style.height = new_box_height;
+			        document.getElementById("card2").style.height = new_box_height;
+			        document.getElementById("card3").style.height = new_box_height;             
+				}
+			</script>
+	</body>
+</html>

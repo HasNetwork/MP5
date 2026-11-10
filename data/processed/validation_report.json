@@ -1,0 +1,91 @@
+{
+  "checks_run": [
+    "category_credit_mismatch",
+    "category_unknown",
+    "core_course_without_syllabus",
+    "duplicate_course_code",
+    "missing_prereq_line",
+    "missing_retrieved_on",
+    "missing_source_url",
+    "non_numeric_credits",
+    "prereq_cycle",
+    "prereq_missing_course",
+    "prereq_outside_programme",
+    "prereq_self",
+    "prereq_semester_order",
+    "resource_course_missing",
+    "resource_missing_licence",
+    "resource_missing_title",
+    "resource_unreachable",
+    "rule_anchor_not_found",
+    "rule_empty_text",
+    "semester_grid",
+    "skill_parent_missing",
+    "skill_unused",
+    "variable_credits"
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "check": "core_course_without_syllabus",
+      "record": "UGQ301",
+      "detail": "listed in CSE curriculum but no syllabus block parsed",
+      "severity": "warning"
+    },
+    {
+      "check": "category_credit_mismatch",
+      "record": "PC",
+      "detail": "sum of parsed PC course credits=49.0 vs required 52.0",
+      "severity": "warning"
+    }
+  ],
+  "waived": [
+    {
+      "check": "prereq_missing_course",
+      "record": "CSP402->IC150",
+      "detail": "prerequisite 'IC150' not found in current Courses of Study",
+      "severity": "error",
+      "waiver_reason": "Source defect: CoS-2026 lists legacy code IC150 (Applied Digital Logic Design, CoS-2023) as a prerequisite of CSP402. No current course covers it 1:1 (ECL101 Basic Electronics only partly). Kept as an unresolved edge (requires_in_catalogue=false) rather than guessing; to be confirmed with the CSE DUGC."
+    }
+  ],
+  "info": [
+    {
+      "check": "category_inferred",
+      "record": "CSL302",
+      "detail": "code garbled in two-column category table; inferred PC from semester grid",
+      "severity": "info"
+    }
+  ],
+  "legacy_alias_resolutions": [
+    {
+      "course": "CSP352",
+      "raw": "IC100",
+      "resolved_to": "CSL100"
+    },
+    {
+      "course": "CSP402",
+      "raw": "IC100",
+      "resolved_to": "CSL100"
+    },
+    {
+      "course": "CSP402",
+      "raw": "CS204",
+      "resolved_to": "CSL251"
+    },
+    {
+      "course": "CSP402",
+      "raw": "CS250",
+      "resolved_to": "CSL301"
+    },
+    {
+      "course": "CSP402",
+      "raw": "CS251",
+      "resolved_to": "CSL302"
+    },
+    {
+      "course": "CSL616",
+      "raw": "CS202",
+      "resolved_to": "CSL252"
+    }
+  ]
+}

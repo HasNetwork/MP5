@@ -1,0 +1,272 @@
+[
+  {
+    "skill_id": "SK-MATH",
+    "name": "Mathematical foundations",
+    "parent_skill": "",
+    "level": "domain",
+    "keywords": "",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-DISCRETE",
+    "name": "Discrete mathematics & logic",
+    "parent_skill": "SK-MATH",
+    "level": "core",
+    "keywords": "discrete|propositional logic|predicate|proof|induction|combinatoric|pigeonhole|recurrence relation|set theory|relations|graph theory|group theory|number theory",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-PROB",
+    "name": "Probability & statistics",
+    "parent_skill": "SK-MATH",
+    "level": "core",
+    "keywords": "probability|random variable|statistic|distribution|expectation|hypothesis|estimation|bayes",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-LINALG",
+    "name": "Linear algebra & calculus",
+    "parent_skill": "SK-MATH",
+    "level": "core",
+    "keywords": "linear algebra|matri|eigen|vector space|calculus|differential|integral",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-PROG",
+    "name": "Programming fundamentals",
+    "parent_skill": "",
+    "level": "domain",
+    "keywords": "",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-C",
+    "name": "Programming in C",
+    "parent_skill": "SK-PROG",
+    "level": "core",
+    "keywords": "programming using c|programming in c|pointers|dynamic memory allocation|macros|file handling",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-PY",
+    "name": "Programming in Python",
+    "parent_skill": "SK-PROG",
+    "level": "core",
+    "keywords": "python",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-OOP",
+    "name": "Object-oriented design",
+    "parent_skill": "SK-PROG",
+    "level": "advanced",
+    "keywords": "object oriented|object-oriented|uml|design pattern|class diagram",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-TOOLS",
+    "name": "Software tools & dev workflow",
+    "parent_skill": "SK-PROG",
+    "level": "core",
+    "keywords": "linux|unix|version control|git|debugger|gdb|docker|containeriz|scripting|shell",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-SWENG",
+    "name": "Software engineering",
+    "parent_skill": "SK-PROG",
+    "level": "advanced",
+    "keywords": "software engineering|software development|requirements|testing|software process|agile|software design",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-ALGO",
+    "name": "Algorithms & data structures",
+    "parent_skill": "",
+    "level": "domain",
+    "keywords": "",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-DS",
+    "name": "Data structures",
+    "parent_skill": "SK-ALGO",
+    "level": "core",
+    "keywords": "data structure|stack|queue|linked list|tree|heap|hash|binary search tree|avl",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-ALGDESIGN",
+    "name": "Algorithm design & analysis",
+    "parent_skill": "SK-ALGO",
+    "level": "core",
+    "keywords": "algorithm analysis|asymptot|divide and conquer|dynamic programming|greedy|sorting|shortest path|minimum spanning|graph algorithm",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-ADVALGO",
+    "name": "Advanced algorithms",
+    "parent_skill": "SK-ALGO",
+    "level": "advanced",
+    "keywords": "approximation algorithm|randomized algorithm|parallel algorithm|network flow|linear programming|parameterized|distributed algorithm|lower bound",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-THEORY",
+    "name": "Theory of computation & complexity",
+    "parent_skill": "",
+    "level": "core",
+    "keywords": "automat|regular language|context free|context-free|turing machine|decidab|np-complete|complexity|computab|pushdown",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-SYS",
+    "name": "Computer systems",
+    "parent_skill": "",
+    "level": "domain",
+    "keywords": "",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-ARCH",
+    "name": "Computer organisation & architecture",
+    "parent_skill": "SK-SYS",
+    "level": "core",
+    "keywords": "computer organization|computer architecture|alu|pipelin|cache|instruction set|assembly|memory organization|processor",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-OS",
+    "name": "Operating systems",
+    "parent_skill": "SK-SYS",
+    "level": "core",
+    "keywords": "operating system|process|thread|scheduling|deadlock|paging|virtual memory|synchroniz|file system",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-COMPILER",
+    "name": "Compilers & programming languages",
+    "parent_skill": "SK-SYS",
+    "level": "core",
+    "keywords": "compiler|lexical|parsing|parser|syntax|code generation|type checking|intermediate code|programming language|semantics",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-NET",
+    "name": "Computer networks",
+    "parent_skill": "SK-SYS",
+    "level": "core",
+    "keywords": "network|tcp|routing|protocol|internet|congestion|wireless|transport layer|sdn",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-DIST",
+    "name": "Distributed & parallel computing",
+    "parent_skill": "SK-SYS",
+    "level": "advanced",
+    "keywords": "distributed|parallel|concurren|consensus|cloud|big data|mapreduce|high performance",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-DB",
+    "name": "Databases",
+    "parent_skill": "",
+    "level": "core",
+    "keywords": "database|sql|relational|normal form|transaction|query|indexing|nosql|b-tree|er model",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-AIML",
+    "name": "AI & machine learning",
+    "parent_skill": "",
+    "level": "domain",
+    "keywords": "",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-AI",
+    "name": "Artificial intelligence (search & reasoning)",
+    "parent_skill": "SK-AIML",
+    "level": "core",
+    "keywords": "artificial intelligence|search|heuristic|knowledge representation|planning|agent|constraint satisfaction|game playing",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-ML",
+    "name": "Machine learning",
+    "parent_skill": "SK-AIML",
+    "level": "core",
+    "keywords": "machine learning|regression|classification|neural network|deep learning|supervised|unsupervised|clustering|learning",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-SEC",
+    "name": "Security & cryptography",
+    "parent_skill": "",
+    "level": "domain",
+    "keywords": "",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-CRYPTO",
+    "name": "Cryptography",
+    "parent_skill": "SK-SEC",
+    "level": "advanced",
+    "keywords": "cryptograph|cipher|encryption|hash function|signature|cryptanalysis|blockchain|key exchange",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-SYSSEC",
+    "name": "Systems & network security",
+    "parent_skill": "SK-SEC",
+    "level": "advanced",
+    "keywords": "security|attack|privacy|malware|adversarial|authentication|access control",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-NETSCI",
+    "name": "Graphs & network science",
+    "parent_skill": "SK-ALGO",
+    "level": "advanced",
+    "keywords": "social network|network science|complex network|centrality|community detection|random graph",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  },
+  {
+    "skill_id": "SK-QC",
+    "name": "Quantum computing",
+    "parent_skill": "",
+    "level": "advanced",
+    "keywords": "quantum",
+    "source_type": "manual",
+    "source_url": "data/manual/skills.csv"
+  }
+]

@@ -1,0 +1,625 @@
+[
+  {
+    "resource_id": "RES-NPTEL-106104128",
+    "skill_id": "SK-C",
+    "level": "intro",
+    "evidence": "file handling; pointers; programming in c",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105171",
+    "skill_id": "SK-C",
+    "level": "intro",
+    "evidence": "programming in c",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105171",
+    "skill_id": "SK-COMPILER",
+    "level": "intro",
+    "evidence": "compiler; programming language",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106127",
+    "skill_id": "SK-C",
+    "level": "intro",
+    "evidence": "dynamic memory allocation; pointers",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106127",
+    "skill_id": "SK-DS",
+    "level": "intro",
+    "evidence": "binary search tree; data structure; hash; heap; linked list; queue; stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106127",
+    "skill_id": "SK-ALGDESIGN",
+    "level": "intro",
+    "evidence": "dynamic programming; greedy; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106145",
+    "skill_id": "SK-PY",
+    "level": "intro",
+    "evidence": "python",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106145",
+    "skill_id": "SK-DS",
+    "level": "intro",
+    "evidence": "data structure; heap; queue; stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102064",
+    "skill_id": "SK-DS",
+    "level": "intro",
+    "evidence": "avl; data structure; hash; heap; linked list; queue; stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102064",
+    "skill_id": "SK-ALGDESIGN",
+    "level": "intro",
+    "evidence": "minimum spanning; shortest path; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106103069",
+    "skill_id": "SK-DS",
+    "level": "intro",
+    "evidence": "avl; data structure; hash; heap; linked list; queue; stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106103069",
+    "skill_id": "SK-ALGDESIGN",
+    "level": "intro",
+    "evidence": "minimum spanning; shortest path; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106183",
+    "skill_id": "SK-DISCRETE",
+    "level": "intro",
+    "evidence": "discrete; group theory; induction; proof; recurrence relation; relations; set theory",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106108227",
+    "skill_id": "SK-DISCRETE",
+    "level": "intro",
+    "evidence": "discrete; graph theory; group theory; induction; predicate; proof; relations",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106131",
+    "skill_id": "SK-DS",
+    "level": "intro",
+    "evidence": "binary search tree; heap; queue; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106131",
+    "skill_id": "SK-ALGDESIGN",
+    "level": "intro",
+    "evidence": "dynamic programming; shortest path; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106131",
+    "skill_id": "SK-ADVALGO",
+    "level": "intro",
+    "evidence": "linear programming; network flow",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106131",
+    "skill_id": "SK-AI",
+    "level": "intro",
+    "evidence": "planning; search",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106101060",
+    "skill_id": "SK-ALGDESIGN",
+    "level": "intro",
+    "evidence": "asymptot; divide and conquer; dynamic programming; greedy; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106101060",
+    "skill_id": "SK-ADVALGO",
+    "level": "intro",
+    "evidence": "approximation algorithm; lower bound",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106049",
+    "skill_id": "SK-THEORY",
+    "level": "intro",
+    "evidence": "automat; complexity; decidab; pushdown; turing machine",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105163",
+    "skill_id": "SK-ARCH",
+    "level": "intro",
+    "evidence": "cache; computer architecture; instruction set; pipelin; processor",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105163",
+    "skill_id": "SK-OS",
+    "level": "intro",
+    "evidence": "process; scheduling",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106144",
+    "skill_id": "SK-OS",
+    "level": "working",
+    "evidence": "deadlock; operating system; process; scheduling; synchroniz; thread; virtual memory",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106144",
+    "skill_id": "SK-SYSSEC",
+    "level": "working",
+    "evidence": "attack; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106108113",
+    "skill_id": "SK-THEORY",
+    "level": "working",
+    "evidence": "automat; context-free; pushdown",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106108113",
+    "skill_id": "SK-COMPILER",
+    "level": "working",
+    "evidence": "code generation; compiler; intermediate code; lexical; parsing; syntax",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105175",
+    "skill_id": "SK-DB",
+    "level": "working",
+    "evidence": "database; indexing; query; relational; sql; transaction",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105183",
+    "skill_id": "SK-NET",
+    "level": "working",
+    "evidence": "congestion; internet; network; protocol; routing; tcp; transport layer; wireless",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106126",
+    "skill_id": "SK-DS",
+    "level": "working",
+    "evidence": "stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106126",
+    "skill_id": "SK-AI",
+    "level": "working",
+    "evidence": "artificial intelligence; constraint satisfaction; game playing; heuristic; planning; search",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102220",
+    "skill_id": "SK-PROB",
+    "level": "working",
+    "evidence": "bayes; expectation; probability",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102220",
+    "skill_id": "SK-COMPILER",
+    "level": "working",
+    "evidence": "semantics; syntax",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102220",
+    "skill_id": "SK-AI",
+    "level": "working",
+    "evidence": "agent; artificial intelligence; constraint satisfaction; heuristic; knowledge representation; search",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102220",
+    "skill_id": "SK-ML",
+    "level": "working",
+    "evidence": "deep learning; learning; neural network",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102220",
+    "skill_id": "SK-SYSSEC",
+    "level": "working",
+    "evidence": "adversarial; privacy",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105182",
+    "skill_id": "SK-OOP",
+    "level": "working",
+    "evidence": "class diagram; object-oriented",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105182",
+    "skill_id": "SK-SWENG",
+    "level": "working",
+    "evidence": "agile; requirements; software engineering; testing",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105224",
+    "skill_id": "SK-OOP",
+    "level": "working",
+    "evidence": "class diagram; design pattern; object oriented; uml",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102067",
+    "skill_id": "SK-COMPILER",
+    "level": "working",
+    "evidence": "programming language; semantics; syntax; type checking",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105162",
+    "skill_id": "SK-DISCRETE",
+    "level": "advanced",
+    "evidence": "discrete; number theory",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105162",
+    "skill_id": "SK-NET",
+    "level": "advanced",
+    "evidence": "network; protocol",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105162",
+    "skill_id": "SK-CRYPTO",
+    "level": "advanced",
+    "evidence": "cipher; cryptanalysis; cryptograph; encryption; hash function; key exchange; signature",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105162",
+    "skill_id": "SK-SYSSEC",
+    "level": "advanced",
+    "evidence": "attack; authentication; privacy; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105184",
+    "skill_id": "SK-DIST",
+    "level": "advanced",
+    "evidence": "big data; cloud; consensus; distributed",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105184",
+    "skill_id": "SK-CRYPTO",
+    "level": "advanced",
+    "evidence": "blockchain",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105184",
+    "skill_id": "SK-SYSSEC",
+    "level": "advanced",
+    "evidence": "access control; privacy; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106169",
+    "skill_id": "SK-DISCRETE",
+    "level": "advanced",
+    "evidence": "proof; relations",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106169",
+    "skill_id": "SK-NET",
+    "level": "advanced",
+    "evidence": "network",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106169",
+    "skill_id": "SK-NETSCI",
+    "level": "advanced",
+    "evidence": "community detection; complex network; random graph; social network",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106104189",
+    "skill_id": "SK-DS",
+    "level": "advanced",
+    "evidence": "stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106104189",
+    "skill_id": "SK-DIST",
+    "level": "advanced",
+    "evidence": "big data; distributed; mapreduce; parallel",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106104189",
+    "skill_id": "SK-ML",
+    "level": "advanced",
+    "evidence": "learning; machine learning",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106232",
+    "skill_id": "SK-QC",
+    "level": "advanced",
+    "evidence": "quantum",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-111105090",
+    "skill_id": "SK-PROB",
+    "level": "working",
+    "evidence": "distribution; estimation; probability; random variable; statistic",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106139",
+    "skill_id": "SK-PROB",
+    "level": "advanced",
+    "evidence": "bayes; estimation; expectation; statistic",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106139",
+    "skill_id": "SK-DS",
+    "level": "advanced",
+    "evidence": "stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106139",
+    "skill_id": "SK-ML",
+    "level": "advanced",
+    "evidence": "classification; clustering; learning; machine learning; neural network; regression; supervised; unsupervised",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105152",
+    "skill_id": "SK-PROB",
+    "level": "advanced",
+    "evidence": "bayes; hypothesis",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105152",
+    "skill_id": "SK-ML",
+    "level": "advanced",
+    "evidence": "clustering; learning; machine learning; neural network; regression",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106179",
+    "skill_id": "SK-PROB",
+    "level": "working",
+    "evidence": "expectation; probability; random variable; statistic",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106179",
+    "skill_id": "SK-LINALG",
+    "level": "working",
+    "evidence": "eigen; linear algebra; matri",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106179",
+    "skill_id": "SK-ML",
+    "level": "working",
+    "evidence": "classification; clustering; learning; regression",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-0001",
+    "skill_id": "SK-PY",
+    "level": "intro",
+    "evidence": "python",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-046J",
+    "skill_id": "SK-ALGDESIGN",
+    "level": "intro",
+    "evidence": "dynamic programming; greedy",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-042J",
+    "skill_id": "SK-DISCRETE",
+    "level": "intro",
+    "evidence": "discrete; proof; relations",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-404J",
+    "skill_id": "SK-THEORY",
+    "level": "intro",
+    "evidence": "complexity; computab; context-free; decidab",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-004",
+    "skill_id": "SK-ARCH",
+    "level": "intro",
+    "evidence": "instruction set; pipelin",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-033",
+    "skill_id": "SK-SYSSEC",
+    "level": "working",
+    "evidence": "privacy; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-035",
+    "skill_id": "SK-COMPILER",
+    "level": "working",
+    "evidence": "compiler; programming language",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-830",
+    "skill_id": "SK-DB",
+    "level": "working",
+    "evidence": "database; query; relational; transaction",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-034",
+    "skill_id": "SK-AI",
+    "level": "working",
+    "evidence": "artificial intelligence; knowledge representation",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-036",
+    "skill_id": "SK-ML",
+    "level": "advanced",
+    "evidence": "learning; machine learning; supervised",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-858",
+    "skill_id": "SK-NET",
+    "level": "advanced",
+    "evidence": "network; protocol",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-858",
+    "skill_id": "SK-SYSSEC",
+    "level": "advanced",
+    "evidence": "attack; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-875",
+    "skill_id": "SK-CRYPTO",
+    "level": "advanced",
+    "evidence": "cryptanalysis; cryptograph; encryption; signature",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-851",
+    "skill_id": "SK-DS",
+    "level": "advanced",
+    "evidence": "data structure",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-856J",
+    "skill_id": "SK-DS",
+    "level": "advanced",
+    "evidence": "data structure; hash; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-856J",
+    "skill_id": "SK-ALGDESIGN",
+    "level": "advanced",
+    "evidence": "graph algorithm; minimum spanning; shortest path",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-856J",
+    "skill_id": "SK-ADVALGO",
+    "level": "advanced",
+    "evidence": "linear programming; parallel algorithm; randomized algorithm",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-172",
+    "skill_id": "SK-DIST",
+    "level": "advanced",
+    "evidence": "high performance; parallel",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-005",
+    "skill_id": "SK-OOP",
+    "level": "intro",
+    "evidence": "design pattern; object-oriented",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-005",
+    "skill_id": "SK-SWENG",
+    "level": "intro",
+    "evidence": "software development; testing",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-06",
+    "skill_id": "SK-LINALG",
+    "level": "intro",
+    "evidence": "eigen; linear algebra; matri; vector space",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-05",
+    "skill_id": "SK-PROB",
+    "level": "working",
+    "evidence": "bayes; distribution; hypothesis; probability; random variable; statistic",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-05",
+    "skill_id": "SK-ML",
+    "level": "working",
+    "evidence": "learning; regression",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-845",
+    "skill_id": "SK-THEORY",
+    "level": "advanced",
+    "evidence": "complexity",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-845",
+    "skill_id": "SK-QC",
+    "level": "advanced",
+    "evidence": "quantum",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-041SC",
+    "skill_id": "SK-PROB",
+    "level": "working",
+    "evidence": "probability; statistic",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  }
+]

@@ -1,0 +1,555 @@
+[
+  {
+    "course_id": "CSL100",
+    "skill_id": "SK-C",
+    "depth": "intro",
+    "evidence": "dynamic memory allocation; file handling; macros; pointers; programming using c",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL201",
+    "skill_id": "SK-DISCRETE",
+    "depth": "intro",
+    "evidence": "combinatoric; discrete; graph theory; group theory; induction; number theory; pigeonhole; predicate; proof; propositional logic; recurrence relation; relations",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL202",
+    "skill_id": "SK-DS",
+    "depth": "intro",
+    "evidence": "binary search tree; data structure; heap; queue; stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSP203",
+    "skill_id": "SK-TOOLS",
+    "depth": "intro",
+    "evidence": "containeriz; debugger; docker; gdb; linux; scripting; version control",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL251",
+    "skill_id": "SK-ARCH",
+    "depth": "intro",
+    "evidence": "alu; assembly; cache; computer organization; memory organization; pipelin; processor",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL251",
+    "skill_id": "SK-OS",
+    "depth": "intro",
+    "evidence": "process; virtual memory",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL252",
+    "skill_id": "SK-ALGDESIGN",
+    "depth": "intro",
+    "evidence": "algorithm analysis; asymptot; divide and conquer; dynamic programming; graph algorithm; greedy; shortest path; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL253",
+    "skill_id": "SK-THEORY",
+    "depth": "intro",
+    "evidence": "automat; complexity; context free; context-free; np-complete; pushdown; turing machine",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL301",
+    "skill_id": "SK-OS",
+    "depth": "working",
+    "evidence": "file system; operating system; paging; process; scheduling; thread",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL301",
+    "skill_id": "SK-DIST",
+    "depth": "working",
+    "evidence": "concurren; distributed",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL301",
+    "skill_id": "SK-SYSSEC",
+    "depth": "working",
+    "evidence": "access control; authentication; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL302",
+    "skill_id": "SK-COMPILER",
+    "depth": "working",
+    "evidence": "code generation; compiler; intermediate code; lexical; syntax; type checking",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL303",
+    "skill_id": "SK-DB",
+    "depth": "working",
+    "evidence": "database; normal form; relational; sql",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL304",
+    "skill_id": "SK-AI",
+    "depth": "working",
+    "evidence": "artificial intelligence; constraint satisfaction; game playing; planning; search",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL351",
+    "skill_id": "SK-NET",
+    "depth": "working",
+    "evidence": "congestion; network; protocol; routing; sdn; tcp; transport layer",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL351",
+    "skill_id": "SK-CRYPTO",
+    "depth": "working",
+    "evidence": "cryptograph; signature",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSP352",
+    "skill_id": "SK-SWENG",
+    "depth": "working",
+    "evidence": "software development; software engineering; testing",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSP352",
+    "skill_id": "SK-AI",
+    "depth": "working",
+    "evidence": "agent; planning; search",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSP402",
+    "skill_id": "SK-DS",
+    "depth": "working",
+    "evidence": "heap; stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSP402",
+    "skill_id": "SK-ARCH",
+    "depth": "working",
+    "evidence": "alu; assembly; computer architecture",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSP402",
+    "skill_id": "SK-OS",
+    "depth": "working",
+    "evidence": "operating system; process",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSP402",
+    "skill_id": "SK-COMPILER",
+    "depth": "working",
+    "evidence": "code generation; compiler; lexical; parser; syntax",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL502",
+    "skill_id": "SK-DISCRETE",
+    "depth": "advanced",
+    "evidence": "combinatoric; graph theory; number theory; proof",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL502",
+    "skill_id": "SK-THEORY",
+    "depth": "advanced",
+    "evidence": "complexity; computab; context free; regular language; turing machine",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL503",
+    "skill_id": "SK-TOOLS",
+    "depth": "advanced",
+    "evidence": "linux; shell",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL503",
+    "skill_id": "SK-ARCH",
+    "depth": "advanced",
+    "evidence": "cache; instruction set; pipelin; processor",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL503",
+    "skill_id": "SK-OS",
+    "depth": "advanced",
+    "evidence": "operating system; process; scheduling; thread",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL504",
+    "skill_id": "SK-DISCRETE",
+    "depth": "advanced",
+    "evidence": "graph theory",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL505",
+    "skill_id": "SK-CRYPTO",
+    "depth": "advanced",
+    "evidence": "cipher; cryptanalysis; cryptograph; encryption; hash function",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL505",
+    "skill_id": "SK-SYSSEC",
+    "depth": "advanced",
+    "evidence": "attack; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL510",
+    "skill_id": "SK-ALGDESIGN",
+    "depth": "advanced",
+    "evidence": "dynamic programming; greedy",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL510",
+    "skill_id": "SK-ADVALGO",
+    "depth": "advanced",
+    "evidence": "approximation algorithm; linear programming",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL512",
+    "skill_id": "SK-ALGDESIGN",
+    "depth": "advanced",
+    "evidence": "divide and conquer; graph algorithm; shortest path; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL512",
+    "skill_id": "SK-ADVALGO",
+    "depth": "advanced",
+    "evidence": "parallel algorithm",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL512",
+    "skill_id": "SK-DIST",
+    "depth": "advanced",
+    "evidence": "parallel",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL515",
+    "skill_id": "SK-ADVALGO",
+    "depth": "advanced",
+    "evidence": "randomized algorithm",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL516",
+    "skill_id": "SK-OS",
+    "depth": "advanced",
+    "evidence": "process; synchroniz; thread",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL516",
+    "skill_id": "SK-DIST",
+    "depth": "advanced",
+    "evidence": "parallel",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL517",
+    "skill_id": "SK-NET",
+    "depth": "advanced",
+    "evidence": "network; protocol; routing; sdn; wireless",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL518",
+    "skill_id": "SK-ALGDESIGN",
+    "depth": "advanced",
+    "evidence": "graph algorithm; shortest path",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL518",
+    "skill_id": "SK-ADVALGO",
+    "depth": "advanced",
+    "evidence": "distributed algorithm; lower bound",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL518",
+    "skill_id": "SK-DIST",
+    "depth": "advanced",
+    "evidence": "consensus; distributed",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL519",
+    "skill_id": "SK-ARCH",
+    "depth": "advanced",
+    "evidence": "cache; computer architecture; pipelin; processor",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL519",
+    "skill_id": "SK-DIST",
+    "depth": "advanced",
+    "evidence": "distributed; high performance; parallel",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL559",
+    "skill_id": "SK-TOOLS",
+    "depth": "advanced",
+    "evidence": "git; unix",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL559",
+    "skill_id": "SK-OS",
+    "depth": "advanced",
+    "evidence": "file system; operating system; scheduling",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL559",
+    "skill_id": "SK-NET",
+    "depth": "advanced",
+    "evidence": "network; tcp",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL559",
+    "skill_id": "SK-SYSSEC",
+    "depth": "advanced",
+    "evidence": "access control; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL601",
+    "skill_id": "SK-NET",
+    "depth": "advanced",
+    "evidence": "network",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL601",
+    "skill_id": "SK-NETSCI",
+    "depth": "advanced",
+    "evidence": "community detection; network science",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL602",
+    "skill_id": "SK-CRYPTO",
+    "depth": "advanced",
+    "evidence": "cipher; cryptanalysis; cryptograph",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL603",
+    "skill_id": "SK-NET",
+    "depth": "advanced",
+    "evidence": "network; protocol",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL603",
+    "skill_id": "SK-CRYPTO",
+    "depth": "advanced",
+    "evidence": "blockchain; cryptograph; hash function; signature",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL604",
+    "skill_id": "SK-OS",
+    "depth": "advanced",
+    "evidence": "process; scheduling",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL604",
+    "skill_id": "SK-NET",
+    "depth": "advanced",
+    "evidence": "network; protocol; wireless",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL605",
+    "skill_id": "SK-NET",
+    "depth": "advanced",
+    "evidence": "congestion; network; protocol; routing; sdn; tcp; transport layer; wireless",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL605",
+    "skill_id": "SK-CRYPTO",
+    "depth": "advanced",
+    "evidence": "cipher; cryptograph; hash function; signature",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL605",
+    "skill_id": "SK-SYSSEC",
+    "depth": "advanced",
+    "evidence": "access control; attack; malware; privacy; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL606",
+    "skill_id": "SK-DS",
+    "depth": "advanced",
+    "evidence": "binary search tree; data structure; heap; linked list; queue; stack; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL606",
+    "skill_id": "SK-ALGDESIGN",
+    "depth": "advanced",
+    "evidence": "dynamic programming; graph algorithm; greedy; sorting",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL606",
+    "skill_id": "SK-ADVALGO",
+    "depth": "advanced",
+    "evidence": "approximation algorithm; linear programming; randomized algorithm",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL607",
+    "skill_id": "SK-ML",
+    "depth": "advanced",
+    "evidence": "learning; machine learning",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL607",
+    "skill_id": "SK-SYSSEC",
+    "depth": "advanced",
+    "evidence": "adversarial; attack; privacy; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL608",
+    "skill_id": "SK-ALGDESIGN",
+    "depth": "advanced",
+    "evidence": "graph algorithm",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL610",
+    "skill_id": "SK-DS",
+    "depth": "advanced",
+    "evidence": "data structure; tree",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL610",
+    "skill_id": "SK-ADVALGO",
+    "depth": "advanced",
+    "evidence": "lower bound",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL610",
+    "skill_id": "SK-DIST",
+    "depth": "advanced",
+    "evidence": "distributed; parallel",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL612",
+    "skill_id": "SK-THEORY",
+    "depth": "advanced",
+    "evidence": "complexity; decidab; turing machine",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL613",
+    "skill_id": "SK-NET",
+    "depth": "advanced",
+    "evidence": "network",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL613",
+    "skill_id": "SK-NETSCI",
+    "depth": "advanced",
+    "evidence": "community detection; social network",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL614",
+    "skill_id": "SK-CRYPTO",
+    "depth": "advanced",
+    "evidence": "cryptanalysis; cryptograph; hash function",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL614",
+    "skill_id": "SK-SYSSEC",
+    "depth": "advanced",
+    "evidence": "adversarial; attack; security",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL614",
+    "skill_id": "SK-QC",
+    "depth": "advanced",
+    "evidence": "quantum",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL616",
+    "skill_id": "SK-ADVALGO",
+    "depth": "advanced",
+    "evidence": "linear programming; lower bound; parameterized; randomized algorithm",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "CSL622",
+    "skill_id": "SK-QC",
+    "depth": "advanced",
+    "evidence": "quantum",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "EEL101",
+    "skill_id": "SK-DISCRETE",
+    "depth": "intro",
+    "evidence": "induction; relations",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "MAL100",
+    "skill_id": "SK-LINALG",
+    "depth": "intro",
+    "evidence": "calculus; integral",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "MAL101",
+    "skill_id": "SK-LINALG",
+    "depth": "intro",
+    "evidence": "differential; eigen; matri; vector space",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  },
+  {
+    "course_id": "MAL403",
+    "skill_id": "SK-PROB",
+    "depth": "working",
+    "evidence": "bayes; distribution; estimation; expectation; hypothesis; probability; random variable; statistic",
+    "method": "keyword match on title/syllabus (data/manual/skills.csv)"
+  }
+]

@@ -1,0 +1,6 @@
+legacy_code,current_code,basis
+IC100,CSL100,Same title 'Introduction to Programming' in CoS-2023 (IC100) and CoS-2026 (CSL100)
+CS204,CSL251,Same title 'Computer Organization & Architecture' in CoS-2023 (CS204) and CoS-2026 (CSL251)
+CS250,CSL301,Same title 'Operating Systems' in CoS-2023 (CS250) and CoS-2026 (CSL301)
+CS251,CSL302,'Introduction to Language Processing' (CoS-2023 CS251) has compiler-construction syllabus matching 'Compiler Design' (CoS-2026 CSL302)
+CS202,CSL252,'Algorithms I' (CoS-2023 CS202) syllabus (analysis/recurrences/sorting/DP/greedy/graph algorithms/NP-completeness) matches 'Design and Analysis of Algorithms' (CoS-2026 CSL252)

@@ -1,0 +1,31 @@
+skill_id,name,parent_skill,level,keywords,source_type,source_url
+SK-MATH,Mathematical foundations,,domain,,manual,data/manual/skills.csv
+SK-DISCRETE,Discrete mathematics & logic,SK-MATH,core,discrete|propositional logic|predicate|proof|induction|combinatoric|pigeonhole|recurrence relation|set theory|relations|graph theory|group theory|number theory,manual,data/manual/skills.csv
+SK-PROB,Probability & statistics,SK-MATH,core,probability|random variable|statistic|distribution|expectation|hypothesis|estimation|bayes,manual,data/manual/skills.csv
+SK-LINALG,Linear algebra & calculus,SK-MATH,core,linear algebra|matri|eigen|vector space|calculus|differential|integral,manual,data/manual/skills.csv
+SK-PROG,Programming fundamentals,,domain,,manual,data/manual/skills.csv
+SK-C,Programming in C,SK-PROG,core,programming using c|programming in c|pointers|dynamic memory allocation|macros|file handling,manual,data/manual/skills.csv
+SK-PY,Programming in Python,SK-PROG,core,python,manual,data/manual/skills.csv
+SK-OOP,Object-oriented design,SK-PROG,advanced,object oriented|object-oriented|uml|design pattern|class diagram,manual,data/manual/skills.csv
+SK-TOOLS,Software tools & dev workflow,SK-PROG,core,linux|unix|version control|git|debugger|gdb|docker|containeriz|scripting|shell,manual,data/manual/skills.csv
+SK-SWENG,Software engineering,SK-PROG,advanced,software engineering|software development|requirements|testing|software process|agile|software design,manual,data/manual/skills.csv
+SK-ALGO,Algorithms & data structures,,domain,,manual,data/manual/skills.csv
+SK-DS,Data structures,SK-ALGO,core,data structure|stack|queue|linked list|tree|heap|hash|binary search tree|avl,manual,data/manual/skills.csv
+SK-ALGDESIGN,Algorithm design & analysis,SK-ALGO,core,algorithm analysis|asymptot|divide and conquer|dynamic programming|greedy|sorting|shortest path|minimum spanning|graph algorithm,manual,data/manual/skills.csv
+SK-ADVALGO,Advanced algorithms,SK-ALGO,advanced,approximation algorithm|randomized algorithm|parallel algorithm|network flow|linear programming|parameterized|distributed algorithm|lower bound,manual,data/manual/skills.csv
+SK-THEORY,Theory of computation & complexity,,core,automat|regular language|context free|context-free|turing machine|decidab|np-complete|complexity|computab|pushdown,manual,data/manual/skills.csv
+SK-SYS,Computer systems,,domain,,manual,data/manual/skills.csv
+SK-ARCH,Computer organisation & architecture,SK-SYS,core,computer organization|computer architecture|alu|pipelin|cache|instruction set|assembly|memory organization|processor,manual,data/manual/skills.csv
+SK-OS,Operating systems,SK-SYS,core,operating system|process|thread|scheduling|deadlock|paging|virtual memory|synchroniz|file system,manual,data/manual/skills.csv
+SK-COMPILER,Compilers & programming languages,SK-SYS,core,compiler|lexical|parsing|parser|syntax|code generation|type checking|intermediate code|programming language|semantics,manual,data/manual/skills.csv
+SK-NET,Computer networks,SK-SYS,core,network|tcp|routing|protocol|internet|congestion|wireless|transport layer|sdn,manual,data/manual/skills.csv
+SK-DIST,Distributed & parallel computing,SK-SYS,advanced,distributed|parallel|concurren|consensus|cloud|big data|mapreduce|high performance,manual,data/manual/skills.csv
+SK-DB,Databases,,core,database|sql|relational|normal form|transaction|query|indexing|nosql|b-tree|er model,manual,data/manual/skills.csv
+SK-AIML,AI & machine learning,,domain,,manual,data/manual/skills.csv
+SK-AI,Artificial intelligence (search & reasoning),SK-AIML,core,artificial intelligence|search|heuristic|knowledge representation|planning|agent|constraint satisfaction|game playing,manual,data/manual/skills.csv
+SK-ML,Machine learning,SK-AIML,core,machine learning|regression|classification|neural network|deep learning|supervised|unsupervised|clustering|learning,manual,data/manual/skills.csv
+SK-SEC,Security & cryptography,,domain,,manual,data/manual/skills.csv
+SK-CRYPTO,Cryptography,SK-SEC,advanced,cryptograph|cipher|encryption|hash function|signature|cryptanalysis|blockchain|key exchange,manual,data/manual/skills.csv
+SK-SYSSEC,Systems & network security,SK-SEC,advanced,security|attack|privacy|malware|adversarial|authentication|access control,manual,data/manual/skills.csv
+SK-NETSCI,Graphs & network science,SK-ALGO,advanced,social network|network science|complex network|centrality|community detection|random graph,manual,data/manual/skills.csv
+SK-QC,Quantum computing,,advanced,quantum,manual,data/manual/skills.csv

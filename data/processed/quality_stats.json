@@ -1,0 +1,114 @@
+{
+  "generated_on": "2026-11-10",
+  "counts": {
+    "courses": 59,
+    "prerequisites": 30,
+    "rules": 38,
+    "resources": 53,
+    "resource_courses": 68,
+    "skills": 30,
+    "course_skills": 79,
+    "resource_skills": 89,
+    "modules": 2575,
+    "programme_requirements": 7,
+    "semester_slots": 10,
+    "chunks": 338
+  },
+  "chunks_by_type": {
+    "course_overview": 59,
+    "course_syllabus": 65,
+    "rule": 38,
+    "resource_overview": 53,
+    "resource_lessons": 123
+  },
+  "chunk_words": {
+    "min": 9,
+    "max": 225,
+    "mean": 74.6
+  },
+  "courses_by_type": {
+    "core": 29,
+    "elective": 30
+  },
+  "courses_by_category": {
+    "IC": 14,
+    "PC": 13,
+    "PE": 30,
+    "NC": 1,
+    "PL": 1
+  },
+  "rules_by_category": {
+    "credit_limit": 6,
+    "graduation_requirement": 2,
+    "credit_validity": 1,
+    "prerequisite": 5,
+    "course_level": 1,
+    "scheduling": 1,
+    "online_credit": 10,
+    "minor_honours": 4,
+    "cgpa": 5,
+    "course_category": 2,
+    "non_graded": 1
+  },
+  "resources_by_provider": {
+    "NPTEL": 30,
+    "MIT OpenCourseWare": 22,
+    "MIT CSAIL (The Missing Semester)": 1
+  },
+  "fill_rate_percent": {
+    "courses": {
+      "code": 100.0,
+      "title": 100.0,
+      "department": 100.0,
+      "credits": 100.0,
+      "semesters_offered": 100.0,
+      "course_type": 100.0,
+      "mode": 100.0,
+      "syllabus": 100.0,
+      "prereq_text": 100.0,
+      "overlap_text": 100.0,
+      "source_url": 100.0,
+      "retrieved_on": 100.0
+    },
+    "rules": {
+      "rule_id": 100.0,
+      "category": 100.0,
+      "text": 100.0,
+      "numeric_limit": 65.8,
+      "unit": 65.8,
+      "applies_to": 100.0,
+      "page": 100.0,
+      "source_url": 100.0
+    },
+    "resources": {
+      "title": 100.0,
+      "provider": 100.0,
+      "licence": 100.0,
+      "format": 100.0,
+      "duration_hours_est": 56.6,
+      "instructor": 56.6,
+      "description": 43.4,
+      "maps_to_courses": 100.0,
+      "source_url": 100.0,
+      "retrieved_on": 100.0
+    },
+    "prerequisites": {
+      "course_code": 100.0,
+      "requires_code": 100.0,
+      "kind": 100.0,
+      "group_logic": 100.0
+    },
+    "skills": {
+      "skill_id": 100.0,
+      "name": 100.0,
+      "parent_skill": 70.0,
+      "level": 100.0
+    }
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 2,
+    "waived": 1,
+    "info": 1
+  }
+}

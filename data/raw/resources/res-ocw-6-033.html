@@ -1,0 +1,7577 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.142.0">
+  <meta charset="utf-8">
+  
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMQZ25T');</script>
+    
+  
+  <style>
+   
+  .search-variant {
+    display: contents;
+  }
+
+   
+  html:not([data-search="learn"]) [data-search-variant="learn"],
+  html[data-search="learn"] [data-search-variant="ocw"] {
+    display: none !important;
+  }
+
+   
+  html[data-search-pending] .course-info-topics {
+    visibility: hidden;
+  }
+</style>
+<script>
+  
+  
+  
+  document.documentElement.setAttribute("data-search-pending", "")
+  setTimeout(function () {
+    document.documentElement.removeAttribute("data-search-pending")
+  }, 1500)
+</script>
+
+
+    
+    <link href="/static_shared/css/course_v2.9481a.css" rel="stylesheet">
+    
+
+    
+    <link href="/static_shared/css/common.9481a.css" rel="stylesheet">
+    
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="This class covers topics on the engineering of computer software and hardware systems. Topics include techniques for controlling complexity; strong modularity using client-server design, operating systems; performance, networks; naming; security and privacy; fault-tolerant systems, atomicity and coordination of concurrent activities, and recovery; impact of computer systems on society.">
+  <meta name="keywords" content="opencourseware,MIT OCW,courseware,MIT opencourseware,Free Courses,class notes,class syllabus,class materials,tutorials,online courses,MIT courses">
+  
+  <meta property="og:site_name" content="MIT OpenCourseWare">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/" />
+  <meta property="og:title" content="Computer System Engineering | Electrical Engineering and Computer Science | MIT OpenCourseWare" />
+  <meta property="og:description" content="This class covers topics on the engineering of computer software and hardware systems. Topics include techniques for controlling complexity; strong modularity using client-server design, operating systems; performance, networks; naming; security and privacy; fault-tolerant systems, atomicity and coordination of concurrent activities, and recovery; impact of computer systems on society." />
+
+  
+
+<meta property="og:image" content="https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/a79fa5e068ab51b3cf0477c51c15a9b9_6-033s18.png" />
+<meta property="og:image:alt" content="Computer System Engineering" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mitocw" />
+<meta name="twitter:image:src" content="https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/a79fa5e068ab51b3cf0477c51c15a9b9_6-033s18.png" />
+
+  <link rel="canonical" href="https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/" />
+  <link rel="alternate" hreflang="en" href="https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/" />
+  <link rel="alternate" hreflang="x-default" href="https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type" : "WebPage",
+        "name": "Computer System Engineering | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+        "url": "https:\/\/ocw.mit.edu\/courses\/6-033-computer-system-engineering-spring-2018\/",
+        "description": "This class covers topics on the engineering of computer software and hardware systems. Topics include techniques for controlling complexity; strong modularity using client-server design, operating systems; performance, networks; naming; security and privacy; fault-tolerant systems, atomicity and coordination of concurrent activities, and recovery; impact of computer systems on society.",
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "CollegeOrUniversity",
+          "name": "MIT OpenCourseWare",
+          "url": "https://ocw.mit.edu"
+        }
+      }
+  </script>
+
+  <title>Computer System Engineering | Electrical Engineering and Computer Science | MIT OpenCourseWare</title>
+  <style>
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(/static_shared/fonts/MaterialIcons-Regular.subset.84f45410d085472240e2.woff2) format('woff2'),
+      url(/static_shared/fonts/MaterialIcons-Regular.subset.8167faf7e3a9170d282a.woff) format('woff'),
+      url(/static_shared/fonts/MaterialIcons-Regular.subset.0beb27f30d92440091b4.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local("MaterialIcons-Round"),
+    url(/static_shared/fonts/MaterialIconsRound-Regular.subset.7154eae1d0e60e0dabe4.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Cardo Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Cardo'),
+      local('Cardo-Bold'),
+      url(/static_shared/fonts/Cardo-Bold.d7bf1aa6f322a64b2fc3.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Cardo Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Cardo'),
+      local('Cardo-Italic'),
+      url(/static_shared/fonts/Cardo-Italic.0935d2ebbc05be3559b1.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal`;
+    font-weight: 400;
+    src: local('Helvetica Light'),
+      local('Helvetica-Light'),
+      url(/static_shared/fonts/Helvetica-Light.70359849afb40079a1c8.ttf) format('truetype');
+  }
+  .external-link.nav-link::after {
+    background-image: url('/static_shared/images/external_link.58bbdd86c00a2c146c36.svg'); 
+  }
+  </style>
+</head>
+
+
+<body class="course-home-page">
+  
+  
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMQZ25T" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  
+  
+
+  <div class="overflow-auto">
+    <span class="course-header">
+      <div
+  id="mobile-course-nav"
+  class="navbar-offcanvas offcanvas-toggle offcanvas-toggle-close medium-and-below-only drawer">
+  <h3 class="my-4 d-flex align-items-center justify-content-between">
+    Browse Course Material
+    <button
+      class="btn"
+      type="button"
+      aria-label="Close Course Menu"
+      onclick="$('#mobile-course-nav-toggle').click();"
+      id="close-mobile-course-menu-button"
+      >
+      <img
+        src="/static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </h3>
+  
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="40fb5a3b-10ae-c787-e007-dfb9b099de9c"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/syllabus/" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_40fb5a3b-10ae-c787-e007-dfb9b099de9c"
+    aria-labelledby="nav-button_mobile_40fb5a3b-10ae-c787-e007-dfb9b099de9c"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="dcd25f88-acf3-f72b-a2ad-5aae10daef4f"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/calendar/" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_dcd25f88-acf3-f72b-a2ad-5aae10daef4f"
+    aria-labelledby="nav-button_mobile_dcd25f88-acf3-f72b-a2ad-5aae10daef4f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/instructor-insights/" >
+          Instructor Insights
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      data-uuid="e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      aria-controls="nav-container_mobile_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      aria-expanded="false"
+      aria-label="Subsections for Instructor Insights"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+    aria-labelledby="nav-button_mobile_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e3329846-53d9-016b-a16d-adba4b432036"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/infusing-active-learning-into-6/" >
+          Infusing Active Learning into 6.033 Recitations
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e3329846-53d9-016b-a16d-adba4b432036"
+    aria-labelledby="nav-button_mobile_e3329846-53d9-016b-a16d-adba4b432036"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e63c00a2-e24c-93cc-5223-35b0a5f1e647"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/what-is-active-learning/" >
+          What Is Active Learning?
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e63c00a2-e24c-93cc-5223-35b0a5f1e647"
+    aria-labelledby="nav-button_mobile_e63c00a2-e24c-93cc-5223-35b0a5f1e647"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c376d0dd-384a-f6be-87ef-f4d6cd32feb0"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/unique-aspects-of-the-course/" >
+          Unique Aspects of the Course
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c376d0dd-384a-f6be-87ef-f4d6cd32feb0"
+    aria-labelledby="nav-button_mobile_c376d0dd-384a-f6be-87ef-f4d6cd32feb0"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1e7e49dc-3b37-e0d9-d362-97d4a6e5e423"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/why_infusing-active-learning-into-6/" >
+          Why Active Learning?
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_1e7e49dc-3b37-e0d9-d362-97d4a6e5e423"
+    aria-labelledby="nav-button_mobile_1e7e49dc-3b37-e0d9-d362-97d4a6e5e423"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b273e9a7-5e78-73fe-ad0e-7a180e6cae80"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/getting-everyone-on-board/" >
+          Getting Everyone on Board
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_b273e9a7-5e78-73fe-ad0e-7a180e6cae80"
+    aria-labelledby="nav-button_mobile_b273e9a7-5e78-73fe-ad0e-7a180e6cae80"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5303c7da-c0ff-5f0e-6844-2a6695ac861e"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/importance-of-extensive-planning/" >
+          The Importance of Extensive Planning
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5303c7da-c0ff-5f0e-6844-2a6695ac861e"
+    aria-labelledby="nav-button_mobile_5303c7da-c0ff-5f0e-6844-2a6695ac861e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4c860345-1055-a405-7e74-e6bb2895d799"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/supporting-staff-as-individuals/" >
+          Supporting Staff as Individuals
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_4c860345-1055-a405-7e74-e6bb2895d799"
+    aria-labelledby="nav-button_mobile_4c860345-1055-a405-7e74-e6bb2895d799"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e771bd0b-e352-139d-acbb-3a4793142d55"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/supporting-staff-as-a-group/" >
+          Supporting Staff as a Group
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e771bd0b-e352-139d-acbb-3a4793142d55"
+    aria-labelledby="nav-button_mobile_e771bd0b-e352-139d-acbb-3a4793142d55"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bcb2ebba-6409-4be0-e70e-0ea2685851d8"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/group-work-to-class-wide-discussion/" >
+          Group Work to Class-Wide Discussion
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_bcb2ebba-6409-4be0-e70e-0ea2685851d8"
+    aria-labelledby="nav-button_mobile_bcb2ebba-6409-4be0-e70e-0ea2685851d8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="78c88887-ab18-4d53-f900-927a50ba8a65"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/active-learning-activity-debates/" >
+          Debates
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_78c88887-ab18-4d53-f900-927a50ba8a65"
+    aria-labelledby="nav-button_mobile_78c88887-ab18-4d53-f900-927a50ba8a65"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5dc920bd-bdee-9276-cae9-210b8529f6be"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/drawing-pictures/" >
+          Drawing Pictures
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5dc920bd-bdee-9276-cae9-210b8529f6be"
+    aria-labelledby="nav-button_mobile_5dc920bd-bdee-9276-cae9-210b8529f6be"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fec8db2d-f75c-585a-9d97-6611ecf7d33a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/acting-things-out/" >
+          Acting Things Out
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_fec8db2d-f75c-585a-9d97-6611ecf7d33a"
+    aria-labelledby="nav-button_mobile_fec8db2d-f75c-585a-9d97-6611ecf7d33a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bc81939d-39ca-9b20-d235-a2bcfdc48df8"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/did-active-learning-work/" >
+          Did Active Learning Work?
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_bc81939d-39ca-9b20-d235-a2bcfdc48df8"
+    aria-labelledby="nav-button_mobile_bc81939d-39ca-9b20-d235-a2bcfdc48df8"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/" >
+          Week 1: Operating Systems I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      data-uuid="70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      aria-controls="nav-container_mobile_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      aria-expanded="false"
+      aria-label="Subsections for Week 1: Operating Systems I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+    aria-labelledby="nav-button_mobile_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6f82dc95-1f47-0c80-136f-e66e5ce7c473"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/lecture-1-outline/" >
+          Lecture 1 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_6f82dc95-1f47-0c80-136f-e66e5ce7c473"
+    aria-labelledby="nav-button_mobile_6f82dc95-1f47-0c80-136f-e66e5ce7c473"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a4a9ba01-b030-11d9-204c-ba12fbc0f60b"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/we-did-nothing-wrong/" >
+          We Did Nothing Wrong Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a4a9ba01-b030-11d9-204c-ba12fbc0f60b"
+    aria-labelledby="nav-button_mobile_a4a9ba01-b030-11d9-204c-ba12fbc0f60b"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6e76f1ca-8214-a450-c84c-bced0d6be017"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/critique-assignment-1/" >
+          Critique Assignment 1
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_6e76f1ca-8214-a450-c84c-bced0d6be017"
+    aria-labelledby="nav-button_mobile_6e76f1ca-8214-a450-c84c-bced0d6be017"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/" >
+          Week 2: Operating Systems II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      data-uuid="d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      aria-controls="nav-container_mobile_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      aria-expanded="false"
+      aria-label="Subsections for Week 2: Operating Systems II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+    aria-labelledby="nav-button_mobile_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3610b8eb-173d-dad3-75e0-c9bf4c6d3ee4"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/lecture-2-outline/" >
+          Lecture 2 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_3610b8eb-173d-dad3-75e0-c9bf4c6d3ee4"
+    aria-labelledby="nav-button_mobile_3610b8eb-173d-dad3-75e0-c9bf4c6d3ee4"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="296c66ea-a30e-98fb-be04-74d631d544ec"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/domain-name-system-dns-assignment/" >
+          Domain Name System (DNS) Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_296c66ea-a30e-98fb-be04-74d631d544ec"
+    aria-labelledby="nav-button_mobile_296c66ea-a30e-98fb-be04-74d631d544ec"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="09361169-bc52-2c62-2a18-8d7cf0c6d2ac"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/lecture-3-outline/" >
+          Lecture 3 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_09361169-bc52-2c62-2a18-8d7cf0c6d2ac"
+    aria-labelledby="nav-button_mobile_09361169-bc52-2c62-2a18-8d7cf0c6d2ac"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="37760e09-a6c5-09c9-e969-bcefe6230e7d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/unix-assignment-part-1/" >
+          UNIX Assignment Part 1
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_37760e09-a6c5-09c9-e969-bcefe6230e7d"
+    aria-labelledby="nav-button_mobile_37760e09-a6c5-09c9-e969-bcefe6230e7d"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="81056cb9-5545-9139-0582-b2e55570d21a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/" >
+          Week 3: Operating Systems III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_81056cb9-5545-9139-0582-b2e55570d21a"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_81056cb9-5545-9139-0582-b2e55570d21a"
+      data-uuid="81056cb9-5545-9139-0582-b2e55570d21a"
+      aria-controls="nav-container_mobile_81056cb9-5545-9139-0582-b2e55570d21a"
+      aria-expanded="false"
+      aria-label="Subsections for Week 3: Operating Systems III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_81056cb9-5545-9139-0582-b2e55570d21a"
+    aria-labelledby="nav-button_mobile_81056cb9-5545-9139-0582-b2e55570d21a"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4bd4d775-885a-2661-47dc-64a6eba38676"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/lecture-4-outline/" >
+          Lecture 4 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_4bd4d775-885a-2661-47dc-64a6eba38676"
+    aria-labelledby="nav-button_mobile_4bd4d775-885a-2661-47dc-64a6eba38676"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="05b631a6-ef1c-2f86-b877-12c4e1b89310"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/lecture-5-outline/" >
+          Lecture 5 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_05b631a6-ef1c-2f86-b877-12c4e1b89310"
+    aria-labelledby="nav-button_mobile_05b631a6-ef1c-2f86-b877-12c4e1b89310"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="58979a0d-36a2-6cf8-2be3-a2f5313e3250"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/unix-assignment-part-2/" >
+          UNIX Assignment Part 2
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_58979a0d-36a2-6cf8-2be3-a2f5313e3250"
+    aria-labelledby="nav-button_mobile_58979a0d-36a2-6cf8-2be3-a2f5313e3250"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/" >
+          Week 4: Operating Systems IV
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      data-uuid="0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      aria-controls="nav-container_mobile_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      aria-expanded="false"
+      aria-label="Subsections for Week 4: Operating Systems IV"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+    aria-labelledby="nav-button_mobile_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0a3d288e-4cbc-112c-d90a-71a2c259a60e"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/lecture-6-outline/" >
+          Lecture 6 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0a3d288e-4cbc-112c-d90a-71a2c259a60e"
+    aria-labelledby="nav-button_mobile_0a3d288e-4cbc-112c-d90a-71a2c259a60e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="85894c20-22fb-054e-580a-61a43ed2648d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/eraser-assignment/" >
+          Eraser Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_85894c20-22fb-054e-580a-61a43ed2648d"
+    aria-labelledby="nav-button_mobile_85894c20-22fb-054e-580a-61a43ed2648d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="694987b9-3a9a-8546-0e09-6d00a856d3d0"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/lecture-7-outline/" >
+          Lecture 7 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_694987b9-3a9a-8546-0e09-6d00a856d3d0"
+    aria-labelledby="nav-button_mobile_694987b9-3a9a-8546-0e09-6d00a856d3d0"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="669830ff-a145-23d6-dcee-00927f0c1d39"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/mapreduce-assignment/" >
+          MapReduce Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_669830ff-a145-23d6-dcee-00927f0c1d39"
+    aria-labelledby="nav-button_mobile_669830ff-a145-23d6-dcee-00927f0c1d39"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b882122b-9e06-c5d6-61c9-7ce3e39fcf07"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/critique-assignment-2/" >
+          Critique Assignment 2
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_b882122b-9e06-c5d6-61c9-7ce3e39fcf07"
+    aria-labelledby="nav-button_mobile_b882122b-9e06-c5d6-61c9-7ce3e39fcf07"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/" >
+          Week 5: Networking I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      data-uuid="a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      aria-controls="nav-container_mobile_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      aria-expanded="false"
+      aria-label="Subsections for Week 5: Networking I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+    aria-labelledby="nav-button_mobile_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="89e1e54e-a14e-f974-0668-9840928834a2"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/lecture-8-outline/" >
+          Lecture 8 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_89e1e54e-a14e-f974-0668-9840928834a2"
+    aria-labelledby="nav-button_mobile_89e1e54e-a14e-f974-0668-9840928834a2"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d592637b-bae8-71c6-59ff-f27fb133b62a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/darpa-assignment/" >
+          DARPA Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d592637b-bae8-71c6-59ff-f27fb133b62a"
+    aria-labelledby="nav-button_mobile_d592637b-bae8-71c6-59ff-f27fb133b62a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="82d38378-244b-6686-4fad-14c082cb5df9"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/lecture-9-outline/" >
+          Lecture 9 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_82d38378-244b-6686-4fad-14c082cb5df9"
+    aria-labelledby="nav-button_mobile_82d38378-244b-6686-4fad-14c082cb5df9"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="88350e45-d2ab-eb7d-9d77-bcfb2ecec721"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/landmark-routing-assignment/" >
+          Landmark Routing Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_88350e45-d2ab-eb7d-9d77-bcfb2ecec721"
+    aria-labelledby="nav-button_mobile_88350e45-d2ab-eb7d-9d77-bcfb2ecec721"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="75800336-c3a2-ebee-84a1-8bb126a5a60b"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/" >
+          Week 6: Networking II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      data-uuid="75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      aria-controls="nav-container_mobile_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      aria-expanded="false"
+      aria-label="Subsections for Week 6: Networking II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+    aria-labelledby="nav-button_mobile_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="26febf46-605f-599b-aa63-c8504b6e5d4d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/lecture-10-outline/" >
+          Lecture 10 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_26febf46-605f-599b-aa63-c8504b6e5d4d"
+    aria-labelledby="nav-button_mobile_26febf46-605f-599b-aa63-c8504b6e5d4d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a832ff85-3be6-a295-c5a6-23b102707bb8"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/lecture-11-outline/" >
+          Lecture 11 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a832ff85-3be6-a295-c5a6-23b102707bb8"
+    aria-labelledby="nav-button_mobile_a832ff85-3be6-a295-c5a6-23b102707bb8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c09c7d62-696b-071f-ffb0-88433fa31b32"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/ron-assignment/" >
+          RON Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c09c7d62-696b-071f-ffb0-88433fa31b32"
+    aria-labelledby="nav-button_mobile_c09c7d62-696b-071f-ffb0-88433fa31b32"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/" >
+          Week 7: Networking III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      data-uuid="0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      aria-controls="nav-container_mobile_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      aria-expanded="false"
+      aria-label="Subsections for Week 7: Networking III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+    aria-labelledby="nav-button_mobile_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3ebfda64-abe4-187a-6497-84708a5f0971"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/lecture-12-outline/" >
+          Lecture 12 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_3ebfda64-abe4-187a-6497-84708a5f0971"
+    aria-labelledby="nav-button_mobile_3ebfda64-abe4-187a-6497-84708a5f0971"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="72f0d675-cb14-ba19-4c5d-7a81051af829"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/dctcp-assignment/" >
+          DCTCP Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_72f0d675-cb14-ba19-4c5d-7a81051af829"
+    aria-labelledby="nav-button_mobile_72f0d675-cb14-ba19-4c5d-7a81051af829"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e46aed55-3f04-cfcf-dcdd-9ab3513be6ed"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/lecture-13-outline/" >
+          Lecture 13 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e46aed55-3f04-cfcf-dcdd-9ab3513be6ed"
+    aria-labelledby="nav-button_mobile_e46aed55-3f04-cfcf-dcdd-9ab3513be6ed"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0de7a026-cc51-8d64-2305-b1769d62af0f"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/cdn-assignment/" >
+          CDN Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0de7a026-cc51-8d64-2305-b1769d62af0f"
+    aria-labelledby="nav-button_mobile_0de7a026-cc51-8d64-2305-b1769d62af0f"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="03839826-8d83-1a70-6fad-0af0bfa301d7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/" >
+          Week 8: Distributed Systems I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_03839826-8d83-1a70-6fad-0af0bfa301d7"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_03839826-8d83-1a70-6fad-0af0bfa301d7"
+      data-uuid="03839826-8d83-1a70-6fad-0af0bfa301d7"
+      aria-controls="nav-container_mobile_03839826-8d83-1a70-6fad-0af0bfa301d7"
+      aria-expanded="false"
+      aria-label="Subsections for Week 8: Distributed Systems I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_03839826-8d83-1a70-6fad-0af0bfa301d7"
+    aria-labelledby="nav-button_mobile_03839826-8d83-1a70-6fad-0af0bfa301d7"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e41330e2-fb4f-3118-bfb7-88e686385fc7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/lecture-14-outline/" >
+          Lecture 14 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e41330e2-fb4f-3118-bfb7-88e686385fc7"
+    aria-labelledby="nav-button_mobile_e41330e2-fb4f-3118-bfb7-88e686385fc7"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="766d3b59-5f03-a2f4-b1ad-4d15d2427648"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/distributed-storage-assignment/" >
+          Distributed Storage Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_766d3b59-5f03-a2f4-b1ad-4d15d2427648"
+    aria-labelledby="nav-button_mobile_766d3b59-5f03-a2f4-b1ad-4d15d2427648"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f982d841-2b34-3c22-7262-04fc7b163732"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/lecture-15-outline/" >
+          Lecture 15 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f982d841-2b34-3c22-7262-04fc7b163732"
+    aria-labelledby="nav-button_mobile_f982d841-2b34-3c22-7262-04fc7b163732"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/" >
+          Week 9: Distributed Systems II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      data-uuid="aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      aria-controls="nav-container_mobile_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      aria-expanded="false"
+      aria-label="Subsections for Week 9: Distributed Systems II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+    aria-labelledby="nav-button_mobile_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c46fe11e-d023-04f5-7535-4315faa42e52"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/lecture-16-outline/" >
+          Lecture 16 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c46fe11e-d023-04f5-7535-4315faa42e52"
+    aria-labelledby="nav-button_mobile_c46fe11e-d023-04f5-7535-4315faa42e52"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="cbb27708-c82e-11a7-a3f9-be7fc848063b"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/log-structured-file-system-lfs-assignment/" >
+          Log-Structured File System (LFS) Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_cbb27708-c82e-11a7-a3f9-be7fc848063b"
+    aria-labelledby="nav-button_mobile_cbb27708-c82e-11a7-a3f9-be7fc848063b"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0f38d012-21c7-a072-b7fd-cd72637e5cd3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/lecture-17-outline/" >
+          Lecture 17 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0f38d012-21c7-a072-b7fd-cd72637e5cd3"
+    aria-labelledby="nav-button_mobile_0f38d012-21c7-a072-b7fd-cd72637e5cd3"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="62a94c78-a524-3c30-60aa-11c27ff81fc7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-10/" >
+          Week 10: Distributed Systems III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      data-uuid="62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      aria-controls="nav-container_mobile_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      aria-expanded="false"
+      aria-label="Subsections for Week 10: Distributed Systems III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+    aria-labelledby="nav-button_mobile_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b1089f5d-b898-b0e4-3de1-1f7b4fb2a366"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-10/lecture-18-outline/" >
+          Lecture 18 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_b1089f5d-b898-b0e4-3de1-1f7b4fb2a366"
+    aria-labelledby="nav-button_mobile_b1089f5d-b898-b0e4-3de1-1f7b4fb2a366"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c109e0c5-f4f6-9b52-7d96-b0c911fcd579"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-10/consistency-guarantees-assignment/" >
+          Consistency Guarantees Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c109e0c5-f4f6-9b52-7d96-b0c911fcd579"
+    aria-labelledby="nav-button_mobile_c109e0c5-f4f6-9b52-7d96-b0c911fcd579"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c7a234fb-b37e-e20a-41b9-581882a0afcd"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/" >
+          Week 11: Security I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      data-uuid="c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      aria-controls="nav-container_mobile_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      aria-expanded="false"
+      aria-label="Subsections for Week 11: Security I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+    aria-labelledby="nav-button_mobile_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="65aa4eed-05a6-e3c3-31b7-24d8f6b44e7d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/lecture-19-outline/" >
+          Lecture 19 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_65aa4eed-05a6-e3c3-31b7-24d8f6b44e7d"
+    aria-labelledby="nav-button_mobile_65aa4eed-05a6-e3c3-31b7-24d8f6b44e7d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="664be575-c00e-8b73-1e97-37cd0a323c01"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/raft-assignment/" >
+          Raft Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_664be575-c00e-8b73-1e97-37cd0a323c01"
+    aria-labelledby="nav-button_mobile_664be575-c00e-8b73-1e97-37cd0a323c01"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="45c3152a-7c7a-8e9d-0344-24fc1d9e7161"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/lecture-20-outline/" >
+          Lecture 20 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_45c3152a-7c7a-8e9d-0344-24fc1d9e7161"
+    aria-labelledby="nav-button_mobile_45c3152a-7c7a-8e9d-0344-24fc1d9e7161"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/" >
+          Week 12: Security II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      data-uuid="463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      aria-controls="nav-container_mobile_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      aria-expanded="false"
+      aria-label="Subsections for Week 12: Security II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+    aria-labelledby="nav-button_mobile_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2500dbfe-4b2f-c63e-8d8a-c612f61c4d08"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/lecture-21-outline/" >
+          Lecture 21 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_2500dbfe-4b2f-c63e-8d8a-c612f61c4d08"
+    aria-labelledby="nav-button_mobile_2500dbfe-4b2f-c63e-8d8a-c612f61c4d08"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d85bd78d-4139-ffc6-6099-38511ef16101"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/why-cryptosystems-fail-assignment/" >
+          Why Cryptosystems Fail Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d85bd78d-4139-ffc6-6099-38511ef16101"
+    aria-labelledby="nav-button_mobile_d85bd78d-4139-ffc6-6099-38511ef16101"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d855de67-a6df-3be8-d7e7-b03e92d249a3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/lecture-22-outline/" >
+          Lecture 22 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d855de67-a6df-3be8-d7e7-b03e92d249a3"
+    aria-labelledby="nav-button_mobile_d855de67-a6df-3be8-d7e7-b03e92d249a3"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d7e80479-aaf3-38d9-e79e-b2f538c418b3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/dnssec-assignment/" >
+          DNSSEC Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d7e80479-aaf3-38d9-e79e-b2f538c418b3"
+    aria-labelledby="nav-button_mobile_d7e80479-aaf3-38d9-e79e-b2f538c418b3"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="87aba984-30c8-d18b-3f71-7bdec998328f"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/" >
+          Week 13: Security III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_87aba984-30c8-d18b-3f71-7bdec998328f"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_87aba984-30c8-d18b-3f71-7bdec998328f"
+      data-uuid="87aba984-30c8-d18b-3f71-7bdec998328f"
+      aria-controls="nav-container_mobile_87aba984-30c8-d18b-3f71-7bdec998328f"
+      aria-expanded="false"
+      aria-label="Subsections for Week 13: Security III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_87aba984-30c8-d18b-3f71-7bdec998328f"
+    aria-labelledby="nav-button_mobile_87aba984-30c8-d18b-3f71-7bdec998328f"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4793bb3a-5463-dd86-f8d5-6dc6fdf33ccb"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/lecture-23-outline/" >
+          Lecture 23 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_4793bb3a-5463-dd86-f8d5-6dc6fdf33ccb"
+    aria-labelledby="nav-button_mobile_4793bb3a-5463-dd86-f8d5-6dc6fdf33ccb"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ea13cbf1-25e6-cb4f-d552-53fee6563f83"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/botnets-assignment/" >
+          Botnets Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ea13cbf1-25e6-cb4f-d552-53fee6563f83"
+    aria-labelledby="nav-button_mobile_ea13cbf1-25e6-cb4f-d552-53fee6563f83"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c4a5c659-5c87-2d2d-140b-12b013818b4a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/lecture-24-outline/" >
+          Lecture 24 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c4a5c659-5c87-2d2d-140b-12b013818b4a"
+    aria-labelledby="nav-button_mobile_c4a5c659-5c87-2d2d-140b-12b013818b4a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f16c7835-ea51-9931-2f17-c5652cc47102"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/memory-corruption-assignment/" >
+          Memory Corruption Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f16c7835-ea51-9931-2f17-c5652cc47102"
+    aria-labelledby="nav-button_mobile_f16c7835-ea51-9931-2f17-c5652cc47102"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/" >
+          Week 14: Security IV
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      data-uuid="a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      aria-controls="nav-container_mobile_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      aria-expanded="false"
+      aria-label="Subsections for Week 14: Security IV"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+    aria-labelledby="nav-button_mobile_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="935d90a5-7a9a-0169-7319-6c14b0526d90"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/lecture-25-outline/" >
+          Lecture 25 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_935d90a5-7a9a-0169-7319-6c14b0526d90"
+    aria-labelledby="nav-button_mobile_935d90a5-7a9a-0169-7319-6c14b0526d90"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="447da471-034f-b347-4c11-bbe7bfa9e6b3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/meltdown-assignment/" >
+          Meltdown Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_447da471-034f-b347-4c11-bbe7bfa9e6b3"
+    aria-labelledby="nav-button_mobile_447da471-034f-b347-4c11-bbe7bfa9e6b3"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1f147788-1493-7d98-11fd-9b451a7d7a4e"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/trusting-trust-assignment/" >
+          Trusting Trust Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_1f147788-1493-7d98-11fd-9b451a7d7a4e"
+    aria-labelledby="nav-button_mobile_1f147788-1493-7d98-11fd-9b451a7d7a4e"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="73594177-84bd-559f-acb2-aadc9d04abe7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/design-project/" >
+          Design Project
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_73594177-84bd-559f-acb2-aadc9d04abe7"
+    aria-labelledby="nav-button_mobile_73594177-84bd-559f-acb2-aadc9d04abe7"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1731a3ca-ac5f-faa7-8e0f-4b3bff50a1cc"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/resource-index/" >
+          Resource Index
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_1731a3ca-ac5f-faa7-8e0f-4b3bff50a1cc"
+    aria-labelledby="nav-button_mobile_1731a3ca-ac5f-faa7-8e0f-4b3bff50a1cc"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+</div>
+
+      <div
+  id="course-info-drawer"
+  class="bg-faded pt-3 bg-light navbar-offcanvas navbar-offcanvas-right medium-and-below-only drawer"
+>
+  <div class="col-12">
+    <button
+      class="btn close-mobile-course-info"
+      type="button"
+      aria-label="Close Course Info"
+      onclick="$('#mobile-course-info-toggle').click();"
+      id="close-mobile-course-info-button"
+      >
+      <img
+        class=""
+        src="/static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </div>
+  <div class="search-variant" data-search-variant="ocw">  
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Instructor
+            </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="/search/?q=Dr.&#43;Katrina&#43;LaCurts"  >Dr. Katrina LaCurts</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label panel-course-info-title ">
+                Departments
+              </h3>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="/search/?d=Electrical&#43;Engineering&#43;and&#43;Computer&#43;Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            As Taught In
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            Spring
+            
+              2018
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Level
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div><div class="search-variant" data-search-variant="learn">  
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Instructor
+            </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;q=Dr.&#43;Katrina&#43;LaCurts"  >Dr. Katrina LaCurts</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label panel-course-info-title ">
+                Departments
+              </h3>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://learn.mit.edu/search/?department=6&amp;offered_by=ocw"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            As Taught In
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            Spring
+            
+              2018
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Level
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://learn.mit.edu/search/?level=undergraduate&amp;offered_by=ocw"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+  <div class="px-3">
+    <div class="search-variant" data-search-variant="ocw">
+
+
+
+
+
+<div class="course-info-topics mt-4">
+  <h3 class="course-info-section-label panel-course-info-title ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_mobile_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_mobile_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_mobile_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_mobile_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Design&#43;and&#43;Engineering"  >Computer Design and Engineering</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Networks"  >Computer Networks</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Operating&#43;Systems"  >Operating Systems</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Software&#43;Design&#43;and&#43;Engineering"  >Software Design and Engineering</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+</div><div class="search-variant" data-search-variant="learn">
+
+
+
+
+
+<div class="course-info-topics mt-4">
+  <h3 class="course-info-section-label panel-course-info-title ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_learn_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_learn_0"
+    aria-expanded="true"
+    aria-label="Data Science, Analytics &amp; Computer Technology subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Data&#43;Science%2C&#43;Analytics&#43;%26&#43;Computer&#43;Technology"  >Data Science, Analytics &amp; Computer Technology</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_mobile_learn_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Networks&#43;and&#43;Security"  >Networks and Security</a></span>
+    </div>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Software&#43;Design&#43;and&#43;Engineering"  >Software Design and Engineering</a></span>
+    </div>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+<div class="position-relative pt-1 pb-1">
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Engineering"  >Engineering</a></span>
+</div>
+
+</li>
+      
+  </ul>
+</div>
+</div>
+    
+
+
+
+<div class="">
+  <h3 class="course-info-section-label course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h3>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1"><span class="material-icons-round">
+        co_present
+      </span></i>
+    <span>Instructor Insights</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">notes</i>
+    <span>Lecture Notes</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">grading</i>
+    <span>Projects with Examples</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">assignment</i>
+    <span>Written Assignments</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="/courses/6-033-computer-system-engineering-spring-2018/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+  </div>
+</div>
+
+      
+
+
+
+
+
+<div id="mobile-header" class="position-relative bg-black medium-and-below-only">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black d-flex">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="material-icons display-4 text-white align-bottom">menu</i>
+    </button>
+    <div class="mx-auto">
+      <a class="ocw-logo-link" href="/">
+        <img width="200" src="/static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare"/>
+      </a>
+    </div>
+    <div class="user-menu-container" data-variant="mobile"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto pl-2 pt-2">
+        <li class="nav-item">
+  
+    
+    
+      
+      
+    <a class="nav-link search-icon text-white pr-6" href="/search/" data-search-variant="ocw">
+      <i class="material-icons">search</i>
+    </a>
+    
+      
+      
+        
+      
+    <a class="nav-link search-icon text-white pr-6" href="https://learn.mit.edu/search/?offered_by=ocw" data-search-variant="learn">
+      <i class="material-icons">search</i>
+    </a>
+    
+  
+</li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home"  >Give Now</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="/about"  >About OCW</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >Help &amp; Faqs</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://mitocw.zendesk.com/hc/en-us/requests/new"  >Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<div id="desktop-header">
+  <div class="contents">
+    <div class="left">
+      <div class="ocw-logo">
+        <a class="ocw-logo-link" href="/">
+          <img src="/static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare" />
+        </a>
+      </div>
+    </div>
+    <div class="right">
+      
+  
+    
+    
+      
+      
+    <a class="nav-link search-icon text-white pr-6" href="/search/" data-search-variant="ocw">
+      <i class="material-icons">search</i>
+    </a>
+    
+      
+      
+        
+      
+    <a class="nav-link search-icon text-white pr-6" href="https://learn.mit.edu/search/?offered_by=ocw" data-search-variant="learn">
+      <i class="material-icons">search</i>
+    </a>
+    
+  
+
+      <a class="give-button text-white text-decoration-none font-weight-bold small-link d-flex align-items-center" aria-label="Give Now - Donate to MIT OpenCourseWare" href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home">
+        <span class="m-0 pr-2">GIVE NOW</span>
+        <img src="/static_shared/images/heart_burgundy.e7c8635e8cc6538b89fa.svg" class="heart-burgundy" alt="" />
+      </a>
+      <a   class="text-white text-decoration-none font-weight-bold pl-5 pr-3 py-2"    href="/about"  >about ocw</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >help &amp; faqs</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"    href="https://mitocw.zendesk.com/hc/en-us/requests/new"  >contact us</a>
+      <div class="user-menu-container" data-variant="desktop"></div>
+    </div>
+  </div>
+</div>
+
+      
+
+<div id="course-banner" class="p-0">
+  <div class="max-content-width course-banner-content m-auto py-3">
+    <div class="row">
+    <div class="col-12">
+      
+      <span class="course-number-term-detail">6.033 | Spring 2018 | Undergraduate</span>
+      <br>
+      <br>
+      <h1>
+        <a
+          class="text-capitalize m-0 text-white"
+          href="/courses/6-033-computer-system-engineering-spring-2018/"
+        >Computer System Engineering</a>
+      </h1>
+    </div>
+    </div>
+  </div>
+</div>
+
+    </span>
+    <div id="course-main-content">
+      <div class="row">
+        <div class="col-12 course-home-grid">
+          <div class="medium-and-below-only mb-3">
+            <div>
+  <button
+    id="mobile-course-nav-toggle"
+    class="mobile-course-nav-toggle-btn d-inline-flex align-items-center offcanvas-toggle"
+    data-toggle="offcanvas"
+    data-target="#mobile-course-nav"
+  >
+    <img src="/static_shared/images/expand.a062b1c47b121e3c7e03.svg" alt=""/>
+    <span class="pl-1">Menu</span>
+  </button>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row course-cards">
+        <div class="col-2 course-home-grid large-and-above-only">
+          <div class="card">
+  <div class="card-body pr-2">
+    
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="40fb5a3b-10ae-c787-e007-dfb9b099de9c"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/syllabus/" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_40fb5a3b-10ae-c787-e007-dfb9b099de9c"
+    aria-labelledby="nav-button_desktop_40fb5a3b-10ae-c787-e007-dfb9b099de9c"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="dcd25f88-acf3-f72b-a2ad-5aae10daef4f"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/calendar/" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_dcd25f88-acf3-f72b-a2ad-5aae10daef4f"
+    aria-labelledby="nav-button_desktop_dcd25f88-acf3-f72b-a2ad-5aae10daef4f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/instructor-insights/" >
+          Instructor Insights
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      data-uuid="e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      aria-controls="nav-container_desktop_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+      aria-expanded="false"
+      aria-label="Subsections for Instructor Insights"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+    aria-labelledby="nav-button_desktop_e75a8c08-e117-86c5-3503-1b5e10f0fe19"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e3329846-53d9-016b-a16d-adba4b432036"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/infusing-active-learning-into-6/" >
+          Infusing Active Learning into 6.033 Recitations
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e3329846-53d9-016b-a16d-adba4b432036"
+    aria-labelledby="nav-button_desktop_e3329846-53d9-016b-a16d-adba4b432036"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e63c00a2-e24c-93cc-5223-35b0a5f1e647"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/what-is-active-learning/" >
+          What Is Active Learning?
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e63c00a2-e24c-93cc-5223-35b0a5f1e647"
+    aria-labelledby="nav-button_desktop_e63c00a2-e24c-93cc-5223-35b0a5f1e647"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c376d0dd-384a-f6be-87ef-f4d6cd32feb0"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/unique-aspects-of-the-course/" >
+          Unique Aspects of the Course
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c376d0dd-384a-f6be-87ef-f4d6cd32feb0"
+    aria-labelledby="nav-button_desktop_c376d0dd-384a-f6be-87ef-f4d6cd32feb0"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1e7e49dc-3b37-e0d9-d362-97d4a6e5e423"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/why_infusing-active-learning-into-6/" >
+          Why Active Learning?
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_1e7e49dc-3b37-e0d9-d362-97d4a6e5e423"
+    aria-labelledby="nav-button_desktop_1e7e49dc-3b37-e0d9-d362-97d4a6e5e423"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b273e9a7-5e78-73fe-ad0e-7a180e6cae80"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/getting-everyone-on-board/" >
+          Getting Everyone on Board
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_b273e9a7-5e78-73fe-ad0e-7a180e6cae80"
+    aria-labelledby="nav-button_desktop_b273e9a7-5e78-73fe-ad0e-7a180e6cae80"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5303c7da-c0ff-5f0e-6844-2a6695ac861e"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/importance-of-extensive-planning/" >
+          The Importance of Extensive Planning
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5303c7da-c0ff-5f0e-6844-2a6695ac861e"
+    aria-labelledby="nav-button_desktop_5303c7da-c0ff-5f0e-6844-2a6695ac861e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4c860345-1055-a405-7e74-e6bb2895d799"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/supporting-staff-as-individuals/" >
+          Supporting Staff as Individuals
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_4c860345-1055-a405-7e74-e6bb2895d799"
+    aria-labelledby="nav-button_desktop_4c860345-1055-a405-7e74-e6bb2895d799"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e771bd0b-e352-139d-acbb-3a4793142d55"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/supporting-staff-as-a-group/" >
+          Supporting Staff as a Group
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e771bd0b-e352-139d-acbb-3a4793142d55"
+    aria-labelledby="nav-button_desktop_e771bd0b-e352-139d-acbb-3a4793142d55"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bcb2ebba-6409-4be0-e70e-0ea2685851d8"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/group-work-to-class-wide-discussion/" >
+          Group Work to Class-Wide Discussion
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_bcb2ebba-6409-4be0-e70e-0ea2685851d8"
+    aria-labelledby="nav-button_desktop_bcb2ebba-6409-4be0-e70e-0ea2685851d8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="78c88887-ab18-4d53-f900-927a50ba8a65"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/active-learning-activity-debates/" >
+          Debates
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_78c88887-ab18-4d53-f900-927a50ba8a65"
+    aria-labelledby="nav-button_desktop_78c88887-ab18-4d53-f900-927a50ba8a65"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5dc920bd-bdee-9276-cae9-210b8529f6be"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/drawing-pictures/" >
+          Drawing Pictures
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5dc920bd-bdee-9276-cae9-210b8529f6be"
+    aria-labelledby="nav-button_desktop_5dc920bd-bdee-9276-cae9-210b8529f6be"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fec8db2d-f75c-585a-9d97-6611ecf7d33a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/acting-things-out/" >
+          Acting Things Out
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_fec8db2d-f75c-585a-9d97-6611ecf7d33a"
+    aria-labelledby="nav-button_desktop_fec8db2d-f75c-585a-9d97-6611ecf7d33a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bc81939d-39ca-9b20-d235-a2bcfdc48df8"
+           href="/courses/6-033-computer-system-engineering-spring-2018/resources/did-active-learning-work/" >
+          Did Active Learning Work?
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_bc81939d-39ca-9b20-d235-a2bcfdc48df8"
+    aria-labelledby="nav-button_desktop_bc81939d-39ca-9b20-d235-a2bcfdc48df8"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/" >
+          Week 1: Operating Systems I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      data-uuid="70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      aria-controls="nav-container_desktop_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+      aria-expanded="false"
+      aria-label="Subsections for Week 1: Operating Systems I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+    aria-labelledby="nav-button_desktop_70f007d8-4ae8-a0b0-ea4f-00fa8931c506"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6f82dc95-1f47-0c80-136f-e66e5ce7c473"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/lecture-1-outline/" >
+          Lecture 1 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_6f82dc95-1f47-0c80-136f-e66e5ce7c473"
+    aria-labelledby="nav-button_desktop_6f82dc95-1f47-0c80-136f-e66e5ce7c473"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a4a9ba01-b030-11d9-204c-ba12fbc0f60b"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/we-did-nothing-wrong/" >
+          We Did Nothing Wrong Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a4a9ba01-b030-11d9-204c-ba12fbc0f60b"
+    aria-labelledby="nav-button_desktop_a4a9ba01-b030-11d9-204c-ba12fbc0f60b"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6e76f1ca-8214-a450-c84c-bced0d6be017"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-1/critique-assignment-1/" >
+          Critique Assignment 1
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_6e76f1ca-8214-a450-c84c-bced0d6be017"
+    aria-labelledby="nav-button_desktop_6e76f1ca-8214-a450-c84c-bced0d6be017"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/" >
+          Week 2: Operating Systems II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      data-uuid="d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      aria-controls="nav-container_desktop_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+      aria-expanded="false"
+      aria-label="Subsections for Week 2: Operating Systems II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+    aria-labelledby="nav-button_desktop_d23c09ff-9de9-dc9c-b989-05d72c54fd66"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3610b8eb-173d-dad3-75e0-c9bf4c6d3ee4"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/lecture-2-outline/" >
+          Lecture 2 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_3610b8eb-173d-dad3-75e0-c9bf4c6d3ee4"
+    aria-labelledby="nav-button_desktop_3610b8eb-173d-dad3-75e0-c9bf4c6d3ee4"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="296c66ea-a30e-98fb-be04-74d631d544ec"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/domain-name-system-dns-assignment/" >
+          Domain Name System (DNS) Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_296c66ea-a30e-98fb-be04-74d631d544ec"
+    aria-labelledby="nav-button_desktop_296c66ea-a30e-98fb-be04-74d631d544ec"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="09361169-bc52-2c62-2a18-8d7cf0c6d2ac"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/lecture-3-outline/" >
+          Lecture 3 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_09361169-bc52-2c62-2a18-8d7cf0c6d2ac"
+    aria-labelledby="nav-button_desktop_09361169-bc52-2c62-2a18-8d7cf0c6d2ac"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="37760e09-a6c5-09c9-e969-bcefe6230e7d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-2/unix-assignment-part-1/" >
+          UNIX Assignment Part 1
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_37760e09-a6c5-09c9-e969-bcefe6230e7d"
+    aria-labelledby="nav-button_desktop_37760e09-a6c5-09c9-e969-bcefe6230e7d"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="81056cb9-5545-9139-0582-b2e55570d21a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/" >
+          Week 3: Operating Systems III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_81056cb9-5545-9139-0582-b2e55570d21a"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_81056cb9-5545-9139-0582-b2e55570d21a"
+      data-uuid="81056cb9-5545-9139-0582-b2e55570d21a"
+      aria-controls="nav-container_desktop_81056cb9-5545-9139-0582-b2e55570d21a"
+      aria-expanded="false"
+      aria-label="Subsections for Week 3: Operating Systems III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_81056cb9-5545-9139-0582-b2e55570d21a"
+    aria-labelledby="nav-button_desktop_81056cb9-5545-9139-0582-b2e55570d21a"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4bd4d775-885a-2661-47dc-64a6eba38676"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/lecture-4-outline/" >
+          Lecture 4 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_4bd4d775-885a-2661-47dc-64a6eba38676"
+    aria-labelledby="nav-button_desktop_4bd4d775-885a-2661-47dc-64a6eba38676"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="05b631a6-ef1c-2f86-b877-12c4e1b89310"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/lecture-5-outline/" >
+          Lecture 5 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_05b631a6-ef1c-2f86-b877-12c4e1b89310"
+    aria-labelledby="nav-button_desktop_05b631a6-ef1c-2f86-b877-12c4e1b89310"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="58979a0d-36a2-6cf8-2be3-a2f5313e3250"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-3/unix-assignment-part-2/" >
+          UNIX Assignment Part 2
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_58979a0d-36a2-6cf8-2be3-a2f5313e3250"
+    aria-labelledby="nav-button_desktop_58979a0d-36a2-6cf8-2be3-a2f5313e3250"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/" >
+          Week 4: Operating Systems IV
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      data-uuid="0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      aria-controls="nav-container_desktop_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+      aria-expanded="false"
+      aria-label="Subsections for Week 4: Operating Systems IV"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+    aria-labelledby="nav-button_desktop_0466ee2b-5ebb-72d0-ad4f-7badf3b6c645"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0a3d288e-4cbc-112c-d90a-71a2c259a60e"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/lecture-6-outline/" >
+          Lecture 6 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0a3d288e-4cbc-112c-d90a-71a2c259a60e"
+    aria-labelledby="nav-button_desktop_0a3d288e-4cbc-112c-d90a-71a2c259a60e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="85894c20-22fb-054e-580a-61a43ed2648d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/eraser-assignment/" >
+          Eraser Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_85894c20-22fb-054e-580a-61a43ed2648d"
+    aria-labelledby="nav-button_desktop_85894c20-22fb-054e-580a-61a43ed2648d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="694987b9-3a9a-8546-0e09-6d00a856d3d0"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/lecture-7-outline/" >
+          Lecture 7 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_694987b9-3a9a-8546-0e09-6d00a856d3d0"
+    aria-labelledby="nav-button_desktop_694987b9-3a9a-8546-0e09-6d00a856d3d0"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="669830ff-a145-23d6-dcee-00927f0c1d39"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/mapreduce-assignment/" >
+          MapReduce Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_669830ff-a145-23d6-dcee-00927f0c1d39"
+    aria-labelledby="nav-button_desktop_669830ff-a145-23d6-dcee-00927f0c1d39"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b882122b-9e06-c5d6-61c9-7ce3e39fcf07"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/critique-assignment-2/" >
+          Critique Assignment 2
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_b882122b-9e06-c5d6-61c9-7ce3e39fcf07"
+    aria-labelledby="nav-button_desktop_b882122b-9e06-c5d6-61c9-7ce3e39fcf07"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/" >
+          Week 5: Networking I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      data-uuid="a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      aria-controls="nav-container_desktop_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+      aria-expanded="false"
+      aria-label="Subsections for Week 5: Networking I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+    aria-labelledby="nav-button_desktop_a8eaa3de-11de-35a2-f8d6-b2d186c97fc6"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="89e1e54e-a14e-f974-0668-9840928834a2"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/lecture-8-outline/" >
+          Lecture 8 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_89e1e54e-a14e-f974-0668-9840928834a2"
+    aria-labelledby="nav-button_desktop_89e1e54e-a14e-f974-0668-9840928834a2"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d592637b-bae8-71c6-59ff-f27fb133b62a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/darpa-assignment/" >
+          DARPA Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d592637b-bae8-71c6-59ff-f27fb133b62a"
+    aria-labelledby="nav-button_desktop_d592637b-bae8-71c6-59ff-f27fb133b62a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="82d38378-244b-6686-4fad-14c082cb5df9"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/lecture-9-outline/" >
+          Lecture 9 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_82d38378-244b-6686-4fad-14c082cb5df9"
+    aria-labelledby="nav-button_desktop_82d38378-244b-6686-4fad-14c082cb5df9"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="88350e45-d2ab-eb7d-9d77-bcfb2ecec721"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-5/landmark-routing-assignment/" >
+          Landmark Routing Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_88350e45-d2ab-eb7d-9d77-bcfb2ecec721"
+    aria-labelledby="nav-button_desktop_88350e45-d2ab-eb7d-9d77-bcfb2ecec721"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="75800336-c3a2-ebee-84a1-8bb126a5a60b"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/" >
+          Week 6: Networking II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      data-uuid="75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      aria-controls="nav-container_desktop_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+      aria-expanded="false"
+      aria-label="Subsections for Week 6: Networking II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+    aria-labelledby="nav-button_desktop_75800336-c3a2-ebee-84a1-8bb126a5a60b"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="26febf46-605f-599b-aa63-c8504b6e5d4d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/lecture-10-outline/" >
+          Lecture 10 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_26febf46-605f-599b-aa63-c8504b6e5d4d"
+    aria-labelledby="nav-button_desktop_26febf46-605f-599b-aa63-c8504b6e5d4d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a832ff85-3be6-a295-c5a6-23b102707bb8"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/lecture-11-outline/" >
+          Lecture 11 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a832ff85-3be6-a295-c5a6-23b102707bb8"
+    aria-labelledby="nav-button_desktop_a832ff85-3be6-a295-c5a6-23b102707bb8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c09c7d62-696b-071f-ffb0-88433fa31b32"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-6/ron-assignment/" >
+          RON Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c09c7d62-696b-071f-ffb0-88433fa31b32"
+    aria-labelledby="nav-button_desktop_c09c7d62-696b-071f-ffb0-88433fa31b32"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/" >
+          Week 7: Networking III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      data-uuid="0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      aria-controls="nav-container_desktop_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+      aria-expanded="false"
+      aria-label="Subsections for Week 7: Networking III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+    aria-labelledby="nav-button_desktop_0abfab7f-cd01-9a6a-159d-1afa3fd61f99"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3ebfda64-abe4-187a-6497-84708a5f0971"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/lecture-12-outline/" >
+          Lecture 12 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_3ebfda64-abe4-187a-6497-84708a5f0971"
+    aria-labelledby="nav-button_desktop_3ebfda64-abe4-187a-6497-84708a5f0971"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="72f0d675-cb14-ba19-4c5d-7a81051af829"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/dctcp-assignment/" >
+          DCTCP Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_72f0d675-cb14-ba19-4c5d-7a81051af829"
+    aria-labelledby="nav-button_desktop_72f0d675-cb14-ba19-4c5d-7a81051af829"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e46aed55-3f04-cfcf-dcdd-9ab3513be6ed"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/lecture-13-outline/" >
+          Lecture 13 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e46aed55-3f04-cfcf-dcdd-9ab3513be6ed"
+    aria-labelledby="nav-button_desktop_e46aed55-3f04-cfcf-dcdd-9ab3513be6ed"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0de7a026-cc51-8d64-2305-b1769d62af0f"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-7/cdn-assignment/" >
+          CDN Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0de7a026-cc51-8d64-2305-b1769d62af0f"
+    aria-labelledby="nav-button_desktop_0de7a026-cc51-8d64-2305-b1769d62af0f"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="03839826-8d83-1a70-6fad-0af0bfa301d7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/" >
+          Week 8: Distributed Systems I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_03839826-8d83-1a70-6fad-0af0bfa301d7"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_03839826-8d83-1a70-6fad-0af0bfa301d7"
+      data-uuid="03839826-8d83-1a70-6fad-0af0bfa301d7"
+      aria-controls="nav-container_desktop_03839826-8d83-1a70-6fad-0af0bfa301d7"
+      aria-expanded="false"
+      aria-label="Subsections for Week 8: Distributed Systems I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_03839826-8d83-1a70-6fad-0af0bfa301d7"
+    aria-labelledby="nav-button_desktop_03839826-8d83-1a70-6fad-0af0bfa301d7"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e41330e2-fb4f-3118-bfb7-88e686385fc7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/lecture-14-outline/" >
+          Lecture 14 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e41330e2-fb4f-3118-bfb7-88e686385fc7"
+    aria-labelledby="nav-button_desktop_e41330e2-fb4f-3118-bfb7-88e686385fc7"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="766d3b59-5f03-a2f4-b1ad-4d15d2427648"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/distributed-storage-assignment/" >
+          Distributed Storage Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_766d3b59-5f03-a2f4-b1ad-4d15d2427648"
+    aria-labelledby="nav-button_desktop_766d3b59-5f03-a2f4-b1ad-4d15d2427648"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f982d841-2b34-3c22-7262-04fc7b163732"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-8/lecture-15-outline/" >
+          Lecture 15 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f982d841-2b34-3c22-7262-04fc7b163732"
+    aria-labelledby="nav-button_desktop_f982d841-2b34-3c22-7262-04fc7b163732"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/" >
+          Week 9: Distributed Systems II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      data-uuid="aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      aria-controls="nav-container_desktop_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+      aria-expanded="false"
+      aria-label="Subsections for Week 9: Distributed Systems II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+    aria-labelledby="nav-button_desktop_aa415ef7-5752-19ee-a10a-fb9dc2dbef65"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c46fe11e-d023-04f5-7535-4315faa42e52"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/lecture-16-outline/" >
+          Lecture 16 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c46fe11e-d023-04f5-7535-4315faa42e52"
+    aria-labelledby="nav-button_desktop_c46fe11e-d023-04f5-7535-4315faa42e52"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="cbb27708-c82e-11a7-a3f9-be7fc848063b"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/log-structured-file-system-lfs-assignment/" >
+          Log-Structured File System (LFS) Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_cbb27708-c82e-11a7-a3f9-be7fc848063b"
+    aria-labelledby="nav-button_desktop_cbb27708-c82e-11a7-a3f9-be7fc848063b"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0f38d012-21c7-a072-b7fd-cd72637e5cd3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-9/lecture-17-outline/" >
+          Lecture 17 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0f38d012-21c7-a072-b7fd-cd72637e5cd3"
+    aria-labelledby="nav-button_desktop_0f38d012-21c7-a072-b7fd-cd72637e5cd3"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="62a94c78-a524-3c30-60aa-11c27ff81fc7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-10/" >
+          Week 10: Distributed Systems III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      data-uuid="62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      aria-controls="nav-container_desktop_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+      aria-expanded="false"
+      aria-label="Subsections for Week 10: Distributed Systems III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+    aria-labelledby="nav-button_desktop_62a94c78-a524-3c30-60aa-11c27ff81fc7"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b1089f5d-b898-b0e4-3de1-1f7b4fb2a366"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-10/lecture-18-outline/" >
+          Lecture 18 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_b1089f5d-b898-b0e4-3de1-1f7b4fb2a366"
+    aria-labelledby="nav-button_desktop_b1089f5d-b898-b0e4-3de1-1f7b4fb2a366"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c109e0c5-f4f6-9b52-7d96-b0c911fcd579"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-10/consistency-guarantees-assignment/" >
+          Consistency Guarantees Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c109e0c5-f4f6-9b52-7d96-b0c911fcd579"
+    aria-labelledby="nav-button_desktop_c109e0c5-f4f6-9b52-7d96-b0c911fcd579"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c7a234fb-b37e-e20a-41b9-581882a0afcd"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/" >
+          Week 11: Security I
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      data-uuid="c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      aria-controls="nav-container_desktop_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+      aria-expanded="false"
+      aria-label="Subsections for Week 11: Security I"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+    aria-labelledby="nav-button_desktop_c7a234fb-b37e-e20a-41b9-581882a0afcd"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="65aa4eed-05a6-e3c3-31b7-24d8f6b44e7d"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/lecture-19-outline/" >
+          Lecture 19 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_65aa4eed-05a6-e3c3-31b7-24d8f6b44e7d"
+    aria-labelledby="nav-button_desktop_65aa4eed-05a6-e3c3-31b7-24d8f6b44e7d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="664be575-c00e-8b73-1e97-37cd0a323c01"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/raft-assignment/" >
+          Raft Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_664be575-c00e-8b73-1e97-37cd0a323c01"
+    aria-labelledby="nav-button_desktop_664be575-c00e-8b73-1e97-37cd0a323c01"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="45c3152a-7c7a-8e9d-0344-24fc1d9e7161"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-11/lecture-20-outline/" >
+          Lecture 20 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_45c3152a-7c7a-8e9d-0344-24fc1d9e7161"
+    aria-labelledby="nav-button_desktop_45c3152a-7c7a-8e9d-0344-24fc1d9e7161"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/" >
+          Week 12: Security II
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      data-uuid="463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      aria-controls="nav-container_desktop_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+      aria-expanded="false"
+      aria-label="Subsections for Week 12: Security II"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+    aria-labelledby="nav-button_desktop_463ad0d7-960d-0f16-fac5-ad1eab91ef20"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2500dbfe-4b2f-c63e-8d8a-c612f61c4d08"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/lecture-21-outline/" >
+          Lecture 21 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_2500dbfe-4b2f-c63e-8d8a-c612f61c4d08"
+    aria-labelledby="nav-button_desktop_2500dbfe-4b2f-c63e-8d8a-c612f61c4d08"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d85bd78d-4139-ffc6-6099-38511ef16101"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/why-cryptosystems-fail-assignment/" >
+          Why Cryptosystems Fail Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d85bd78d-4139-ffc6-6099-38511ef16101"
+    aria-labelledby="nav-button_desktop_d85bd78d-4139-ffc6-6099-38511ef16101"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d855de67-a6df-3be8-d7e7-b03e92d249a3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/lecture-22-outline/" >
+          Lecture 22 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d855de67-a6df-3be8-d7e7-b03e92d249a3"
+    aria-labelledby="nav-button_desktop_d855de67-a6df-3be8-d7e7-b03e92d249a3"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d7e80479-aaf3-38d9-e79e-b2f538c418b3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-12/dnssec-assignment/" >
+          DNSSEC Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d7e80479-aaf3-38d9-e79e-b2f538c418b3"
+    aria-labelledby="nav-button_desktop_d7e80479-aaf3-38d9-e79e-b2f538c418b3"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="87aba984-30c8-d18b-3f71-7bdec998328f"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/" >
+          Week 13: Security III
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_87aba984-30c8-d18b-3f71-7bdec998328f"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_87aba984-30c8-d18b-3f71-7bdec998328f"
+      data-uuid="87aba984-30c8-d18b-3f71-7bdec998328f"
+      aria-controls="nav-container_desktop_87aba984-30c8-d18b-3f71-7bdec998328f"
+      aria-expanded="false"
+      aria-label="Subsections for Week 13: Security III"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_87aba984-30c8-d18b-3f71-7bdec998328f"
+    aria-labelledby="nav-button_desktop_87aba984-30c8-d18b-3f71-7bdec998328f"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4793bb3a-5463-dd86-f8d5-6dc6fdf33ccb"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/lecture-23-outline/" >
+          Lecture 23 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_4793bb3a-5463-dd86-f8d5-6dc6fdf33ccb"
+    aria-labelledby="nav-button_desktop_4793bb3a-5463-dd86-f8d5-6dc6fdf33ccb"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ea13cbf1-25e6-cb4f-d552-53fee6563f83"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/botnets-assignment/" >
+          Botnets Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ea13cbf1-25e6-cb4f-d552-53fee6563f83"
+    aria-labelledby="nav-button_desktop_ea13cbf1-25e6-cb4f-d552-53fee6563f83"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c4a5c659-5c87-2d2d-140b-12b013818b4a"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/lecture-24-outline/" >
+          Lecture 24 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c4a5c659-5c87-2d2d-140b-12b013818b4a"
+    aria-labelledby="nav-button_desktop_c4a5c659-5c87-2d2d-140b-12b013818b4a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f16c7835-ea51-9931-2f17-c5652cc47102"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-13/memory-corruption-assignment/" >
+          Memory Corruption Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f16c7835-ea51-9931-2f17-c5652cc47102"
+    aria-labelledby="nav-button_desktop_f16c7835-ea51-9931-2f17-c5652cc47102"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/" >
+          Week 14: Security IV
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      data-uuid="a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      aria-controls="nav-container_desktop_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+      aria-expanded="false"
+      aria-label="Subsections for Week 14: Security IV"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+    aria-labelledby="nav-button_desktop_a53ea92f-4c3d-bec4-3ffa-e7cf73d6eb29"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="935d90a5-7a9a-0169-7319-6c14b0526d90"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/lecture-25-outline/" >
+          Lecture 25 Outline
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_935d90a5-7a9a-0169-7319-6c14b0526d90"
+    aria-labelledby="nav-button_desktop_935d90a5-7a9a-0169-7319-6c14b0526d90"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="447da471-034f-b347-4c11-bbe7bfa9e6b3"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/meltdown-assignment/" >
+          Meltdown Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_447da471-034f-b347-4c11-bbe7bfa9e6b3"
+    aria-labelledby="nav-button_desktop_447da471-034f-b347-4c11-bbe7bfa9e6b3"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1f147788-1493-7d98-11fd-9b451a7d7a4e"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/week-14/trusting-trust-assignment/" >
+          Trusting Trust Assignment
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_1f147788-1493-7d98-11fd-9b451a7d7a4e"
+    aria-labelledby="nav-button_desktop_1f147788-1493-7d98-11fd-9b451a7d7a4e"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="73594177-84bd-559f-acb2-aadc9d04abe7"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/design-project/" >
+          Design Project
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_73594177-84bd-559f-acb2-aadc9d04abe7"
+    aria-labelledby="nav-button_desktop_73594177-84bd-559f-acb2-aadc9d04abe7"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1731a3ca-ac5f-faa7-8e0f-4b3bff50a1cc"
+           href="/courses/6-033-computer-system-engineering-spring-2018/pages/resource-index/" >
+          Resource Index
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_1731a3ca-ac5f-faa7-8e0f-4b3bff50a1cc"
+    aria-labelledby="nav-button_desktop_1731a3ca-ac5f-faa7-8e0f-4b3bff50a1cc"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+
+        </div>
+        <div class="col-12 col-md-8 col-lg-7 course-home-grid">
+          <div class="card">
+  <div class="card-body">
+    <section class="course-detail-section">
+      
+
+
+  
+  
+  
+
+<div id="course-description">
+  <h4 class="course-detail-title">
+    Course Description
+  </h4>
+  
+  <div id="collapsed-description" class="description">This class covers topics on the engineering of computer software and hardware systems. Topics include techniques for controlling complexity; strong modularity using client-server design, operating systems; performance, networks; naming; security and privacy; fault-tolerant systems, atomicity and coordination of …<button id="expand-description" type="button" class="btn btn-link link-button p-0">Show more</button></div>
+  <div id="expanded-description" class="description d-none">This class covers topics on the engineering of computer software and hardware systems. Topics include techniques for controlling complexity; strong modularity using client-server design, operating systems; performance, networks; naming; security and privacy; fault-tolerant systems, atomicity and coordination of concurrent activities, and recovery; impact of computer systems on society.<button id="collapse-description" type="button" class="btn btn-link link-button p-0">Show less</button></div>
+  
+</div>
+
+    </section>
+
+    <section class="course-detail-section">
+      <div class="search-variant" data-search-variant="ocw">  
+
+<div class="course-info">
+  <div class="course-detail-title ">
+    <h2 class="font-black ">
+      Course Info
+    </h2>
+  </div>
+  <div class="">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label  text-muted ">
+            Instructor
+            </h3>
+          <div class="course-info-content ">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="/search/?q=Dr.&#43;Katrina&#43;LaCurts"  >Dr. Katrina LaCurts</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label  text-muted ">
+                Departments
+              </h3>
+              <div class="course-info-content ">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="/search/?d=Electrical&#43;Engineering&#43;and&#43;Computer&#43;Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+      </div>
+      
+      <div class="col-12 col-sm-6">
+        <div class="mt-4 mt-sm-0">
+          
+
+
+
+
+
+<div class="course-info-topics ">
+  <h3 class="course-info-section-label  text-muted ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 ">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_desktop_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_desktop_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_desktop_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_desktop_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Design&#43;and&#43;Engineering"  >Computer Design and Engineering</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Networks"  >Computer Networks</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Operating&#43;Systems"  >Operating Systems</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Software&#43;Design&#43;and&#43;Engineering"  >Software Design and Engineering</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div><div class="search-variant" data-search-variant="learn">  
+
+<div class="course-info">
+  <div class="course-detail-title ">
+    <h2 class="font-black ">
+      Course Info
+    </h2>
+  </div>
+  <div class="">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label  text-muted ">
+            Instructor
+            </h3>
+          <div class="course-info-content ">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;q=Dr.&#43;Katrina&#43;LaCurts"  >Dr. Katrina LaCurts</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label  text-muted ">
+                Departments
+              </h3>
+              <div class="course-info-content ">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://learn.mit.edu/search/?department=6&amp;offered_by=ocw"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+      </div>
+      
+      <div class="col-12 col-sm-6">
+        <div class="mt-4 mt-sm-0">
+          
+
+
+
+
+
+<div class="course-info-topics ">
+  <h3 class="course-info-section-label  text-muted ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 ">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_learn_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_learn_0"
+    aria-expanded="true"
+    aria-label="Data Science, Analytics &amp; Computer Technology subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Data&#43;Science%2C&#43;Analytics&#43;%26&#43;Computer&#43;Technology"  >Data Science, Analytics &amp; Computer Technology</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_desktop_learn_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Networks&#43;and&#43;Security"  >Networks and Security</a></span>
+    </div>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Software&#43;Design&#43;and&#43;Engineering"  >Software Design and Engineering</a></span>
+    </div>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+<div class="position-relative pt-1 pb-1">
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Engineering"  >Engineering</a></span>
+</div>
+
+</li>
+      
+  </ul>
+</div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+    </section>
+
+    <section class="course-detail-section">
+      
+
+
+
+<div class="">
+  <h3 class="course-info-section-label course-detail-title ">
+    Learning Resource Types
+  </h3>
+  <div>
+    <div class="row ">
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1"><span class="material-icons-round">
+        co_present
+      </span></i>
+    <span>Instructor Insights</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">notes</i>
+    <span>Lecture Notes</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">grading</i>
+    <span>Projects with Examples</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">assignment</i>
+    <span>Written Assignments</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    </section>
+  </div>
+</div>
+
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mb-3 mb-md-0 course-home-grid">
+          <div class="card">
+  <div class="card-body">
+    <div class="course-image-section-container">
+      <div class="course-image-container">
+        <div class="d-flex flex-column">
+          <img src="/courses/6-033-computer-system-engineering-spring-2018/a79fa5e068ab51b3cf0477c51c15a9b9_6-033s18.png" alt="Diagram of information between servers. " class="course-image" srcset="/courses/6-033-computer-system-engineering-spring-2018/a79fa5e068ab51b3cf0477c51c15a9b9_6-033s18.png?format=auto&amp;quality=75&amp;width=480 480w, /courses/6-033-computer-system-engineering-spring-2018/a79fa5e068ab51b3cf0477c51c15a9b9_6-033s18.png?format=auto&amp;quality=75&amp;width=800 800w, /courses/6-033-computer-system-engineering-spring-2018/a79fa5e068ab51b3cf0477c51c15a9b9_6-033s18.png?format=auto&amp;quality=75&amp;width=1280 1280w, /courses/6-033-computer-system-engineering-spring-2018/a79fa5e068ab51b3cf0477c51c15a9b9_6-033s18.png?format=auto&amp;quality=75&amp;width=1920 1920w" sizes="(min-width: 992px) 33vw, 100vw" loading="eager" decoding="async" fetchpriority="high" />
+        </div>
+        <div class="course-image-caption">
+          <span>Diagram of a transaction system which provides atomicity and isolation. Information is sent between the coordinator, view server, primary server, and backup server as indicated by arrows. Image by Dr. Katrina LaCurts.</span>
+        </div>
+      </div>
+      <div>
+        <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="/courses/6-033-computer-system-engineering-spring-2018/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+<div class="footer">
+    <div class="footer-main-content mx-auto">
+    	<div class="col-12 px-0">
+        	<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-md-flex align-items-center">
+						<a href="https://openlearning.mit.edu/" target="_blank">
+							<img width="117px" src="/static_shared/images/mit_ol.4165342f87abb1da46fd.svg" alt="MIT Open Learning" />
+						</a>
+						<div class="ml-md-3 mt-4 mt-md-0">
+							<div class="font-weight-bold">
+								Over 2,500 courses & materials
+							</div>
+							<div>
+								Freely sharing knowledge with learners and educators around the world. <a href='/about'>Learn more</a>
+							</div>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0 d-none d-md-block">
+					<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="/static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="/static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+				</div>
+        	</div>
+    	</div>
+		
+		<div class="col-12 mt-3 mt-md-4 px-0">
+			<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-lg-flex">
+						<div class="pr-md-2 mt-2 mt-lg-0 d-none d-lg-block">
+							© 2001–2026 Massachusetts Institute of Technology
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://accessibility.mit.edu" target="_blank">Accessibility</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons License</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a class="hide-offline" href='/pages/privacy-and-terms-of-use/'>Terms and Conditions</a>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0">
+					<div class="d-flex justify-content-md-end mt-4 mt-lg-0">
+						<div>
+						Proud member of: 
+						<a href="https://www.oeglobal.org/" target="_blank">
+							<img class="oeg-logo" src="/static_shared/images/oeg_logo.8a31f7b87f30df2d0169.png" alt="Open Education Global"/>
+						</a>
+						</div>
+					</div>
+				</div>
+        	</div>
+		</div>
+
+		<div class="col-12 mt-5 px-0 d-md-none">
+			<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="/static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="/static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+		</div>
+
+		<div class="col-12 mt-4 px-0 d-lg-none">
+			© 2001–2026 Massachusetts Institute of Technology
+		</div>
+    
+
+
+    
+    <script src="/static_shared/js/common.9481a.js"></script>
+    
+
+    
+    <script src="/static_shared/js/course_v2.9481a.js"></script>
+    
+
+
+
+
+
+    
+<script async src="https://w.appzi.io/w.js?token=Tgs1d"></script>
+
+	</div>
+</div>
+
+    <script>
+function hideLinksOffline(){
+  if (!window.navigator.onLine) {
+    const stripLinks = document.querySelectorAll(".strip-link-offline")
+    const hideOffline = document.querySelectorAll(".hide-offline")
+    const showOffline = document.querySelectorAll(".show-offline")
+    Array.prototype.forEach.call(stripLinks, function(link) {
+      link.outerHTML = link.innerHTML
+    })
+    Array.prototype.forEach.call(hideOffline, function(link) {
+      link.classList.add("d-none")
+    })
+    Array.prototype.forEach.call(showOffline, function(link) {
+      link.classList.remove("d-none")
+    })
+  }
+}
+hideLinksOffline()
+</script>
+
+  </div>
+  
+
+<div
+  class="modal"
+  id="external-link-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="external-link-modal-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-3">
+      <div class="modal-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <img
+            class="modal-header-icon-img mr-3 align-baseline"
+            src="/static_shared/images/external_link.58bbdd86c00a2c146c36.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <h1 class="modal-title" id="external-link-modal-title">
+            You are leaving MIT OpenCourseWare
+          </h1>
+        </div>
+        <button type="button" class="border-0 p-0 bg-transparent d-flex" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="material-icons modal-header-icon">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please be advised that external sites may have terms and conditions, 
+        including license rights, that differ from ours. MIT OCW is not responsible 
+        for any content on third party sites, nor does a link suggest an endorsement 
+        of those sites and/or their content.
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-link link-button"
+          data-dismiss="modal"
+          >
+            Stay Here
+        </button>
+        <a
+          role="button"
+          class="btn btn-primary btn-continue"
+          target="_blank"
+          href="#"
+        >
+          Continue
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<script>
+function expandNav(e,t){t.classList.add("show"),e.querySelector(".course-nav-section-toggle, video-tab-toggle-section").setAttribute("aria-expanded","true")}function courseNav(){document.querySelectorAll(".course-nav, .transcript-header").forEach(e=>{e.querySelectorAll(".nav-link").forEach(e=>{const t=e.getAttribute("href")?e.getAttribute("href"):"";if(t.replace(/\/$/,"")===window.location.pathname.replace(/\/$/,"")){e.classList.add("active");const s=e.closest(".course-nav-parent");s?.classList.add("active");const o=e.dataset.uuid,t=e.closest(".course-nav-list-item"),n=t?.querySelector(".collapse"),i=Array.prototype.filter.call(document.querySelectorAll(".course-nav-section-toggle"),e=>e.dataset.uuid===o);t&&n&&i.length>0&&expandNav(t,n)}});const t=e.querySelector("a.nav-link.active");e.querySelectorAll(".course-nav-list-item").forEach(e=>{const n=e.querySelector(".collapse");n&&n.contains(t)&&expandNav(e,n)})})}courseNav()
+</script>
+
+  
+
+<script>
+(()=>{var e=()=>document.querySelectorAll("#course-content-section table"),t=()=>document.getElementById("course-content-section");function n(){const o=e(),n=t();if(!n)return;if(!window.ResizeObserver)return;const i=new ResizeObserver(()=>s());i.observe(n),o.forEach(e=>{const t=e.getElementsByTagName("th"),n=e.querySelectorAll("table tr");n.forEach(e=>{const n=e.querySelectorAll("td");n.forEach((e,s)=>{t.length>=s+1&&(n[s].dataset.title=t[s].innerText.trim().concat(": "))})})})}function s(){const s=e(),n=t();if(!n)return;s.forEach(e=>{const t=n.getBoundingClientRect(),o=+(e.dataset.minWidth??0);t.width>o&&e.classList.remove("mobile-table");const s=e.getBoundingClientRect();s.right>t.right&&(e.dataset.minWidth=`${s.width}`,e.classList.add("mobile-table"))})}n()})()
+</script>
+
+</body>
+
+</html>

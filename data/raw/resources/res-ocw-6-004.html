@@ -1,0 +1,8099 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.142.0">
+  <meta charset="utf-8">
+  
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMQZ25T');</script>
+    
+  
+  <style>
+   
+  .search-variant {
+    display: contents;
+  }
+
+   
+  html:not([data-search="learn"]) [data-search-variant="learn"],
+  html[data-search="learn"] [data-search-variant="ocw"] {
+    display: none !important;
+  }
+
+   
+  html[data-search-pending] .course-info-topics {
+    visibility: hidden;
+  }
+</style>
+<script>
+  
+  
+  
+  document.documentElement.setAttribute("data-search-pending", "")
+  setTimeout(function () {
+    document.documentElement.removeAttribute("data-search-pending")
+  }, 1500)
+</script>
+
+
+    
+    <link href="/static_shared/css/course_v2.9481a.css" rel="stylesheet">
+    
+
+    
+    <link href="/static_shared/css/common.9481a.css" rel="stylesheet">
+    
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="This course introduces architecture of digital systems, emphasizing structural principles common to a wide range of technologies. It covers the topics including multilevel implementation strategies, definition of new primitives (e.g., gates, instructions, procedures, processes) and their mechanization using lower-level elements. It also includes analysis of potential concurrency, precedence constraints and performance measures, pipelined and multidimensional systems, instruction set design issues and architectural support for contemporary software structures.
+">
+  <meta name="keywords" content="opencourseware,MIT OCW,courseware,MIT opencourseware,Free Courses,class notes,class syllabus,class materials,tutorials,online courses,MIT courses">
+  
+  <meta property="og:site_name" content="MIT OpenCourseWare">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/" />
+  <meta property="og:title" content="Computation Structures | Electrical Engineering and Computer Science | MIT OpenCourseWare" />
+  <meta property="og:description" content="This course introduces architecture of digital systems, emphasizing structural principles common to a wide range of technologies. It covers the topics including multilevel implementation strategies, definition of new primitives (e.g., gates, instructions, procedures, processes) and their mechanization using lower-level elements. It also includes analysis of potential concurrency, precedence constraints and performance measures, pipelined and multidimensional systems, instruction set design issues and architectural support for contemporary software structures.
+" />
+
+  
+
+<meta property="og:image" content="https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/3a6d35b0390ffb5180ed20f5fadd63db_6-004S17.jpg" />
+<meta property="og:image:alt" content="Computation Structures" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mitocw" />
+<meta name="twitter:image:src" content="https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/3a6d35b0390ffb5180ed20f5fadd63db_6-004S17.jpg" />
+
+  <link rel="canonical" href="https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/" />
+  <link rel="alternate" hreflang="en" href="https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/" />
+  <link rel="alternate" hreflang="x-default" href="https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type" : "WebPage",
+        "name": "Computation Structures | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+        "url": "https:\/\/ocw.mit.edu\/courses\/6-004-computation-structures-spring-2017\/",
+        "description": "This course introduces architecture of digital systems, emphasizing structural principles common to a wide range of technologies. It covers the topics including multilevel implementation strategies, definition of new primitives (e.g., gates, instructions, procedures, processes) and their mechanization using lower-level elements. It also includes analysis of potential concurrency, precedence constraints and performance measures, pipelined and multidimensional systems, instruction set design issues and architectural support for contemporary software structures.\n",
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "CollegeOrUniversity",
+          "name": "MIT OpenCourseWare",
+          "url": "https://ocw.mit.edu"
+        }
+      }
+  </script>
+
+  <title>Computation Structures | Electrical Engineering and Computer Science | MIT OpenCourseWare</title>
+  <style>
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(/static_shared/fonts/MaterialIcons-Regular.subset.84f45410d085472240e2.woff2) format('woff2'),
+      url(/static_shared/fonts/MaterialIcons-Regular.subset.8167faf7e3a9170d282a.woff) format('woff'),
+      url(/static_shared/fonts/MaterialIcons-Regular.subset.0beb27f30d92440091b4.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local("MaterialIcons-Round"),
+    url(/static_shared/fonts/MaterialIconsRound-Regular.subset.7154eae1d0e60e0dabe4.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Cardo Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Cardo'),
+      local('Cardo-Bold'),
+      url(/static_shared/fonts/Cardo-Bold.d7bf1aa6f322a64b2fc3.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Cardo Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Cardo'),
+      local('Cardo-Italic'),
+      url(/static_shared/fonts/Cardo-Italic.0935d2ebbc05be3559b1.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal`;
+    font-weight: 400;
+    src: local('Helvetica Light'),
+      local('Helvetica-Light'),
+      url(/static_shared/fonts/Helvetica-Light.70359849afb40079a1c8.ttf) format('truetype');
+  }
+  .external-link.nav-link::after {
+    background-image: url('/static_shared/images/external_link.58bbdd86c00a2c146c36.svg'); 
+  }
+  </style>
+</head>
+
+
+<body class="course-home-page">
+  
+  
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMQZ25T" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  
+  
+
+  <div class="overflow-auto">
+    <span class="course-header">
+      <div
+  id="mobile-course-nav"
+  class="navbar-offcanvas offcanvas-toggle offcanvas-toggle-close medium-and-below-only drawer">
+  <h3 class="my-4 d-flex align-items-center justify-content-between">
+    Browse Course Material
+    <button
+      class="btn"
+      type="button"
+      aria-label="Close Course Menu"
+      onclick="$('#mobile-course-nav-toggle').click();"
+      id="close-mobile-course-menu-button"
+      >
+      <img
+        src="/static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </h3>
+  
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="03d6d4cc-d256-5a7b-39f7-f75e9ca36583"
+           href="/courses/6-004-computation-structures-spring-2017/pages/syllabus/" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_03d6d4cc-d256-5a7b-39f7-f75e9ca36583"
+    aria-labelledby="nav-button_mobile_03d6d4cc-d256-5a7b-39f7-f75e9ca36583"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="676547cd-e026-1f59-fb0f-aad00c82837e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/calendar/" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_676547cd-e026-1f59-fb0f-aad00c82837e"
+    aria-labelledby="nav-button_mobile_676547cd-e026-1f59-fb0f-aad00c82837e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="afe08404-8e78-ace8-b662-e0ac78cd1a98"
+           href="/courses/6-004-computation-structures-spring-2017/pages/instructor-insights/" >
+          Instructor Insights
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_afe08404-8e78-ace8-b662-e0ac78cd1a98"
+    aria-labelledby="nav-button_mobile_afe08404-8e78-ace8-b662-e0ac78cd1a98"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/" >
+          1 Basics of Information
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      data-uuid="5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      aria-controls="nav-container_mobile_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      aria-expanded="false"
+      aria-label="Subsections for 1 Basics of Information"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+    aria-labelledby="nav-button_mobile_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="24191c34-3d57-2641-409b-fd54b3d9b2dc"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/c1s1/" >
+          1.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_24191c34-3d57-2641-409b-fd54b3d9b2dc"
+    aria-labelledby="nav-button_mobile_24191c34-3d57-2641-409b-fd54b3d9b2dc"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c6b15600-7ff9-e918-f099-32c3700a9011"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/c1s2/" >
+          1.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c6b15600-7ff9-e918-f099-32c3700a9011"
+    aria-labelledby="nav-button_mobile_c6b15600-7ff9-e918-f099-32c3700a9011"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f46386c5-ec0e-5ec2-ca4d-528ff1e6d0bb"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/c1s3/" >
+          1.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f46386c5-ec0e-5ec2-ca4d-528ff1e6d0bb"
+    aria-labelledby="nav-button_mobile_f46386c5-ec0e-5ec2-ca4d-528ff1e6d0bb"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="350323ac-aa01-682d-7e3d-980d579da90c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/" >
+          2 The Digital Abstraction
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_350323ac-aa01-682d-7e3d-980d579da90c"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_350323ac-aa01-682d-7e3d-980d579da90c"
+      data-uuid="350323ac-aa01-682d-7e3d-980d579da90c"
+      aria-controls="nav-container_mobile_350323ac-aa01-682d-7e3d-980d579da90c"
+      aria-expanded="false"
+      aria-label="Subsections for 2 The Digital Abstraction"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_350323ac-aa01-682d-7e3d-980d579da90c"
+    aria-labelledby="nav-button_mobile_350323ac-aa01-682d-7e3d-980d579da90c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f36c8cab-16b9-624b-b4fe-c82e9ddf0f73"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/c2s1/" >
+          2.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f36c8cab-16b9-624b-b4fe-c82e9ddf0f73"
+    aria-labelledby="nav-button_mobile_f36c8cab-16b9-624b-b4fe-c82e9ddf0f73"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="80ba6453-e630-7129-a21b-4719e902522d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/c2s2/" >
+          2.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_80ba6453-e630-7129-a21b-4719e902522d"
+    aria-labelledby="nav-button_mobile_80ba6453-e630-7129-a21b-4719e902522d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="cd27e83b-4e39-1850-db5f-aab1b06be4a0"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/c2s3/" >
+          2.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_cd27e83b-4e39-1850-db5f-aab1b06be4a0"
+    aria-labelledby="nav-button_mobile_cd27e83b-4e39-1850-db5f-aab1b06be4a0"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1a6131b0-2b8c-2f47-69db-158bbd05b575"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/" >
+          3 CMOS
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      data-uuid="1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      aria-controls="nav-container_mobile_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      aria-expanded="false"
+      aria-label="Subsections for 3 CMOS"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+    aria-labelledby="nav-button_mobile_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d77171d7-bbaa-8eb5-d974-6a2895701253"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/" >
+          3.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d77171d7-bbaa-8eb5-d974-6a2895701253"
+    aria-labelledby="nav-button_mobile_d77171d7-bbaa-8eb5-d974-6a2895701253"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="335a4984-a0cf-abb0-a4f2-ea9f1bf5f315"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/c3s2/" >
+          3.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_335a4984-a0cf-abb0-a4f2-ea9f1bf5f315"
+    aria-labelledby="nav-button_mobile_335a4984-a0cf-abb0-a4f2-ea9f1bf5f315"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="45356b55-3771-6031-956c-7ded0603cfb7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/c3s3/" >
+          3.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_45356b55-3771-6031-956c-7ded0603cfb7"
+    aria-labelledby="nav-button_mobile_45356b55-3771-6031-956c-7ded0603cfb7"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/" >
+          4 Combinational Logic
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      data-uuid="dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      aria-controls="nav-container_mobile_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      aria-expanded="false"
+      aria-label="Subsections for 4 Combinational Logic"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+    aria-labelledby="nav-button_mobile_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b39a5b15-c1c8-c348-7bc5-29f6a8d2e699"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/c4s1/" >
+          4.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_b39a5b15-c1c8-c348-7bc5-29f6a8d2e699"
+    aria-labelledby="nav-button_mobile_b39a5b15-c1c8-c348-7bc5-29f6a8d2e699"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="16d99d53-bc32-2c68-e45c-056821c57278"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/c4s2/" >
+          4.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_16d99d53-bc32-2c68-e45c-056821c57278"
+    aria-labelledby="nav-button_mobile_16d99d53-bc32-2c68-e45c-056821c57278"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="90810d58-5a23-ba9d-654d-f7602a5d61ae"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/c4s3/" >
+          4.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_90810d58-5a23-ba9d-654d-f7602a5d61ae"
+    aria-labelledby="nav-button_mobile_90810d58-5a23-ba9d-654d-f7602a5d61ae"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="65644957-eae2-5f55-14b2-8b47728b4c31"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/" >
+          5 Sequential Logic
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_65644957-eae2-5f55-14b2-8b47728b4c31"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_65644957-eae2-5f55-14b2-8b47728b4c31"
+      data-uuid="65644957-eae2-5f55-14b2-8b47728b4c31"
+      aria-controls="nav-container_mobile_65644957-eae2-5f55-14b2-8b47728b4c31"
+      aria-expanded="false"
+      aria-label="Subsections for 5 Sequential Logic"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_65644957-eae2-5f55-14b2-8b47728b4c31"
+    aria-labelledby="nav-button_mobile_65644957-eae2-5f55-14b2-8b47728b4c31"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ba996719-fd35-c417-5993-5d31177dfcb9"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/c5s1/" >
+          5.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ba996719-fd35-c417-5993-5d31177dfcb9"
+    aria-labelledby="nav-button_mobile_ba996719-fd35-c417-5993-5d31177dfcb9"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e01318d3-35d4-9080-2f77-dae35f856d7f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/c5s2/" >
+          5.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e01318d3-35d4-9080-2f77-dae35f856d7f"
+    aria-labelledby="nav-button_mobile_e01318d3-35d4-9080-2f77-dae35f856d7f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="02123972-4a2b-0e71-718e-7969f3320766"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/c5s3/" >
+          5.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_02123972-4a2b-0e71-718e-7969f3320766"
+    aria-labelledby="nav-button_mobile_02123972-4a2b-0e71-718e-7969f3320766"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/" >
+          6 Finite State Machines
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      data-uuid="1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      aria-controls="nav-container_mobile_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      aria-expanded="false"
+      aria-label="Subsections for 6 Finite State Machines"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+    aria-labelledby="nav-button_mobile_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1ce0a254-f5ec-8356-abea-088ff937a0ac"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/c6s1/" >
+          6.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_1ce0a254-f5ec-8356-abea-088ff937a0ac"
+    aria-labelledby="nav-button_mobile_1ce0a254-f5ec-8356-abea-088ff937a0ac"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3ea8e9cb-09c5-3d24-4c08-c798e88363f8"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/c6s2/" >
+          6.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_3ea8e9cb-09c5-3d24-4c08-c798e88363f8"
+    aria-labelledby="nav-button_mobile_3ea8e9cb-09c5-3d24-4c08-c798e88363f8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="be13eea8-200c-47ed-3464-b6b332afcd96"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/c6s3/" >
+          6.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_be13eea8-200c-47ed-3464-b6b332afcd96"
+    aria-labelledby="nav-button_mobile_be13eea8-200c-47ed-3464-b6b332afcd96"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ff062356-dd4d-b849-14e8-05d7d47e5b64"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/" >
+          7 Performance Measures
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      data-uuid="ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      aria-controls="nav-container_mobile_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      aria-expanded="false"
+      aria-label="Subsections for 7 Performance Measures"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+    aria-labelledby="nav-button_mobile_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a97ebc62-7536-6091-9846-90b005674a5d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/c7s1/" >
+          7.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a97ebc62-7536-6091-9846-90b005674a5d"
+    aria-labelledby="nav-button_mobile_a97ebc62-7536-6091-9846-90b005674a5d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="73b2c57f-6d66-9b9c-4894-e14fae072f07"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/c7s2/" >
+          7.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_73b2c57f-6d66-9b9c-4894-e14fae072f07"
+    aria-labelledby="nav-button_mobile_73b2c57f-6d66-9b9c-4894-e14fae072f07"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5a1d9c82-ae55-5d9b-4ce5-afd224c16043"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/c7s3/" >
+          7.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5a1d9c82-ae55-5d9b-4ce5-afd224c16043"
+    aria-labelledby="nav-button_mobile_5a1d9c82-ae55-5d9b-4ce5-afd224c16043"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c8/" >
+          8 Design Tradeoffs
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      data-uuid="6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      aria-controls="nav-container_mobile_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      aria-expanded="false"
+      aria-label="Subsections for 8 Design Tradeoffs"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+    aria-labelledby="nav-button_mobile_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c8a85f9c-129e-5b36-f9c5-2a3365574124"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c8/c8s1/" >
+          8.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c8a85f9c-129e-5b36-f9c5-2a3365574124"
+    aria-labelledby="nav-button_mobile_c8a85f9c-129e-5b36-f9c5-2a3365574124"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae991901-cdb6-6775-2838-78b6c6c26194"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c8/c8s2/" >
+          8.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ae991901-cdb6-6775-2838-78b6c6c26194"
+    aria-labelledby="nav-button_mobile_ae991901-cdb6-6775-2838-78b6c6c26194"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8a240b21-8a75-95ac-4780-61831b8316d6"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/" >
+          9 Designing an Instruction Set
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_8a240b21-8a75-95ac-4780-61831b8316d6"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_8a240b21-8a75-95ac-4780-61831b8316d6"
+      data-uuid="8a240b21-8a75-95ac-4780-61831b8316d6"
+      aria-controls="nav-container_mobile_8a240b21-8a75-95ac-4780-61831b8316d6"
+      aria-expanded="false"
+      aria-label="Subsections for 9 Designing an Instruction Set"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_8a240b21-8a75-95ac-4780-61831b8316d6"
+    aria-labelledby="nav-button_mobile_8a240b21-8a75-95ac-4780-61831b8316d6"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="50133447-1f02-454d-b4c8-8a4afb3d32b8"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/c9s1/" >
+          9.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_50133447-1f02-454d-b4c8-8a4afb3d32b8"
+    aria-labelledby="nav-button_mobile_50133447-1f02-454d-b4c8-8a4afb3d32b8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5c4d3e65-eb78-c4a8-ad52-9266007c5239"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/c9s2/" >
+          9.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5c4d3e65-eb78-c4a8-ad52-9266007c5239"
+    aria-labelledby="nav-button_mobile_5c4d3e65-eb78-c4a8-ad52-9266007c5239"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0f1a2fc6-f501-ba70-cf84-b4d71722a65d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/c9s3/" >
+          9.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0f1a2fc6-f501-ba70-cf84-b4d71722a65d"
+    aria-labelledby="nav-button_mobile_0f1a2fc6-f501-ba70-cf84-b4d71722a65d"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="15e8c35a-1d49-ac3c-be84-3d679465973c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c10/" >
+          10 Assembly Language, Models of Computation
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_15e8c35a-1d49-ac3c-be84-3d679465973c"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_15e8c35a-1d49-ac3c-be84-3d679465973c"
+      data-uuid="15e8c35a-1d49-ac3c-be84-3d679465973c"
+      aria-controls="nav-container_mobile_15e8c35a-1d49-ac3c-be84-3d679465973c"
+      aria-expanded="false"
+      aria-label="Subsections for 10 Assembly Language, Models of Computation"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_15e8c35a-1d49-ac3c-be84-3d679465973c"
+    aria-labelledby="nav-button_mobile_15e8c35a-1d49-ac3c-be84-3d679465973c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="76b26f4e-38da-1486-221a-ccb9b343c762"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c10/c10s1/" >
+          10.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_76b26f4e-38da-1486-221a-ccb9b343c762"
+    aria-labelledby="nav-button_mobile_76b26f4e-38da-1486-221a-ccb9b343c762"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8b20414c-f39f-e884-20ad-bf68575692e7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c10/c10s2/" >
+          10.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_8b20414c-f39f-e884-20ad-bf68575692e7"
+    aria-labelledby="nav-button_mobile_8b20414c-f39f-e884-20ad-bf68575692e7"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2e15240f-872c-980b-fb93-06a9a5d2aff2"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/" >
+          11 Compilers
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      data-uuid="2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      aria-controls="nav-container_mobile_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      aria-expanded="false"
+      aria-label="Subsections for 11 Compilers"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+    aria-labelledby="nav-button_mobile_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2db1eadc-5344-f2de-9462-f7932dabec44"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/c11s1/" >
+          11.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_2db1eadc-5344-f2de-9462-f7932dabec44"
+    aria-labelledby="nav-button_mobile_2db1eadc-5344-f2de-9462-f7932dabec44"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="adbecd56-9a8c-9341-b3a3-3ba0d8d47ec7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/c11s2/" >
+          11.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_adbecd56-9a8c-9341-b3a3-3ba0d8d47ec7"
+    aria-labelledby="nav-button_mobile_adbecd56-9a8c-9341-b3a3-3ba0d8d47ec7"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="47c4729e-2a5e-9dfa-6a07-fc5ae5ed469f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/c11s3/" >
+          11.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_47c4729e-2a5e-9dfa-6a07-fc5ae5ed469f"
+    aria-labelledby="nav-button_mobile_47c4729e-2a5e-9dfa-6a07-fc5ae5ed469f"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/" >
+          12 Procedures and Stacks
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      data-uuid="419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      aria-controls="nav-container_mobile_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      aria-expanded="false"
+      aria-label="Subsections for 12 Procedures and Stacks"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+    aria-labelledby="nav-button_mobile_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="29840bcc-41c4-bfab-a071-981783ab0a1b"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/c12s1/" >
+          12.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_29840bcc-41c4-bfab-a071-981783ab0a1b"
+    aria-labelledby="nav-button_mobile_29840bcc-41c4-bfab-a071-981783ab0a1b"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fc44a356-c643-ef09-949b-723bc06e5623"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/c12s2/" >
+          12.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_fc44a356-c643-ef09-949b-723bc06e5623"
+    aria-labelledby="nav-button_mobile_fc44a356-c643-ef09-949b-723bc06e5623"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c2c69358-3e7e-117f-0cb8-97b345bbc086"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/c12s3/" >
+          12.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c2c69358-3e7e-117f-0cb8-97b345bbc086"
+    aria-labelledby="nav-button_mobile_c2c69358-3e7e-117f-0cb8-97b345bbc086"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4ce90d60-68fa-22b6-ad31-616717ca515c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/" >
+          13 Building the Beta
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_4ce90d60-68fa-22b6-ad31-616717ca515c"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_4ce90d60-68fa-22b6-ad31-616717ca515c"
+      data-uuid="4ce90d60-68fa-22b6-ad31-616717ca515c"
+      aria-controls="nav-container_mobile_4ce90d60-68fa-22b6-ad31-616717ca515c"
+      aria-expanded="false"
+      aria-label="Subsections for 13 Building the Beta"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_4ce90d60-68fa-22b6-ad31-616717ca515c"
+    aria-labelledby="nav-button_mobile_4ce90d60-68fa-22b6-ad31-616717ca515c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="7fba5e1d-2fa4-056c-150f-90508b97f937"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/c13s1/" >
+          13.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_7fba5e1d-2fa4-056c-150f-90508b97f937"
+    aria-labelledby="nav-button_mobile_7fba5e1d-2fa4-056c-150f-90508b97f937"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0f5d07f6-2e94-7d88-a1f1-191b8a267539"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/c13s2/" >
+          13.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0f5d07f6-2e94-7d88-a1f1-191b8a267539"
+    aria-labelledby="nav-button_mobile_0f5d07f6-2e94-7d88-a1f1-191b8a267539"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae8a3025-a1b5-ae94-e48b-280c14812fa7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/c13s3/" >
+          13.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ae8a3025-a1b5-ae94-e48b-280c14812fa7"
+    aria-labelledby="nav-button_mobile_ae8a3025-a1b5-ae94-e48b-280c14812fa7"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/" >
+          14 Caches and the Memory Hierarchy
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      data-uuid="bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      aria-controls="nav-container_mobile_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      aria-expanded="false"
+      aria-label="Subsections for 14 Caches and the Memory Hierarchy"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+    aria-labelledby="nav-button_mobile_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f65bc7a3-97ff-f216-13ee-a241c537bd4c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/c14s1/" >
+          14.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f65bc7a3-97ff-f216-13ee-a241c537bd4c"
+    aria-labelledby="nav-button_mobile_f65bc7a3-97ff-f216-13ee-a241c537bd4c"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e049ec91-6ab1-9944-2bd9-158b7136ada8"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/" >
+          14.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e049ec91-6ab1-9944-2bd9-158b7136ada8"
+    aria-labelledby="nav-button_mobile_e049ec91-6ab1-9944-2bd9-158b7136ada8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0845b426-e819-9b1a-84ed-2a828a0f014a"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/c14s3/" >
+          14.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0845b426-e819-9b1a-84ed-2a828a0f014a"
+    aria-labelledby="nav-button_mobile_0845b426-e819-9b1a-84ed-2a828a0f014a"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/" >
+          15 Pipelining the Beta
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      data-uuid="2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      aria-controls="nav-container_mobile_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      aria-expanded="false"
+      aria-label="Subsections for 15 Pipelining the Beta"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+    aria-labelledby="nav-button_mobile_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="76ea0269-3b06-ecaa-e0bb-d8ca4be4bb7e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/c15s1/" >
+          15.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_76ea0269-3b06-ecaa-e0bb-d8ca4be4bb7e"
+    aria-labelledby="nav-button_mobile_76ea0269-3b06-ecaa-e0bb-d8ca4be4bb7e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f0d50dc2-904e-e419-c2e4-019c29c19532"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/c15s2/" >
+          15.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f0d50dc2-904e-e419-c2e4-019c29c19532"
+    aria-labelledby="nav-button_mobile_f0d50dc2-904e-e419-c2e4-019c29c19532"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a9a1cc07-a231-ae83-e932-2ed49506c610"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/c15s3/" >
+          15.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a9a1cc07-a231-ae83-e932-2ed49506c610"
+    aria-labelledby="nav-button_mobile_a9a1cc07-a231-ae83-e932-2ed49506c610"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/" >
+          16 Virtual Memory
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      data-uuid="76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      aria-controls="nav-container_mobile_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      aria-expanded="false"
+      aria-label="Subsections for 16 Virtual Memory"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+    aria-labelledby="nav-button_mobile_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="61c8d864-831f-2145-e0a9-922732a385ec"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/c16s1/" >
+          16.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_61c8d864-831f-2145-e0a9-922732a385ec"
+    aria-labelledby="nav-button_mobile_61c8d864-831f-2145-e0a9-922732a385ec"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3b281e42-db10-8f1f-f6e4-71fa803f6cdf"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/" >
+          16.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_3b281e42-db10-8f1f-f6e4-71fa803f6cdf"
+    aria-labelledby="nav-button_mobile_3b281e42-db10-8f1f-f6e4-71fa803f6cdf"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="9fc3bb09-1d14-9f85-ed27-77bace810678"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/c16s3/" >
+          16.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_9fc3bb09-1d14-9f85-ed27-77bace810678"
+    aria-labelledby="nav-button_mobile_9fc3bb09-1d14-9f85-ed27-77bace810678"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/" >
+          17 Virtualizing the Processor
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      data-uuid="3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      aria-controls="nav-container_mobile_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      aria-expanded="false"
+      aria-label="Subsections for 17 Virtualizing the Processor"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+    aria-labelledby="nav-button_mobile_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="435fa3f2-0748-7b97-ace6-65391f3bff5f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/c17s1/" >
+          17.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_435fa3f2-0748-7b97-ace6-65391f3bff5f"
+    aria-labelledby="nav-button_mobile_435fa3f2-0748-7b97-ace6-65391f3bff5f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4ee7d448-d42f-22ac-fa6c-f0c41a85fe4f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/c17s2/" >
+          17.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_4ee7d448-d42f-22ac-fa6c-f0c41a85fe4f"
+    aria-labelledby="nav-button_mobile_4ee7d448-d42f-22ac-fa6c-f0c41a85fe4f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="57fba60a-b40f-4cd5-e783-0c5f98b68af5"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/c17s3/" >
+          17.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_57fba60a-b40f-4cd5-e783-0c5f98b68af5"
+    aria-labelledby="nav-button_mobile_57fba60a-b40f-4cd5-e783-0c5f98b68af5"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2c92b4b6-593e-3038-6fc7-38856e2308fb"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/" >
+          18 Devices and Interrupts
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      data-uuid="2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      aria-controls="nav-container_mobile_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      aria-expanded="false"
+      aria-label="Subsections for 18 Devices and Interrupts"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+    aria-labelledby="nav-button_mobile_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5e79a00f-7377-2e87-4bc8-390515e63a0d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/c18s1/" >
+          18.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5e79a00f-7377-2e87-4bc8-390515e63a0d"
+    aria-labelledby="nav-button_mobile_5e79a00f-7377-2e87-4bc8-390515e63a0d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fa697aed-8dfd-8206-d150-e1218c118201"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/c18s2/" >
+          18.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_fa697aed-8dfd-8206-d150-e1218c118201"
+    aria-labelledby="nav-button_mobile_fa697aed-8dfd-8206-d150-e1218c118201"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f0658301-b67e-cbfc-76ec-db0caa42768e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/c18s3/" >
+          18.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f0658301-b67e-cbfc-76ec-db0caa42768e"
+    aria-labelledby="nav-button_mobile_f0658301-b67e-cbfc-76ec-db0caa42768e"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/" >
+          19 Concurrency and Synchronization
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      data-uuid="8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      aria-controls="nav-container_mobile_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      aria-expanded="false"
+      aria-label="Subsections for 19 Concurrency and Synchronization"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+    aria-labelledby="nav-button_mobile_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="afb5e6a8-476a-7f76-4e0a-4be0d22685e4"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/c19s1/" >
+          19.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_afb5e6a8-476a-7f76-4e0a-4be0d22685e4"
+    aria-labelledby="nav-button_mobile_afb5e6a8-476a-7f76-4e0a-4be0d22685e4"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4c59d53d-717d-751b-1465-1b2fd8c38744"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/c19s2/" >
+          19.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_4c59d53d-717d-751b-1465-1b2fd8c38744"
+    aria-labelledby="nav-button_mobile_4c59d53d-717d-751b-1465-1b2fd8c38744"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8820f7c1-0771-7309-c202-bdd18171ca42"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/c19s3/" >
+          19.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_8820f7c1-0771-7309-c202-bdd18171ca42"
+    aria-labelledby="nav-button_mobile_8820f7c1-0771-7309-c202-bdd18171ca42"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c20/" >
+          20 System-level Communication
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      data-uuid="a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      aria-controls="nav-container_mobile_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      aria-expanded="false"
+      aria-label="Subsections for 20 System-level Communication"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+    aria-labelledby="nav-button_mobile_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="866cbcd7-fe65-4979-53fa-90baa0c3f6da"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c20/c20s1/" >
+          20.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_866cbcd7-fe65-4979-53fa-90baa0c3f6da"
+    aria-labelledby="nav-button_mobile_866cbcd7-fe65-4979-53fa-90baa0c3f6da"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="9acc3357-2435-756b-dcaf-c5ab86d755af"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c20/c20s2/" >
+          20.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_9acc3357-2435-756b-dcaf-c5ab86d755af"
+    aria-labelledby="nav-button_mobile_9acc3357-2435-756b-dcaf-c5ab86d755af"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="137e1b2f-66e7-989b-562c-f577e910834c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c21/" >
+          21 Parallel Processing
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_137e1b2f-66e7-989b-562c-f577e910834c"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_137e1b2f-66e7-989b-562c-f577e910834c"
+      data-uuid="137e1b2f-66e7-989b-562c-f577e910834c"
+      aria-controls="nav-container_mobile_137e1b2f-66e7-989b-562c-f577e910834c"
+      aria-expanded="false"
+      aria-label="Subsections for 21 Parallel Processing"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_137e1b2f-66e7-989b-562c-f577e910834c"
+    aria-labelledby="nav-button_mobile_137e1b2f-66e7-989b-562c-f577e910834c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="9a439586-e23c-50b5-9bf2-cfbc1289a41e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c21/c21s1/" >
+          21.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_9a439586-e23c-50b5-9bf2-cfbc1289a41e"
+    aria-labelledby="nav-button_mobile_9a439586-e23c-50b5-9bf2-cfbc1289a41e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fe5883b3-ab22-9104-9169-85cf37e78935"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c21/c21s2/" >
+          21.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_fe5883b3-ab22-9104-9169-85cf37e78935"
+    aria-labelledby="nav-button_mobile_fe5883b3-ab22-9104-9169-85cf37e78935"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+</div>
+
+      <div
+  id="course-info-drawer"
+  class="bg-faded pt-3 bg-light navbar-offcanvas navbar-offcanvas-right medium-and-below-only drawer"
+>
+  <div class="col-12">
+    <button
+      class="btn close-mobile-course-info"
+      type="button"
+      aria-label="Close Course Info"
+      onclick="$('#mobile-course-info-toggle').click();"
+      id="close-mobile-course-info-button"
+      >
+      <img
+        class=""
+        src="/static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </div>
+  <div class="search-variant" data-search-variant="ocw">  
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Instructor
+            </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="/search/?q=Chris&#43;Terman"  >Chris Terman</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label panel-course-info-title ">
+                Departments
+              </h3>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="/search/?d=Electrical&#43;Engineering&#43;and&#43;Computer&#43;Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            As Taught In
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            Spring
+            
+              2017
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Level
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div><div class="search-variant" data-search-variant="learn">  
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Instructor
+            </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;q=Chris&#43;Terman"  >Chris Terman</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label panel-course-info-title ">
+                Departments
+              </h3>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://learn.mit.edu/search/?department=6&amp;offered_by=ocw"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            As Taught In
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            Spring
+            
+              2017
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h3 class="course-info-section-label panel-course-info-title ">
+            Level
+          </h3>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://learn.mit.edu/search/?level=undergraduate&amp;offered_by=ocw"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+  <div class="px-3">
+    <div class="search-variant" data-search-variant="ocw">
+
+
+
+
+
+<div class="course-info-topics mt-4">
+  <h3 class="course-info-section-label panel-course-info-title ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_mobile_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_mobile_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_mobile_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_mobile_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Design&#43;and&#43;Engineering"  >Computer Design and Engineering</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_mobile_0_1"
+        data-toggle="collapse"
+        aria-controls="speciality-container_mobile_0_1"
+        aria-expanded="true"
+        aria-label="Electrical Engineering specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Electrical&#43;Engineering"  >Electrical Engineering</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_mobile_0_1"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Digital&#43;Systems"  >Digital Systems</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+</div><div class="search-variant" data-search-variant="learn">
+
+
+
+
+
+<div class="course-info-topics mt-4">
+  <h3 class="course-info-section-label panel-course-info-title ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_learn_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_learn_0"
+    aria-expanded="true"
+    aria-label="Data Science, Analytics &amp; Computer Technology subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Data&#43;Science%2C&#43;Analytics&#43;%26&#43;Computer&#43;Technology"  >Data Science, Analytics &amp; Computer Technology</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_mobile_learn_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Software&#43;Design&#43;and&#43;Engineering"  >Software Design and Engineering</a></span>
+    </div>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_learn_1"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_learn_1"
+    aria-expanded="false"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse list-unstyled"
+  id="subtopic-container_mobile_learn_1"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Electrical&#43;Engineering"  >Electrical Engineering</a></span>
+    </div>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+</div>
+    
+
+
+
+<div class="">
+  <h3 class="course-info-section-label course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h3>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1"><span class="material-icons-round">
+        co_present
+      </span></i>
+    <span>Instructor Insights</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">notes</i>
+    <span>Lecture Notes</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">theaters</i>
+    <span>Lecture Videos</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">podcasts</i>
+    <span>Podcasts</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">assignment_turned_in</i>
+    <span>Programming Assignments with Examples</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="/courses/6-004-computation-structures-spring-2017/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+  </div>
+</div>
+
+      
+
+
+
+
+
+<div id="mobile-header" class="position-relative bg-black medium-and-below-only">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black d-flex">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="material-icons display-4 text-white align-bottom">menu</i>
+    </button>
+    <div class="mx-auto">
+      <a class="ocw-logo-link" href="/">
+        <img width="200" src="/static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare"/>
+      </a>
+    </div>
+    <div class="user-menu-container" data-variant="mobile"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto pl-2 pt-2">
+        <li class="nav-item">
+  
+    
+    
+      
+      
+    <a class="nav-link search-icon text-white pr-6" href="/search/" data-search-variant="ocw">
+      <i class="material-icons">search</i>
+    </a>
+    
+      
+      
+        
+      
+    <a class="nav-link search-icon text-white pr-6" href="https://learn.mit.edu/search/?offered_by=ocw" data-search-variant="learn">
+      <i class="material-icons">search</i>
+    </a>
+    
+  
+</li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home"  >Give Now</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="/about"  >About OCW</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >Help &amp; Faqs</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://mitocw.zendesk.com/hc/en-us/requests/new"  >Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<div id="desktop-header">
+  <div class="contents">
+    <div class="left">
+      <div class="ocw-logo">
+        <a class="ocw-logo-link" href="/">
+          <img src="/static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare" />
+        </a>
+      </div>
+    </div>
+    <div class="right">
+      
+  
+    
+    
+      
+      
+    <a class="nav-link search-icon text-white pr-6" href="/search/" data-search-variant="ocw">
+      <i class="material-icons">search</i>
+    </a>
+    
+      
+      
+        
+      
+    <a class="nav-link search-icon text-white pr-6" href="https://learn.mit.edu/search/?offered_by=ocw" data-search-variant="learn">
+      <i class="material-icons">search</i>
+    </a>
+    
+  
+
+      <a class="give-button text-white text-decoration-none font-weight-bold small-link d-flex align-items-center" aria-label="Give Now - Donate to MIT OpenCourseWare" href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home">
+        <span class="m-0 pr-2">GIVE NOW</span>
+        <img src="/static_shared/images/heart_burgundy.e7c8635e8cc6538b89fa.svg" class="heart-burgundy" alt="" />
+      </a>
+      <a   class="text-white text-decoration-none font-weight-bold pl-5 pr-3 py-2"    href="/about"  >about ocw</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >help &amp; faqs</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"    href="https://mitocw.zendesk.com/hc/en-us/requests/new"  >contact us</a>
+      <div class="user-menu-container" data-variant="desktop"></div>
+    </div>
+  </div>
+</div>
+
+      
+
+<div id="course-banner" class="p-0">
+  <div class="max-content-width course-banner-content m-auto py-3">
+    <div class="row">
+    <div class="col-12">
+      
+      <span class="course-number-term-detail">6.004 | Spring 2017 | Undergraduate</span>
+      <br>
+      <br>
+      <h1>
+        <a
+          class="text-capitalize m-0 text-white"
+          href="/courses/6-004-computation-structures-spring-2017/"
+        >Computation Structures</a>
+      </h1>
+    </div>
+    </div>
+  </div>
+</div>
+
+    </span>
+    <div id="course-main-content">
+      <div class="row">
+        <div class="col-12 course-home-grid">
+          <div class="medium-and-below-only mb-3">
+            <div>
+  <button
+    id="mobile-course-nav-toggle"
+    class="mobile-course-nav-toggle-btn d-inline-flex align-items-center offcanvas-toggle"
+    data-toggle="offcanvas"
+    data-target="#mobile-course-nav"
+  >
+    <img src="/static_shared/images/expand.a062b1c47b121e3c7e03.svg" alt=""/>
+    <span class="pl-1">Menu</span>
+  </button>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row course-cards">
+        <div class="col-2 course-home-grid large-and-above-only">
+          <div class="card">
+  <div class="card-body pr-2">
+    
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="03d6d4cc-d256-5a7b-39f7-f75e9ca36583"
+           href="/courses/6-004-computation-structures-spring-2017/pages/syllabus/" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_03d6d4cc-d256-5a7b-39f7-f75e9ca36583"
+    aria-labelledby="nav-button_desktop_03d6d4cc-d256-5a7b-39f7-f75e9ca36583"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="676547cd-e026-1f59-fb0f-aad00c82837e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/calendar/" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_676547cd-e026-1f59-fb0f-aad00c82837e"
+    aria-labelledby="nav-button_desktop_676547cd-e026-1f59-fb0f-aad00c82837e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="afe08404-8e78-ace8-b662-e0ac78cd1a98"
+           href="/courses/6-004-computation-structures-spring-2017/pages/instructor-insights/" >
+          Instructor Insights
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_afe08404-8e78-ace8-b662-e0ac78cd1a98"
+    aria-labelledby="nav-button_desktop_afe08404-8e78-ace8-b662-e0ac78cd1a98"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/" >
+          1 Basics of Information
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      data-uuid="5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      aria-controls="nav-container_desktop_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+      aria-expanded="false"
+      aria-label="Subsections for 1 Basics of Information"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+    aria-labelledby="nav-button_desktop_5e1b464a-9f55-f37c-1135-ec4ece6732b2"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="24191c34-3d57-2641-409b-fd54b3d9b2dc"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/c1s1/" >
+          1.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_24191c34-3d57-2641-409b-fd54b3d9b2dc"
+    aria-labelledby="nav-button_desktop_24191c34-3d57-2641-409b-fd54b3d9b2dc"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c6b15600-7ff9-e918-f099-32c3700a9011"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/c1s2/" >
+          1.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c6b15600-7ff9-e918-f099-32c3700a9011"
+    aria-labelledby="nav-button_desktop_c6b15600-7ff9-e918-f099-32c3700a9011"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f46386c5-ec0e-5ec2-ca4d-528ff1e6d0bb"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c1/c1s3/" >
+          1.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f46386c5-ec0e-5ec2-ca4d-528ff1e6d0bb"
+    aria-labelledby="nav-button_desktop_f46386c5-ec0e-5ec2-ca4d-528ff1e6d0bb"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="350323ac-aa01-682d-7e3d-980d579da90c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/" >
+          2 The Digital Abstraction
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_350323ac-aa01-682d-7e3d-980d579da90c"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_350323ac-aa01-682d-7e3d-980d579da90c"
+      data-uuid="350323ac-aa01-682d-7e3d-980d579da90c"
+      aria-controls="nav-container_desktop_350323ac-aa01-682d-7e3d-980d579da90c"
+      aria-expanded="false"
+      aria-label="Subsections for 2 The Digital Abstraction"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_350323ac-aa01-682d-7e3d-980d579da90c"
+    aria-labelledby="nav-button_desktop_350323ac-aa01-682d-7e3d-980d579da90c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f36c8cab-16b9-624b-b4fe-c82e9ddf0f73"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/c2s1/" >
+          2.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f36c8cab-16b9-624b-b4fe-c82e9ddf0f73"
+    aria-labelledby="nav-button_desktop_f36c8cab-16b9-624b-b4fe-c82e9ddf0f73"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="80ba6453-e630-7129-a21b-4719e902522d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/c2s2/" >
+          2.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_80ba6453-e630-7129-a21b-4719e902522d"
+    aria-labelledby="nav-button_desktop_80ba6453-e630-7129-a21b-4719e902522d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="cd27e83b-4e39-1850-db5f-aab1b06be4a0"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c2/c2s3/" >
+          2.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_cd27e83b-4e39-1850-db5f-aab1b06be4a0"
+    aria-labelledby="nav-button_desktop_cd27e83b-4e39-1850-db5f-aab1b06be4a0"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1a6131b0-2b8c-2f47-69db-158bbd05b575"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/" >
+          3 CMOS
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      data-uuid="1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      aria-controls="nav-container_desktop_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+      aria-expanded="false"
+      aria-label="Subsections for 3 CMOS"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+    aria-labelledby="nav-button_desktop_1a6131b0-2b8c-2f47-69db-158bbd05b575"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d77171d7-bbaa-8eb5-d974-6a2895701253"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/" >
+          3.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d77171d7-bbaa-8eb5-d974-6a2895701253"
+    aria-labelledby="nav-button_desktop_d77171d7-bbaa-8eb5-d974-6a2895701253"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="335a4984-a0cf-abb0-a4f2-ea9f1bf5f315"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/c3s2/" >
+          3.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_335a4984-a0cf-abb0-a4f2-ea9f1bf5f315"
+    aria-labelledby="nav-button_desktop_335a4984-a0cf-abb0-a4f2-ea9f1bf5f315"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="45356b55-3771-6031-956c-7ded0603cfb7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c3/c3s3/" >
+          3.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_45356b55-3771-6031-956c-7ded0603cfb7"
+    aria-labelledby="nav-button_desktop_45356b55-3771-6031-956c-7ded0603cfb7"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/" >
+          4 Combinational Logic
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      data-uuid="dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      aria-controls="nav-container_desktop_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+      aria-expanded="false"
+      aria-label="Subsections for 4 Combinational Logic"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+    aria-labelledby="nav-button_desktop_dd057f79-dfc7-79ee-ad85-cab1a1a91750"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b39a5b15-c1c8-c348-7bc5-29f6a8d2e699"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/c4s1/" >
+          4.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_b39a5b15-c1c8-c348-7bc5-29f6a8d2e699"
+    aria-labelledby="nav-button_desktop_b39a5b15-c1c8-c348-7bc5-29f6a8d2e699"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="16d99d53-bc32-2c68-e45c-056821c57278"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/c4s2/" >
+          4.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_16d99d53-bc32-2c68-e45c-056821c57278"
+    aria-labelledby="nav-button_desktop_16d99d53-bc32-2c68-e45c-056821c57278"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="90810d58-5a23-ba9d-654d-f7602a5d61ae"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c4/c4s3/" >
+          4.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_90810d58-5a23-ba9d-654d-f7602a5d61ae"
+    aria-labelledby="nav-button_desktop_90810d58-5a23-ba9d-654d-f7602a5d61ae"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="65644957-eae2-5f55-14b2-8b47728b4c31"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/" >
+          5 Sequential Logic
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_65644957-eae2-5f55-14b2-8b47728b4c31"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_65644957-eae2-5f55-14b2-8b47728b4c31"
+      data-uuid="65644957-eae2-5f55-14b2-8b47728b4c31"
+      aria-controls="nav-container_desktop_65644957-eae2-5f55-14b2-8b47728b4c31"
+      aria-expanded="false"
+      aria-label="Subsections for 5 Sequential Logic"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_65644957-eae2-5f55-14b2-8b47728b4c31"
+    aria-labelledby="nav-button_desktop_65644957-eae2-5f55-14b2-8b47728b4c31"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ba996719-fd35-c417-5993-5d31177dfcb9"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/c5s1/" >
+          5.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ba996719-fd35-c417-5993-5d31177dfcb9"
+    aria-labelledby="nav-button_desktop_ba996719-fd35-c417-5993-5d31177dfcb9"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e01318d3-35d4-9080-2f77-dae35f856d7f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/c5s2/" >
+          5.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e01318d3-35d4-9080-2f77-dae35f856d7f"
+    aria-labelledby="nav-button_desktop_e01318d3-35d4-9080-2f77-dae35f856d7f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="02123972-4a2b-0e71-718e-7969f3320766"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c5/c5s3/" >
+          5.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_02123972-4a2b-0e71-718e-7969f3320766"
+    aria-labelledby="nav-button_desktop_02123972-4a2b-0e71-718e-7969f3320766"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/" >
+          6 Finite State Machines
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      data-uuid="1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      aria-controls="nav-container_desktop_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+      aria-expanded="false"
+      aria-label="Subsections for 6 Finite State Machines"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+    aria-labelledby="nav-button_desktop_1c9ab291-68cf-1e57-eeaf-2f8c2015d9dc"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="1ce0a254-f5ec-8356-abea-088ff937a0ac"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/c6s1/" >
+          6.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_1ce0a254-f5ec-8356-abea-088ff937a0ac"
+    aria-labelledby="nav-button_desktop_1ce0a254-f5ec-8356-abea-088ff937a0ac"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3ea8e9cb-09c5-3d24-4c08-c798e88363f8"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/c6s2/" >
+          6.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_3ea8e9cb-09c5-3d24-4c08-c798e88363f8"
+    aria-labelledby="nav-button_desktop_3ea8e9cb-09c5-3d24-4c08-c798e88363f8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="be13eea8-200c-47ed-3464-b6b332afcd96"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c6/c6s3/" >
+          6.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_be13eea8-200c-47ed-3464-b6b332afcd96"
+    aria-labelledby="nav-button_desktop_be13eea8-200c-47ed-3464-b6b332afcd96"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ff062356-dd4d-b849-14e8-05d7d47e5b64"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/" >
+          7 Performance Measures
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      data-uuid="ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      aria-controls="nav-container_desktop_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+      aria-expanded="false"
+      aria-label="Subsections for 7 Performance Measures"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+    aria-labelledby="nav-button_desktop_ff062356-dd4d-b849-14e8-05d7d47e5b64"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a97ebc62-7536-6091-9846-90b005674a5d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/c7s1/" >
+          7.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a97ebc62-7536-6091-9846-90b005674a5d"
+    aria-labelledby="nav-button_desktop_a97ebc62-7536-6091-9846-90b005674a5d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="73b2c57f-6d66-9b9c-4894-e14fae072f07"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/c7s2/" >
+          7.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_73b2c57f-6d66-9b9c-4894-e14fae072f07"
+    aria-labelledby="nav-button_desktop_73b2c57f-6d66-9b9c-4894-e14fae072f07"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5a1d9c82-ae55-5d9b-4ce5-afd224c16043"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c7/c7s3/" >
+          7.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5a1d9c82-ae55-5d9b-4ce5-afd224c16043"
+    aria-labelledby="nav-button_desktop_5a1d9c82-ae55-5d9b-4ce5-afd224c16043"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c8/" >
+          8 Design Tradeoffs
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      data-uuid="6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      aria-controls="nav-container_desktop_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+      aria-expanded="false"
+      aria-label="Subsections for 8 Design Tradeoffs"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+    aria-labelledby="nav-button_desktop_6b8eb127-6fd5-8cc5-9e96-5a684d70f7c9"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c8a85f9c-129e-5b36-f9c5-2a3365574124"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c8/c8s1/" >
+          8.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c8a85f9c-129e-5b36-f9c5-2a3365574124"
+    aria-labelledby="nav-button_desktop_c8a85f9c-129e-5b36-f9c5-2a3365574124"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae991901-cdb6-6775-2838-78b6c6c26194"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c8/c8s2/" >
+          8.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ae991901-cdb6-6775-2838-78b6c6c26194"
+    aria-labelledby="nav-button_desktop_ae991901-cdb6-6775-2838-78b6c6c26194"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8a240b21-8a75-95ac-4780-61831b8316d6"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/" >
+          9 Designing an Instruction Set
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_8a240b21-8a75-95ac-4780-61831b8316d6"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_8a240b21-8a75-95ac-4780-61831b8316d6"
+      data-uuid="8a240b21-8a75-95ac-4780-61831b8316d6"
+      aria-controls="nav-container_desktop_8a240b21-8a75-95ac-4780-61831b8316d6"
+      aria-expanded="false"
+      aria-label="Subsections for 9 Designing an Instruction Set"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_8a240b21-8a75-95ac-4780-61831b8316d6"
+    aria-labelledby="nav-button_desktop_8a240b21-8a75-95ac-4780-61831b8316d6"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="50133447-1f02-454d-b4c8-8a4afb3d32b8"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/c9s1/" >
+          9.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_50133447-1f02-454d-b4c8-8a4afb3d32b8"
+    aria-labelledby="nav-button_desktop_50133447-1f02-454d-b4c8-8a4afb3d32b8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5c4d3e65-eb78-c4a8-ad52-9266007c5239"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/c9s2/" >
+          9.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5c4d3e65-eb78-c4a8-ad52-9266007c5239"
+    aria-labelledby="nav-button_desktop_5c4d3e65-eb78-c4a8-ad52-9266007c5239"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0f1a2fc6-f501-ba70-cf84-b4d71722a65d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c9/c9s3/" >
+          9.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0f1a2fc6-f501-ba70-cf84-b4d71722a65d"
+    aria-labelledby="nav-button_desktop_0f1a2fc6-f501-ba70-cf84-b4d71722a65d"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="15e8c35a-1d49-ac3c-be84-3d679465973c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c10/" >
+          10 Assembly Language, Models of Computation
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_15e8c35a-1d49-ac3c-be84-3d679465973c"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_15e8c35a-1d49-ac3c-be84-3d679465973c"
+      data-uuid="15e8c35a-1d49-ac3c-be84-3d679465973c"
+      aria-controls="nav-container_desktop_15e8c35a-1d49-ac3c-be84-3d679465973c"
+      aria-expanded="false"
+      aria-label="Subsections for 10 Assembly Language, Models of Computation"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_15e8c35a-1d49-ac3c-be84-3d679465973c"
+    aria-labelledby="nav-button_desktop_15e8c35a-1d49-ac3c-be84-3d679465973c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="76b26f4e-38da-1486-221a-ccb9b343c762"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c10/c10s1/" >
+          10.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_76b26f4e-38da-1486-221a-ccb9b343c762"
+    aria-labelledby="nav-button_desktop_76b26f4e-38da-1486-221a-ccb9b343c762"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8b20414c-f39f-e884-20ad-bf68575692e7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c10/c10s2/" >
+          10.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_8b20414c-f39f-e884-20ad-bf68575692e7"
+    aria-labelledby="nav-button_desktop_8b20414c-f39f-e884-20ad-bf68575692e7"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2e15240f-872c-980b-fb93-06a9a5d2aff2"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/" >
+          11 Compilers
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      data-uuid="2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      aria-controls="nav-container_desktop_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+      aria-expanded="false"
+      aria-label="Subsections for 11 Compilers"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+    aria-labelledby="nav-button_desktop_2e15240f-872c-980b-fb93-06a9a5d2aff2"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2db1eadc-5344-f2de-9462-f7932dabec44"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/c11s1/" >
+          11.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_2db1eadc-5344-f2de-9462-f7932dabec44"
+    aria-labelledby="nav-button_desktop_2db1eadc-5344-f2de-9462-f7932dabec44"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="adbecd56-9a8c-9341-b3a3-3ba0d8d47ec7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/c11s2/" >
+          11.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_adbecd56-9a8c-9341-b3a3-3ba0d8d47ec7"
+    aria-labelledby="nav-button_desktop_adbecd56-9a8c-9341-b3a3-3ba0d8d47ec7"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="47c4729e-2a5e-9dfa-6a07-fc5ae5ed469f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c11/c11s3/" >
+          11.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_47c4729e-2a5e-9dfa-6a07-fc5ae5ed469f"
+    aria-labelledby="nav-button_desktop_47c4729e-2a5e-9dfa-6a07-fc5ae5ed469f"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/" >
+          12 Procedures and Stacks
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      data-uuid="419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      aria-controls="nav-container_desktop_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+      aria-expanded="false"
+      aria-label="Subsections for 12 Procedures and Stacks"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+    aria-labelledby="nav-button_desktop_419b66c7-9004-2402-69f8-4dcbfe8e7c79"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="29840bcc-41c4-bfab-a071-981783ab0a1b"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/c12s1/" >
+          12.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_29840bcc-41c4-bfab-a071-981783ab0a1b"
+    aria-labelledby="nav-button_desktop_29840bcc-41c4-bfab-a071-981783ab0a1b"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fc44a356-c643-ef09-949b-723bc06e5623"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/c12s2/" >
+          12.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_fc44a356-c643-ef09-949b-723bc06e5623"
+    aria-labelledby="nav-button_desktop_fc44a356-c643-ef09-949b-723bc06e5623"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c2c69358-3e7e-117f-0cb8-97b345bbc086"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c12/c12s3/" >
+          12.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c2c69358-3e7e-117f-0cb8-97b345bbc086"
+    aria-labelledby="nav-button_desktop_c2c69358-3e7e-117f-0cb8-97b345bbc086"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4ce90d60-68fa-22b6-ad31-616717ca515c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/" >
+          13 Building the Beta
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_4ce90d60-68fa-22b6-ad31-616717ca515c"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_4ce90d60-68fa-22b6-ad31-616717ca515c"
+      data-uuid="4ce90d60-68fa-22b6-ad31-616717ca515c"
+      aria-controls="nav-container_desktop_4ce90d60-68fa-22b6-ad31-616717ca515c"
+      aria-expanded="false"
+      aria-label="Subsections for 13 Building the Beta"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_4ce90d60-68fa-22b6-ad31-616717ca515c"
+    aria-labelledby="nav-button_desktop_4ce90d60-68fa-22b6-ad31-616717ca515c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="7fba5e1d-2fa4-056c-150f-90508b97f937"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/c13s1/" >
+          13.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_7fba5e1d-2fa4-056c-150f-90508b97f937"
+    aria-labelledby="nav-button_desktop_7fba5e1d-2fa4-056c-150f-90508b97f937"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0f5d07f6-2e94-7d88-a1f1-191b8a267539"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/c13s2/" >
+          13.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0f5d07f6-2e94-7d88-a1f1-191b8a267539"
+    aria-labelledby="nav-button_desktop_0f5d07f6-2e94-7d88-a1f1-191b8a267539"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae8a3025-a1b5-ae94-e48b-280c14812fa7"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c13/c13s3/" >
+          13.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ae8a3025-a1b5-ae94-e48b-280c14812fa7"
+    aria-labelledby="nav-button_desktop_ae8a3025-a1b5-ae94-e48b-280c14812fa7"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/" >
+          14 Caches and the Memory Hierarchy
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      data-uuid="bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      aria-controls="nav-container_desktop_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+      aria-expanded="false"
+      aria-label="Subsections for 14 Caches and the Memory Hierarchy"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+    aria-labelledby="nav-button_desktop_bb0a76eb-d0c8-86bf-0a4e-2106e7f17dd5"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f65bc7a3-97ff-f216-13ee-a241c537bd4c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/c14s1/" >
+          14.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f65bc7a3-97ff-f216-13ee-a241c537bd4c"
+    aria-labelledby="nav-button_desktop_f65bc7a3-97ff-f216-13ee-a241c537bd4c"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e049ec91-6ab1-9944-2bd9-158b7136ada8"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/" >
+          14.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e049ec91-6ab1-9944-2bd9-158b7136ada8"
+    aria-labelledby="nav-button_desktop_e049ec91-6ab1-9944-2bd9-158b7136ada8"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0845b426-e819-9b1a-84ed-2a828a0f014a"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c14/c14s3/" >
+          14.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0845b426-e819-9b1a-84ed-2a828a0f014a"
+    aria-labelledby="nav-button_desktop_0845b426-e819-9b1a-84ed-2a828a0f014a"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/" >
+          15 Pipelining the Beta
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      data-uuid="2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      aria-controls="nav-container_desktop_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+      aria-expanded="false"
+      aria-label="Subsections for 15 Pipelining the Beta"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+    aria-labelledby="nav-button_desktop_2b6492b8-d2dd-6c33-ae0c-6b5df540142b"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="76ea0269-3b06-ecaa-e0bb-d8ca4be4bb7e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/c15s1/" >
+          15.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_76ea0269-3b06-ecaa-e0bb-d8ca4be4bb7e"
+    aria-labelledby="nav-button_desktop_76ea0269-3b06-ecaa-e0bb-d8ca4be4bb7e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f0d50dc2-904e-e419-c2e4-019c29c19532"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/c15s2/" >
+          15.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f0d50dc2-904e-e419-c2e4-019c29c19532"
+    aria-labelledby="nav-button_desktop_f0d50dc2-904e-e419-c2e4-019c29c19532"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a9a1cc07-a231-ae83-e932-2ed49506c610"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c15/c15s3/" >
+          15.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a9a1cc07-a231-ae83-e932-2ed49506c610"
+    aria-labelledby="nav-button_desktop_a9a1cc07-a231-ae83-e932-2ed49506c610"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/" >
+          16 Virtual Memory
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      data-uuid="76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      aria-controls="nav-container_desktop_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+      aria-expanded="false"
+      aria-label="Subsections for 16 Virtual Memory"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+    aria-labelledby="nav-button_desktop_76d5b94f-1d73-abfb-8b7a-27a9d119bc19"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="61c8d864-831f-2145-e0a9-922732a385ec"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/c16s1/" >
+          16.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_61c8d864-831f-2145-e0a9-922732a385ec"
+    aria-labelledby="nav-button_desktop_61c8d864-831f-2145-e0a9-922732a385ec"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3b281e42-db10-8f1f-f6e4-71fa803f6cdf"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/" >
+          16.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_3b281e42-db10-8f1f-f6e4-71fa803f6cdf"
+    aria-labelledby="nav-button_desktop_3b281e42-db10-8f1f-f6e4-71fa803f6cdf"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="9fc3bb09-1d14-9f85-ed27-77bace810678"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c16/c16s3/" >
+          16.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_9fc3bb09-1d14-9f85-ed27-77bace810678"
+    aria-labelledby="nav-button_desktop_9fc3bb09-1d14-9f85-ed27-77bace810678"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/" >
+          17 Virtualizing the Processor
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      data-uuid="3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      aria-controls="nav-container_desktop_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+      aria-expanded="false"
+      aria-label="Subsections for 17 Virtualizing the Processor"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+    aria-labelledby="nav-button_desktop_3d85b3c6-cc8e-d9e8-27ba-a39e0c5064f9"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="435fa3f2-0748-7b97-ace6-65391f3bff5f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/c17s1/" >
+          17.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_435fa3f2-0748-7b97-ace6-65391f3bff5f"
+    aria-labelledby="nav-button_desktop_435fa3f2-0748-7b97-ace6-65391f3bff5f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4ee7d448-d42f-22ac-fa6c-f0c41a85fe4f"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/c17s2/" >
+          17.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_4ee7d448-d42f-22ac-fa6c-f0c41a85fe4f"
+    aria-labelledby="nav-button_desktop_4ee7d448-d42f-22ac-fa6c-f0c41a85fe4f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="57fba60a-b40f-4cd5-e783-0c5f98b68af5"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c17/c17s3/" >
+          17.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_57fba60a-b40f-4cd5-e783-0c5f98b68af5"
+    aria-labelledby="nav-button_desktop_57fba60a-b40f-4cd5-e783-0c5f98b68af5"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2c92b4b6-593e-3038-6fc7-38856e2308fb"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/" >
+          18 Devices and Interrupts
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      data-uuid="2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      aria-controls="nav-container_desktop_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+      aria-expanded="false"
+      aria-label="Subsections for 18 Devices and Interrupts"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+    aria-labelledby="nav-button_desktop_2c92b4b6-593e-3038-6fc7-38856e2308fb"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5e79a00f-7377-2e87-4bc8-390515e63a0d"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/c18s1/" >
+          18.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5e79a00f-7377-2e87-4bc8-390515e63a0d"
+    aria-labelledby="nav-button_desktop_5e79a00f-7377-2e87-4bc8-390515e63a0d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fa697aed-8dfd-8206-d150-e1218c118201"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/c18s2/" >
+          18.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_fa697aed-8dfd-8206-d150-e1218c118201"
+    aria-labelledby="nav-button_desktop_fa697aed-8dfd-8206-d150-e1218c118201"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f0658301-b67e-cbfc-76ec-db0caa42768e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c18/c18s3/" >
+          18.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f0658301-b67e-cbfc-76ec-db0caa42768e"
+    aria-labelledby="nav-button_desktop_f0658301-b67e-cbfc-76ec-db0caa42768e"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/" >
+          19 Concurrency and Synchronization
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      data-uuid="8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      aria-controls="nav-container_desktop_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+      aria-expanded="false"
+      aria-label="Subsections for 19 Concurrency and Synchronization"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+    aria-labelledby="nav-button_desktop_8d47f5e6-fb0b-d9f2-9387-9c21cfb1c9aa"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="afb5e6a8-476a-7f76-4e0a-4be0d22685e4"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/c19s1/" >
+          19.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_afb5e6a8-476a-7f76-4e0a-4be0d22685e4"
+    aria-labelledby="nav-button_desktop_afb5e6a8-476a-7f76-4e0a-4be0d22685e4"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="4c59d53d-717d-751b-1465-1b2fd8c38744"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/c19s2/" >
+          19.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_4c59d53d-717d-751b-1465-1b2fd8c38744"
+    aria-labelledby="nav-button_desktop_4c59d53d-717d-751b-1465-1b2fd8c38744"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8820f7c1-0771-7309-c202-bdd18171ca42"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c19/c19s3/" >
+          19.3 Worksheet
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_8820f7c1-0771-7309-c202-bdd18171ca42"
+    aria-labelledby="nav-button_desktop_8820f7c1-0771-7309-c202-bdd18171ca42"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c20/" >
+          20 System-level Communication
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      data-uuid="a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      aria-controls="nav-container_desktop_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+      aria-expanded="false"
+      aria-label="Subsections for 20 System-level Communication"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+    aria-labelledby="nav-button_desktop_a78212de-6f2a-fd10-a0ba-99eedfa16bef"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="866cbcd7-fe65-4979-53fa-90baa0c3f6da"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c20/c20s1/" >
+          20.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_866cbcd7-fe65-4979-53fa-90baa0c3f6da"
+    aria-labelledby="nav-button_desktop_866cbcd7-fe65-4979-53fa-90baa0c3f6da"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="9acc3357-2435-756b-dcaf-c5ab86d755af"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c20/c20s2/" >
+          20.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_9acc3357-2435-756b-dcaf-c5ab86d755af"
+    aria-labelledby="nav-button_desktop_9acc3357-2435-756b-dcaf-c5ab86d755af"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="137e1b2f-66e7-989b-562c-f577e910834c"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c21/" >
+          21 Parallel Processing
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_137e1b2f-66e7-989b-562c-f577e910834c"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_137e1b2f-66e7-989b-562c-f577e910834c"
+      data-uuid="137e1b2f-66e7-989b-562c-f577e910834c"
+      aria-controls="nav-container_desktop_137e1b2f-66e7-989b-562c-f577e910834c"
+      aria-expanded="false"
+      aria-label="Subsections for 21 Parallel Processing"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_137e1b2f-66e7-989b-562c-f577e910834c"
+    aria-labelledby="nav-button_desktop_137e1b2f-66e7-989b-562c-f577e910834c"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="9a439586-e23c-50b5-9bf2-cfbc1289a41e"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c21/c21s1/" >
+          21.1 Annotated Slides
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_9a439586-e23c-50b5-9bf2-cfbc1289a41e"
+    aria-labelledby="nav-button_desktop_9a439586-e23c-50b5-9bf2-cfbc1289a41e"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="fe5883b3-ab22-9104-9169-85cf37e78935"
+           href="/courses/6-004-computation-structures-spring-2017/pages/c21/c21s2/" >
+          21.2 Topic Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_fe5883b3-ab22-9104-9169-85cf37e78935"
+    aria-labelledby="nav-button_desktop_fe5883b3-ab22-9104-9169-85cf37e78935"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+
+        </div>
+        <div class="col-12 col-md-8 col-lg-7 course-home-grid">
+          <div class="card">
+  <div class="card-body">
+    <section class="course-detail-section">
+      
+
+
+  
+  
+  
+
+<div id="course-description">
+  <h4 class="course-detail-title">
+    Course Description
+  </h4>
+  
+  <div id="collapsed-description" class="description">This course introduces architecture of digital systems, emphasizing structural principles common to a wide range of technologies. It covers the topics including multilevel implementation strategies, definition of new primitives (e.g., gates, instructions, procedures, processes) and their mechanization using lower-level …<button id="expand-description" type="button" class="btn btn-link link-button p-0">Show more</button></div>
+  <div id="expanded-description" class="description d-none">This course introduces architecture of digital systems, emphasizing structural principles common to a wide range of technologies. It covers the topics including multilevel implementation strategies, definition of new primitives (e.g., gates, instructions, procedures, processes) and their mechanization using lower-level elements. It also includes analysis of potential concurrency, precedence constraints and performance measures, pipelined and multidimensional systems, instruction set design issues and architectural support for contemporary software structures.<button id="collapse-description" type="button" class="btn btn-link link-button p-0">Show less</button></div>
+  
+</div>
+
+    </section>
+
+    <section class="course-detail-section">
+      <div class="search-variant" data-search-variant="ocw">  
+
+<div class="course-info">
+  <div class="course-detail-title ">
+    <h2 class="font-black ">
+      Course Info
+    </h2>
+  </div>
+  <div class="">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label  text-muted ">
+            Instructor
+            </h3>
+          <div class="course-info-content ">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="/search/?q=Chris&#43;Terman"  >Chris Terman</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label  text-muted ">
+                Departments
+              </h3>
+              <div class="course-info-content ">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="/search/?d=Electrical&#43;Engineering&#43;and&#43;Computer&#43;Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+      </div>
+      
+      <div class="col-12 col-sm-6">
+        <div class="mt-4 mt-sm-0">
+          
+
+
+
+
+
+<div class="course-info-topics ">
+  <h3 class="course-info-section-label  text-muted ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 ">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_desktop_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_desktop_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_desktop_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_desktop_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Computer&#43;Design&#43;and&#43;Engineering"  >Computer Design and Engineering</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_desktop_0_1"
+        data-toggle="collapse"
+        aria-controls="speciality-container_desktop_0_1"
+        aria-expanded="true"
+        aria-label="Electrical Engineering specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Electrical&#43;Engineering"  >Electrical Engineering</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_desktop_0_1"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="/search/?t=Digital&#43;Systems"  >Digital Systems</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div><div class="search-variant" data-search-variant="learn">  
+
+<div class="course-info">
+  <div class="course-detail-title ">
+    <h2 class="font-black ">
+      Course Info
+    </h2>
+  </div>
+  <div class="">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        
+        <div class="">
+          
+          <h3 class="course-info-section-label  text-muted ">
+            Instructor
+            </h3>
+          <div class="course-info-content ">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;q=Chris&#43;Terman"  >Chris Terman</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h3 class="course-info-section-label  text-muted ">
+                Departments
+              </h3>
+              <div class="course-info-content ">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://learn.mit.edu/search/?department=6&amp;offered_by=ocw"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+      </div>
+      
+      <div class="col-12 col-sm-6">
+        <div class="mt-4 mt-sm-0">
+          
+
+
+
+
+
+<div class="course-info-topics ">
+  <h3 class="course-info-section-label  text-muted ">
+    Topics
+  </h3>
+  <ul class="list-unstyled pb-2 m-0 ">
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_learn_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_learn_0"
+    aria-expanded="true"
+    aria-label="Data Science, Analytics &amp; Computer Technology subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Data&#43;Science%2C&#43;Analytics&#43;%26&#43;Computer&#43;Technology"  >Data Science, Analytics &amp; Computer Technology</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_desktop_learn_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Computer&#43;Science"  >Computer Science</a></span>
+    </div>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Software&#43;Design&#43;and&#43;Engineering"  >Software Design and Engineering</a></span>
+    </div>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_learn_1"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_learn_1"
+    aria-expanded="false"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse list-unstyled"
+  id="subtopic-container_desktop_learn_1"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://learn.mit.edu/search/?offered_by=ocw&amp;topic=Electrical&#43;Engineering"  >Electrical Engineering</a></span>
+    </div>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+    </section>
+
+    <section class="course-detail-section">
+      
+
+
+
+<div class="">
+  <h3 class="course-info-section-label course-detail-title ">
+    Learning Resource Types
+  </h3>
+  <div>
+    <div class="row ">
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1"><span class="material-icons-round">
+        co_present
+      </span></i>
+    <span>Instructor Insights</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">notes</i>
+    <span>Lecture Notes</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">theaters</i>
+    <span>Lecture Videos</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">podcasts</i>
+    <span>Podcasts</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class=" m-2 ">
+          
+
+<div class="learning-resource-type-item">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">assignment_turned_in</i>
+    <span>Programming Assignments with Examples</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    </section>
+  </div>
+</div>
+
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mb-3 mb-md-0 course-home-grid">
+          <div class="card">
+  <div class="card-body">
+    <div class="course-image-section-container">
+      <div class="course-image-container">
+        <div class="d-flex flex-column">
+          <img src="/courses/6-004-computation-structures-spring-2017/3a6d35b0390ffb5180ed20f5fadd63db_6-004S17.jpg" alt="A photo featuring many computer processors in black and white" class="course-image" srcset="/courses/6-004-computation-structures-spring-2017/3a6d35b0390ffb5180ed20f5fadd63db_6-004S17.jpg?format=auto&amp;quality=75&amp;width=480 480w, /courses/6-004-computation-structures-spring-2017/3a6d35b0390ffb5180ed20f5fadd63db_6-004S17.jpg?format=auto&amp;quality=75&amp;width=800 800w, /courses/6-004-computation-structures-spring-2017/3a6d35b0390ffb5180ed20f5fadd63db_6-004S17.jpg?format=auto&amp;quality=75&amp;width=1280 1280w, /courses/6-004-computation-structures-spring-2017/3a6d35b0390ffb5180ed20f5fadd63db_6-004S17.jpg?format=auto&amp;quality=75&amp;width=1920 1920w" sizes="(min-width: 992px) 33vw, 100vw" loading="eager" decoding="async" fetchpriority="high" />
+        </div>
+        <div class="course-image-caption">
+          <span>Artwork featuring microprocessor chips. (Courtesy of <a   class="external-link "   target="_blank"   href="https://www.flickr.com/photos/buglogic/2963839347/in/photolist-5vUsbp-3MDzS-ABM9a4-dNP9oK-dNP9Mz-aKX7bD-6sf9f8-dQhWda-9T7mmd-4unt7Y-5Wp1pr-fdJUmS-6htQYi-KX5og-aAnUzR-ahb3Bj-9X1a4g-EsRpST-6dCMHx-22xsFsN-tWfy8G-Etq2Co-e3jr9Q-bAupZf-ibVAX9-pgRLET-7K7PG8-bgoamV-9J6Q5m-bgoAHF-3c8ye6-61myie-379BJF-5cTKa-bgoc8k-bgod18-4A5XSW-bgoKGB-bgoAhp-Z2vsqs-76zKzV-K97XrX-9skaJF-q4v1zy-WY1ZnE-ojrnDB-dsBUSg-eTzKqn-oAAcV6-pK7FGy"  aria-label="buglogic (opens in a new tab)"  >buglogic</a>. License CC BY-NC-SA.)</span>
+        </div>
+      </div>
+      <div>
+        <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="/courses/6-004-computation-structures-spring-2017/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+<div class="footer">
+    <div class="footer-main-content mx-auto">
+    	<div class="col-12 px-0">
+        	<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-md-flex align-items-center">
+						<a href="https://openlearning.mit.edu/" target="_blank">
+							<img width="117px" src="/static_shared/images/mit_ol.4165342f87abb1da46fd.svg" alt="MIT Open Learning" />
+						</a>
+						<div class="ml-md-3 mt-4 mt-md-0">
+							<div class="font-weight-bold">
+								Over 2,500 courses & materials
+							</div>
+							<div>
+								Freely sharing knowledge with learners and educators around the world. <a href='/about'>Learn more</a>
+							</div>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0 d-none d-md-block">
+					<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="/static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="/static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+				</div>
+        	</div>
+    	</div>
+		
+		<div class="col-12 mt-3 mt-md-4 px-0">
+			<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-lg-flex">
+						<div class="pr-md-2 mt-2 mt-lg-0 d-none d-lg-block">
+							© 2001–2026 Massachusetts Institute of Technology
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://accessibility.mit.edu" target="_blank">Accessibility</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons License</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a class="hide-offline" href='/pages/privacy-and-terms-of-use/'>Terms and Conditions</a>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0">
+					<div class="d-flex justify-content-md-end mt-4 mt-lg-0">
+						<div>
+						Proud member of: 
+						<a href="https://www.oeglobal.org/" target="_blank">
+							<img class="oeg-logo" src="/static_shared/images/oeg_logo.8a31f7b87f30df2d0169.png" alt="Open Education Global"/>
+						</a>
+						</div>
+					</div>
+				</div>
+        	</div>
+		</div>
+
+		<div class="col-12 mt-5 px-0 d-md-none">
+			<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="/static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="/static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="/static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+		</div>
+
+		<div class="col-12 mt-4 px-0 d-lg-none">
+			© 2001–2026 Massachusetts Institute of Technology
+		</div>
+    
+
+
+    
+    <script src="/static_shared/js/common.9481a.js"></script>
+    
+
+    
+    <script src="/static_shared/js/course_v2.9481a.js"></script>
+    
+
+
+
+
+
+    
+<script async src="https://w.appzi.io/w.js?token=Tgs1d"></script>
+
+	</div>
+</div>
+
+    <script>
+function hideLinksOffline(){
+  if (!window.navigator.onLine) {
+    const stripLinks = document.querySelectorAll(".strip-link-offline")
+    const hideOffline = document.querySelectorAll(".hide-offline")
+    const showOffline = document.querySelectorAll(".show-offline")
+    Array.prototype.forEach.call(stripLinks, function(link) {
+      link.outerHTML = link.innerHTML
+    })
+    Array.prototype.forEach.call(hideOffline, function(link) {
+      link.classList.add("d-none")
+    })
+    Array.prototype.forEach.call(showOffline, function(link) {
+      link.classList.remove("d-none")
+    })
+  }
+}
+hideLinksOffline()
+</script>
+
+  </div>
+  
+
+<div
+  class="modal"
+  id="external-link-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="external-link-modal-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-3">
+      <div class="modal-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <img
+            class="modal-header-icon-img mr-3 align-baseline"
+            src="/static_shared/images/external_link.58bbdd86c00a2c146c36.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <h1 class="modal-title" id="external-link-modal-title">
+            You are leaving MIT OpenCourseWare
+          </h1>
+        </div>
+        <button type="button" class="border-0 p-0 bg-transparent d-flex" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="material-icons modal-header-icon">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please be advised that external sites may have terms and conditions, 
+        including license rights, that differ from ours. MIT OCW is not responsible 
+        for any content on third party sites, nor does a link suggest an endorsement 
+        of those sites and/or their content.
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-link link-button"
+          data-dismiss="modal"
+          >
+            Stay Here
+        </button>
+        <a
+          role="button"
+          class="btn btn-primary btn-continue"
+          target="_blank"
+          href="#"
+        >
+          Continue
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<script>
+function expandNav(e,t){t.classList.add("show"),e.querySelector(".course-nav-section-toggle, video-tab-toggle-section").setAttribute("aria-expanded","true")}function courseNav(){document.querySelectorAll(".course-nav, .transcript-header").forEach(e=>{e.querySelectorAll(".nav-link").forEach(e=>{const t=e.getAttribute("href")?e.getAttribute("href"):"";if(t.replace(/\/$/,"")===window.location.pathname.replace(/\/$/,"")){e.classList.add("active");const s=e.closest(".course-nav-parent");s?.classList.add("active");const o=e.dataset.uuid,t=e.closest(".course-nav-list-item"),n=t?.querySelector(".collapse"),i=Array.prototype.filter.call(document.querySelectorAll(".course-nav-section-toggle"),e=>e.dataset.uuid===o);t&&n&&i.length>0&&expandNav(t,n)}});const t=e.querySelector("a.nav-link.active");e.querySelectorAll(".course-nav-list-item").forEach(e=>{const n=e.querySelector(".collapse");n&&n.contains(t)&&expandNav(e,n)})})}courseNav()
+</script>
+
+  
+
+<script>
+(()=>{var e=()=>document.querySelectorAll("#course-content-section table"),t=()=>document.getElementById("course-content-section");function n(){const o=e(),n=t();if(!n)return;if(!window.ResizeObserver)return;const i=new ResizeObserver(()=>s());i.observe(n),o.forEach(e=>{const t=e.getElementsByTagName("th"),n=e.querySelectorAll("table tr");n.forEach(e=>{const n=e.querySelectorAll("td");n.forEach((e,s)=>{t.length>=s+1&&(n[s].dataset.title=t[s].innerText.trim().concat(": "))})})})}function s(){const s=e(),n=t();if(!n)return;s.forEach(e=>{const t=n.getBoundingClientRect(),o=+(e.dataset.minWidth??0);t.width>o&&e.classList.remove("mobile-table");const s=e.getBoundingClientRect();s.right>t.right&&(e.dataset.minWidth=`${s.width}`,e.classList.add("mobile-table"))})}n()})()
+</script>
+
+</body>
+
+</html>

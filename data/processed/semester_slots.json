@@ -1,0 +1,112 @@
+[
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 3,
+    "semester_label": "Sem 3",
+    "slot_type": "LA",
+    "credits": 2.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 4,
+    "semester_label": "Sem 4",
+    "slot_type": "LA",
+    "credits": 4.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 5,
+    "semester_label": "Sem 5",
+    "slot_type": "LA",
+    "credits": 2.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 6,
+    "semester_label": "Sem 6",
+    "slot_type": "PE",
+    "credits": 3.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 6,
+    "semester_label": "Sem 6",
+    "slot_type": "OE",
+    "credits": 3.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 6,
+    "semester_label": "Sem 6",
+    "slot_type": "LA",
+    "credits": 2.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 7,
+    "semester_label": "Sem 7",
+    "slot_type": "PE",
+    "credits": 8.5,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 7,
+    "semester_label": "Sem 7",
+    "slot_type": "OE",
+    "credits": 6.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 8,
+    "semester_label": "Sem 8",
+    "slot_type": "PE",
+    "credits": 11.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  },
+  {
+    "programme_id": "IITBH-BTECH-CSE",
+    "semester": 8,
+    "semester_label": "Sem 8",
+    "slot_type": "OE",
+    "credits": 6.0,
+    "source_id": "iitbh_cos_2026",
+    "source_url": "https://www.iitbhilai.ac.in/index.php?pid=new_schedule_programs#page=22",
+    "retrieved_on": "2026-11-10",
+    "source_type": "official"
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "resource_id": "RES-NPTEL-106104128",
+    "course_code": "CSL100",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105171",
+    "course_code": "CSL100",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106127",
+    "course_code": "CSL100",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106127",
+    "course_code": "CSL202",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106145",
+    "course_code": "CSL202",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106145",
+    "course_code": "CSL252",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102064",
+    "course_code": "CSL202",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106103069",
+    "course_code": "CSL202",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106183",
+    "course_code": "CSL201",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106108227",
+    "course_code": "CSL201",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106131",
+    "course_code": "CSL252",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106101060",
+    "course_code": "CSL252",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106101060",
+    "course_code": "CSL510",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106049",
+    "course_code": "CSL253",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105163",
+    "course_code": "CSL251",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106144",
+    "course_code": "CSL301",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106108113",
+    "course_code": "CSL302",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105175",
+    "course_code": "CSL303",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105183",
+    "course_code": "CSL351",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106126",
+    "course_code": "CSL304",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102220",
+    "course_code": "CSL304",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105182",
+    "course_code": "CSP352",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105224",
+    "course_code": "CSP352",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106102067",
+    "course_code": "CSL302",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105162",
+    "course_code": "CSL505",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105162",
+    "course_code": "CSL605",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105184",
+    "course_code": "CSL603",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106169",
+    "course_code": "CSL601",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106169",
+    "course_code": "CSL613",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106104189",
+    "course_code": "CSL518",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106232",
+    "course_code": "CSL622",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-111105090",
+    "course_code": "MAL403",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106139",
+    "course_code": "CSL607",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106105152",
+    "course_code": "CSL607",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-NPTEL-106106179",
+    "course_code": "MAL403",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-0001",
+    "course_code": "CSL100",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-006",
+    "course_code": "CSL202",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-006",
+    "course_code": "CSL252",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-046J",
+    "course_code": "CSL252",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-046J",
+    "course_code": "CSL510",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-046J",
+    "course_code": "CSL515",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-042J",
+    "course_code": "CSL201",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-404J",
+    "course_code": "CSL253",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-404J",
+    "course_code": "CSL612",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-004",
+    "course_code": "CSL251",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-033",
+    "course_code": "CSL301",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-033",
+    "course_code": "CSL503",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-035",
+    "course_code": "CSL302",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-830",
+    "course_code": "CSL303",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-034",
+    "course_code": "CSL304",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-036",
+    "course_code": "CSL607",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-858",
+    "course_code": "CSL605",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-875",
+    "course_code": "CSL505",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-875",
+    "course_code": "CSL602",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-851",
+    "course_code": "CSL606",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-854J",
+    "course_code": "CSL510",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-854J",
+    "course_code": "CSL608",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-856J",
+    "course_code": "CSL515",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-172",
+    "course_code": "CSL516",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-172",
+    "course_code": "CSL519",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-005",
+    "course_code": "CSP203",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-005",
+    "course_code": "CSP352",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-06",
+    "course_code": "MAL100",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-06",
+    "course_code": "MAL101",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-18-05",
+    "course_code": "MAL403",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-845",
+    "course_code": "CSL622",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-MISSING-SEMESTER",
+    "course_code": "CSP203",
+    "method": "manual mapping (resources_seed.csv)"
+  },
+  {
+    "resource_id": "RES-OCW-6-041SC",
+    "course_code": "MAL403",
+    "method": "manual mapping (resources_seed.csv)"
+  }
+]

@@ -1,0 +1,2 @@
+check,record,reason
+prereq_missing_course,CSP402->IC150,"Source defect: CoS-2026 lists legacy code IC150 (Applied Digital Logic Design, CoS-2023) as a prerequisite of CSP402. No current course covers it 1:1 (ECL101 Basic Electronics only partly). Kept as an unresolved edge (requires_in_catalogue=false) rather than guessing; to be confirmed with the CSE DUGC."

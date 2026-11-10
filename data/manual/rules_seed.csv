@@ -1,0 +1,39 @@
+rule_id,category,source_id,quote_start,quote_end,numeric_limit,unit,comparator,applies_to,notes
+R-CRED-001,credit_limit,iitbh_ug_manual,In general a student has to register for the nominal load,curriculum of the discipline.,,,,BTech all semesters,
+R-CRED-002,credit_limit,iitbh_ug_manual,Overload/underload can only be permitted from third semester,onwards.,3,semester,>=,BTech,
+R-CRED-003,credit_limit,iitbh_ug_manual,BTech students may be allowed to register for 15 to 21 credits,on case to case basis.,21,credits_per_semester,<=,BTech semester 3 onwards,Range 15-21; lower bound 15 recorded in notes; DUGC approval needed
+R-CRED-004,credit_limit,iitbh_ug_manual,In the eighth regular semester,subject to fulfilling the credit requirements.,9,credits_per_semester,>=,BTech semester 8,
+R-CRED-005,graduation_requirement,iitbh_cos_2026,BTech program at IIT Bhilai is a fully residential program with a nominal duration of 4 years (i.e.,is as follows.,144,credits_total,>=,BTech 2023 batch onwards,Plus 12 non-graded core units; table follows quote in source
+R-CRED-006,graduation_requirement,iitbh_cos_2023,BTech program at IIT Bhilai is a fully residential program with a nominal duration of 4 years.,is as follows.,240,credits_total,>=,BTech admitted till 2022-23-W,LEGACY curriculum (240-credit scale); conflicts with R-CRED-005 by batch not by error
+R-CRED-008,credit_limit,iitbh_ug_manual,Students may add or drop courses using the registration system within 5 working days,approved by the DUGC convener.,5,working_days,<=,All UG,
+R-CRED-009,credit_limit,iitbh_ug_manual,A student has the option of auditing upto 3 credits in a semester,consent from the course instructor(s).,3,credits_per_semester,<=,All UG,
+R-CRED-010,credit_validity,iitbh_ug_manual,The credits earned for the course or thesis are valid for up to seven years only,acquired earlier than seven years or more.,7,years,<=,All UG,
+R-PRE-001,prerequisite,iitbh_ug_manual,"Each course, other than 100 level courses, may have specified pre-requisite(s)",will not be eligible to register for the course.,,,,All UG,
+R-PRE-002,prerequisite,iitbh_ug_manual,i. Pre-requisites shall be defined only in terms of the other course code(s).,course code(s).,,,,All UG,
+R-PRE-003,prerequisite,iitbh_ug_manual,ii. A precedent course defined as a prerequisite for a course must be cleared,before the dependent course can be taken.,,,,All UG,
+R-PRE-004,prerequisite,iitbh_cos_2023,Pre-requisites of a course (i.e. dependent course) are those courses,prior to registering for the course.,,,,BTech admitted till 2022-23-W,Allows concurrent registration in some cases; the 2026 syllabus text does not use 'concurrently'
+R-PRE-005,prerequisite,iitbh_ug_manual,"If a course (course X) has more than 25% overlapping content",not eligible to register for the course (course X).,25,percent_overlap,<=,All UG,Overlap rule; course overlap % listed per course in Courses of Study
+R-PRE-006,course_level,iitbh_cos_2026,400-600 Core courses for MSc Programs,as elective courses only),3,year_of_study,>=,BTech,500/600-level courses open to BTech 3rd/final year as electives only
+R-PRE-007,scheduling,iitbh_cos_2026,*Students going for Internship in their 7th Semester,8th Semester.,8,semester,==,BTech CSE,CSQ401 moves to semester 8 for students on 7th-semester internship
+R-MOOC-001,online_credit,iitbh_ug_manual,Students can register for MOOC/NPTEL courses worth 6 credits,entire UG curriculum.,6,credits_total,<=,BTech,
+R-MOOC-002,online_credit,iitbh_ug_manual,Grade based course from MOOC based portals shall be considered,under Open Elective (OE) or Program Elective (PE).,,,,BTech,MOOC credit counts only as OE or PE
+R-MOOC-003,online_credit,iitbh_ug_manual,Student shall take prior permission from their respective DUGC convener,grade based course from MOOC.,,,,BTech,
+R-MOOC-004,online_credit,iitbh_ug_manual,The department shall look into the course content to decide,Overlapping of course content shall not be allowed.,,,,BTech,
+R-MOOC-005,online_credit,iitbh_ug_manual,14 weeks/42 hours course shall be considered as equivalent,equivalent to 3 credits of IIT Bhilai.,3,credits_per_course,==,BTech,14-week / 42-hour MOOC = 3 IIT Bhilai credits
+R-MOOC-006,online_credit,iitbh_ug_manual,A student shall be allowed to opt a maximum of 6 credits from MOOC,during his/her entire program.,6,credits_total,<=,BTech,Duplicates R-MOOC-001 wording; kept because it is the binding 'maximum' clause
+R-MOOC-007,online_credit,iitbh_ug_manual,The students shall make their request for credit transfer before,commencement of the course.,,,,BTech,
+R-MOOC-008,online_credit,iitbh_ug_manual,ii. A course code with a common numeral (495),"CSL495, MEL495, etc.,)",495,course_code_number,==,BTech,
+R-MOOC-009,online_credit,iitbh_cos_2026,V# Lectures courses on special topics by external experts or NPTEL courses,maximum of 6 credits during the entire program.,6,credits_total,<=,BTech 2023 batch onwards,CONFLICT: 2026 CoS says V# courses are 1-2 credits; UG Manual says 1-3 credits (see R-MOOC-010)
+R-MOOC-010,online_credit,iitbh_ug_manual,V# Lectures courses on special topics by external experts or NPTEL courses,maximum of 6 credits during the entire program.,6,credits_total,<=,BTech,CONFLICT with R-MOOC-009 on per-course credit range (1-3 vs 1-2)
+R-MINOR-001,minor_honours,iitbh_ug_manual,A student at the end of 5th semester can register for BTech Honours,"interest, and evaluation.",5,semester,>=,BTech,No numeric CGPA cut-off published for Honours; no separate 'Minor' programme found in any source
+R-MINOR-002,minor_honours,iitbh_cos_2023,Students completing two years of BTech program in IIT Bhilai can opt for conversion to BTech,program structure,,,,BTech admitted till 2022-23-W,Honours via additional courses in ANOTHER discipline (='specialization') is the closest equivalent to a minor; +6 credits per semester from semester 5
+R-MINOR-003,minor_honours,iitbh_cos_2023,Students registered in course-based BTech (Honours) program with specialization in the discipline of Computer Science and Engineering,for 8 more credits.,8,credits_total,>=,BTech admitted till 2022-23-W (non-CSE students),CSE specialization = CS101+CS102+CS202+CS204 (legacy codes) + 8 credits; LEGACY
+R-MINOR-004,minor_honours,iitbh_ug_manual,A student may be allowed to convert their program from BTech/BTech (Honours) to,Conversion of program is a privilege and not a right.,,,,BTech,
+R-CGPA-001,cgpa,iitbh_ug_manual,A candidate is eligible for the award of BTech degree only if his/her CGPA,fulfills the minimum number of course credits.,4.5,cgpa,>=,BTech,
+R-CGPA-002,cgpa,iitbh_ug_manual,"(a) If SGPA falls below 4.5, he/she will be put on academic probation",allowed to register for the next semester only if CGPA ≥ 4.0.,4.0,cgpa,>=,BTech,
+R-CGPA-003,cgpa,iitbh_ug_manual,"(b) If, in the subsequent semesters, if CGPA ≥ 4.0 but CGPA < 4.5",on the recommendation of DUGC with the approval of IUGC.,4.5,cgpa,<,BTech,
+R-CGPA-004,cgpa,iitbh_ug_manual,The course grade improvement can be carried out for a maximum of three courses,does not lead to any increase in the semester load.,3,courses_total,<=,BTech,Only where grade <= C and CGPA <= 5
+R-CGPA-005,cgpa,iitbh_ug_manual,"For the purpose of employment or requirement of any external body, IIT Bhilai graduate having 6 (Six) CGPA",be taken as First Class.,6,cgpa,>=,BTech,
+R-CAT-001,course_category,iitbh_ug_manual,5. Open elective (OE) courses: A bouquet of courses offered by various disciplines,cannot take LA courses as open elective.,,,,All UG,
+R-CAT-002,course_category,iitbh_ug_manual,4. Program elective (PE) courses: A bouquet of courses declared by the discipline,credits to fulfill the program requirements.,,,,All UG,
+R-NC-001,non_graded,iitbh_cos_2026,Students have to spend a minimum of 120 hours in the National Service Scheme,within the first four semesters.,120,hours,>=,BTech 2023 batch onwards,
